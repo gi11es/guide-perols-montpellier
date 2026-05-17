@@ -1,9 +1,8 @@
 import type { LatLon } from './geo';
 
 export function extractCoordsFromGmapsUrl(url: string): LatLon | null {
-  if (!/google\.[a-z.]+\/maps/.test(url) && !url.includes('maps.app.goo.gl')) {
-    return null;
-  }
+  const isGoogle = /google\.[a-z.]+\/maps/.test(url) || url.includes('maps.app.goo.gl') || url.includes('goo.gl/maps');
+  if (!isGoogle) return null;
   const dm = url.match(/!3d(-?\d+(?:\.\d+)?)!4d(-?\d+(?:\.\d+)?)/);
   if (dm) return { lat: parseFloat(dm[1]), lon: parseFloat(dm[2]) };
   const at = url.match(/@(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)/);

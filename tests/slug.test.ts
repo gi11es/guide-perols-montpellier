@@ -15,4 +15,8 @@ describe('slugify', () => {
   it('keeps numbers', () => {
     expect(slugify('Bar 24')).toBe('bar-24');
   });
+  it('expands Œ/œ and Æ/æ ligatures', () => {
+    expect(slugify("L'Œillet")).toBe('l-oeillet');
+    expect(slugify('Cæsar')).toBe('caesar');
+  });
 });

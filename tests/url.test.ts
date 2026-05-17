@@ -24,4 +24,14 @@ describe('extractCoordsFromGmapsUrl', () => {
   it('returns null for non-google URL', () => {
     expect(extractCoordsFromGmapsUrl('https://example.com')).toBeNull();
   });
+
+  it('extracts from a goo.gl/maps short URL containing @lat,lon', () => {
+    const url = 'https://goo.gl/maps/abc?q=43.5709,3.9519';
+    expect(extractCoordsFromGmapsUrl(url)).toEqual({ lat: 43.5709, lon: 3.9519 });
+  });
+
+  it('handles negative coordinates in @ pattern', () => {
+    const url = 'https://www.google.com/maps/place/Foo/@-33.8688,151.2093,17z';
+    expect(extractCoordsFromGmapsUrl(url)).toEqual({ lat: -33.8688, lon: 151.2093 });
+  });
 });
