@@ -5,7 +5,8 @@ category: enfants
 lat: 43.659436
 lon: 4.0567552
 address: "Les Petits Fermiers au Pays de l'Or, Lansargues, Montpellier, Hérault, Occitanie, France métropolitaine, 34130, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJESp4EumhthIRj-8NKW5imxk"
 source: "manual"
 google_category: ""
 hero: "/photos/les-petits-fermiers-de-lansargues/hero.jpg"

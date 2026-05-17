@@ -5,7 +5,8 @@ category: boutique
 lat: 43.6087141
 lon: 3.8764846
 address: "En Traits Libres, 1, Rue Voltaire, Centre Historique, Comédie, Centre, Montpellier, Hérault, Occitanie, France métropolitaine, 34000, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJQzF99wevthIRxEgpkd5gT5Q"
 source: "manual"
 google_category: ""
 hero: "/photos/en-traits-libres/hero.jpg"

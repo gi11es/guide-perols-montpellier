@@ -5,7 +5,8 @@ category: nature
 lat: 43.6240914
 lon: 3.3617076
 address: "Cirque de Mourèze, Mourèze, Lodève, Hérault, Occitanie, France métropolitaine, 34800, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJQyGosGBmsRIR5z5UoT-KG1E"
 source: "manual"
 google_category: ""
 hero: "/photos/cirque-de-moureze/hero.jpg"

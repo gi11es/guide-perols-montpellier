@@ -5,7 +5,7 @@ category: culture
 lat: 43.6128269
 lon: 3.8784363
 links:
-  google_maps: "https://www.google.com/maps/place/La+Panac%C3%A9e/data=!4m2!3m1!1s0x12b6af085458faa1:0xcacdcc059f3c0d5f"
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJA7d0_wivthIRfEI9-jcXs4c"
 source: "google-takeout"
 google_category: ""
 hero: "/photos/la-panacee/hero.jpg"

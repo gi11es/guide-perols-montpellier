@@ -5,7 +5,8 @@ category: enfants
 lat: 43.5850607
 lon: 3.9333685999999997
 address: "Rue Louis Lumière, 34970 Lattes, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJx4MDbjylthIRVjAw18VF5p0"
 source: "manual"
 google_category: ""
 hero: "/photos/trampoline-park-lattes/hero.jpg"

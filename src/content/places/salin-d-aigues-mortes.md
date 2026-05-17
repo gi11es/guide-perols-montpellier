@@ -5,7 +5,8 @@ category: nature
 lat: 43.5577145
 lon: 4.1833482
 address: "Salin d'Aigues-Mortes, D 979, Aigues-Mortes, Nîmes, Gard, Occitanie, France métropolitaine, 30220, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJgYQwSIWQthIRoSSGvpo6GFw"
 source: "manual"
 google_category: ""
 hero: "/photos/salin-d-aigues-mortes/hero.jpg"

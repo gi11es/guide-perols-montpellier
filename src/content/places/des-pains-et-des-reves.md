@@ -5,7 +5,8 @@ category: boulangerie
 lat: 43.6106234
 lon: 3.8736542000000003
 address: "10 Rue Eugène Lisbonne, 34000 Montpellier, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJaQfxhgevthIR1Qfa85xfVrM"
 source: "manual"
 google_category: ""
 hero: "/photos/des-pains-et-des-reves/hero.jpg"

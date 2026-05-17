@@ -5,7 +5,8 @@ category: restaurant
 lat: 43.3825861
 lon: 3.5564775
 address: "Montpenedre, 34340 Marseillan, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJRUIdKbc5sRIRMIg29hsrAcw"
 source: "manual"
 google_category: ""
 hero: "/photos/le-st-barth-tarbouriech/hero.jpg"

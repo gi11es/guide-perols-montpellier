@@ -5,7 +5,8 @@ category: nature
 lat: 43.3809658
 lon: 4.5559208
 address: "Plage de Beauduc, Arles, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, France métropolitaine, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJ21-Q0ChothIRMM3tjoXB50Q"
 source: "manual"
 google_category: ""
 hero: "/photos/plage-de-beauduc/hero.jpg"

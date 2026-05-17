@@ -5,7 +5,8 @@ category: enfants
 lat: 43.4584251
 lon: 3.5455343
 address: "Musée des Dinosaures, D 613, Mèze, Montpellier, Hérault, Occitanie, France métropolitaine, 34140, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJ_X88Cdk3sRIRsS25OLdHo_U"
 source: "manual"
 google_category: ""
 hero: "/photos/musee-des-dinosaures/hero.jpg"

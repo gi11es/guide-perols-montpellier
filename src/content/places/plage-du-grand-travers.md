@@ -5,7 +5,8 @@ category: nature
 lat: 43.5574015
 lon: 4.0494637
 address: "2 Rue du Levant, 34280 La Grande-Motte, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJzz6L6Te9thIRSrKFwlFCgXU"
 source: "manual"
 google_category: ""
 hero: "/photos/plage-du-grand-travers/hero.jpg"

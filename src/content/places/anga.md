@@ -5,7 +5,8 @@ category: restaurant
 lat: 43.6104808
 lon: 3.8752797
 address: "Anga - Beaulieu, Rue Saint-Firmin, Centre Historique, Centre, Montpellier, Hérault, Occitanie, France métropolitaine, 34062, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJC_HZ-AevthIRAfG_oy1DUW4"
 source: "manual"
 google_category: ""
 hero: "/photos/anga/hero.jpg"

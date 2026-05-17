@@ -5,7 +5,8 @@ category: restaurant
 lat: 43.6084292
 lon: 3.8770581
 address: "21 Rue Vallat, 34000 Montpellier, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJceApyKevthIRn-NqBQqgYvI"
 source: "manual"
 google_category: ""
 hero: "/photos/baba-ristorante/hero.jpg"

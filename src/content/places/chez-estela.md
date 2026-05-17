@@ -5,7 +5,8 @@ category: fruits-legumes
 lat: 43.6358014
 lon: 3.9434243
 address: "Chem. de la Vieille Poste, 34130 Saint-Aunès, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJn3fJgoSlthIRZKySj-BtP9U"
 source: "manual"
 google_category: ""
 hero: "/photos/chez-estela/hero.jpg"

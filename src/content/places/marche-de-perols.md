@@ -5,7 +5,8 @@ category: boutique
 lat: 43.5638791
 lon: 3.9538634
 address: "Pl. Carnot, 34470 Pérols, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJH7I4BB-7thIRmBRZGNnSvGU"
 source: "manual"
 google_category: ""
 hero: "/photos/marche-de-perols/hero.jpg"

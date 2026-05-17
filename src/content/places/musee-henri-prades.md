@@ -5,7 +5,8 @@ category: culture
 lat: 43.5664922
 lon: 3.9084701
 address: "390 Rte de Pérols, 34970 Lattes, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJg3a2BAGwthIRLIO4TZ79Fp0"
 source: "manual"
 google_category: "museum"
 hero: "/photos/musee-henri-prades/hero.jpg"

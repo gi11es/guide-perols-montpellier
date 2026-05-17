@@ -5,7 +5,8 @@ category: culture
 lat: 43.6102461
 lon: 3.8821557
 address: "Pavillon Populaire, Parvis de la Légion d'Honneur, Comédie, Centre, Montpellier, Hérault, Occitanie, France métropolitaine, 34000, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJMdVxdQqvthIRSnJwlSdA-MQ"
 source: "manual"
 google_category: ""
 hero: "/photos/pavillon-populaire/hero.jpg"

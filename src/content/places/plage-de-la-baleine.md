@@ -5,7 +5,8 @@ category: nature
 lat: 43.3545925
 lon: 3.6007369
 address: "Plage de la Baleine, Sète, Montpellier, Hérault, Occitanie, France métropolitaine, 34200, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJ3y3SyPM2sRIRDAhXGubWuos"
 source: "manual"
 google_category: ""
 hero: "/photos/plage-de-la-baleine/hero.jpg"

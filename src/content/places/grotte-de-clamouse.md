@@ -5,7 +5,8 @@ category: nature
 lat: 43.709593
 lon: 3.5525836
 address: "Grotte de Clamouse, D 4, Saint-Jean-de-Fos, Lodève, Hérault, Occitanie, France métropolitaine, 34150, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJH7FAxERYsRIRb0pRqd_cLDo"
 source: "manual"
 google_category: ""
 hero: "/photos/grotte-de-clamouse/hero.jpg"

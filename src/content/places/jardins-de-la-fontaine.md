@@ -5,7 +5,8 @@ category: culture
 lat: 43.8414305
 lon: 4.3497314
 address: "Les Jardins de la Fontaine, La Placette, Nîmes, Gard, Occitanie, France métropolitaine, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJBXWMQKIttBIRZcv3AnAFYV4"
 source: "manual"
 google_category: ""
 hero: "/photos/jardins-de-la-fontaine/hero.jpg"

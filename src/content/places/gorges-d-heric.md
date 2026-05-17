@@ -5,7 +5,8 @@ category: nature
 lat: 43.5858869
 lon: 2.9565491
 address: "Gorges d'Héric, Mons, Béziers, Hérault, Occitanie, France métropolitaine, 34390, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJhcrs57iasRIRMyHJMyZeg9Q"
 source: "manual"
 google_category: ""
 hero: "/photos/gorges-d-heric/hero.jpg"

@@ -5,7 +5,8 @@ category: villes-villages
 lat: 43.4515922
 lon: 4.4277202
 address: "Saintes-Maries-de-la-Mer, Arles, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, France métropolitaine, 13460, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJexX9dpdhthIRLWbvPeXuCYM"
 source: "manual"
 google_category: ""
 hero: "/photos/saintes-maries-de-la-mer/hero.jpg"

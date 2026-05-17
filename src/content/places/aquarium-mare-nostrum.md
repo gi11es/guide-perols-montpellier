@@ -5,7 +5,8 @@ category: enfants
 lat: 43.60277
 lon: 3.917057
 address: "Centre commercial Odysseum, All. Ulysse, 34000 Montpellier, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJuy7dmXClthIRlGRhXjHC43E"
 source: "manual"
 google_category: ""
 hero: "/photos/aquarium-mare-nostrum/hero.jpg"

@@ -5,7 +5,8 @@ category: culture
 lat: 43.6117542
 lon: 3.8801274
 address: "Musée Fabre, 39, Boulevard Bonne Nouvelle, Comédie, Centre, Montpellier, Hérault, Occitanie, France métropolitaine, 34000, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJC4Wu9QmvthIRDmojjnJB6rA"
 source: "manual"
 google_category: ""
 hero: "/photos/musee-fabre/hero.jpg"

@@ -13,7 +13,8 @@
     "import": "tsx scripts/import-takeout.mjs",
     "photos": "tsx scripts/fetch-photos.mjs",
     "build-tiles": "tsx scripts/build-tiles.mjs",
-    "descriptions": "tsx scripts/fetch-descriptions.mjs"
+    "descriptions": "tsx scripts/fetch-descriptions.mjs",
+    "fix-maps-links": "tsx scripts/fix-maps-links.mjs"
   },
   "dependencies": {
     "astro": "^6.3.3",

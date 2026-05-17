@@ -5,7 +5,8 @@ category: enfants
 lat: 43.6036144
 lon: 3.9168442
 address: "Pôle ludique Odysseum Allée d'Ulysse, 34000 Montpellier, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJ36WbczeuthIRdVs_YylZO4g"
 source: "manual"
 google_category: ""
 hero: "/photos/laser-game-evolution-odysseum/hero.jpg"

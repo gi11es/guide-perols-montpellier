@@ -5,7 +5,8 @@ category: enfants
 lat: 43.5852813
 lon: 3.8782861000000004
 address: "188 Av. du Marché Gare, 34000 Montpellier, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJccgGznClthIRK2ltZPvlgIw"
 source: "manual"
 google_category: ""
 hero: "/photos/bowlingstar-pres-d-arenes/hero.jpg"

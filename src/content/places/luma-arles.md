@@ -5,7 +5,8 @@ category: culture
 lat: 43.6731164
 lon: 4.6373089
 address: "Parc des Ateliers, Les Alyscamps, Pont-de-Crau, Arles, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, France métropolitaine, 13200, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJC7c8cnJ2thIR0beowqohrgU"
 source: "manual"
 google_category: ""
 hero: "/photos/luma-arles/hero.jpg"

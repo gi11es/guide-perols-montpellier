@@ -5,7 +5,8 @@ category: restaurant
 lat: 43.5919649
 lon: 3.9066759
 address: "Terminal #1, Véloligne 4, Port Marianne, Montpellier, Hérault, Occitanie, France métropolitaine, 34965, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJM0PILWClthIRBJ3NwqPzhdM"
 source: "manual"
 google_category: ""
 hero: "/photos/terminal-1/hero.jpg"

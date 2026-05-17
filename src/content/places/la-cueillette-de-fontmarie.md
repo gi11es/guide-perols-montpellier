@@ -5,7 +5,8 @@ category: fruits-legumes
 lat: 43.700833100000004
 lon: 3.9908533999999998
 address: "1790 Rte de Fontmarie, 34160 Castries, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJ_dNSKGehthIRp-NBGo6WXoI"
 source: "manual"
 google_category: ""
 hero: "/photos/la-cueillette-de-fontmarie/hero.jpg"

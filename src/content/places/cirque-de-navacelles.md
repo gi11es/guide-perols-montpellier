@@ -5,7 +5,8 @@ category: nature
 lat: 43.8927621
 lon: 3.509978
 address: "Cirque de Navacelles, Navacelles, Saint-Maurice-Navacelles, Lodève, Hérault, Occitanie, France métropolitaine, France"
-links: {}
+links:
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJ_5KT8FfvsxIRHOdpUxD7jRg"
 source: "manual"
 google_category: ""
 hero: "/photos/cirque-de-navacelles/hero.jpg"
