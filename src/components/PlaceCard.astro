@@ -7,11 +7,12 @@ interface Props {
   categoryColor: string;
 }
 const { place, categoryLabel, categoryColor } = Astro.props;
-const { name, address, hero, links } = place.data;
-const slug = place.data.slug;
+const { name, address, hero, links, lat, lon } = place.data;
+const mapsUrl = links?.google_maps
+  ?? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}+${lat},${lon}`;
 ---
 <article class="card">
-  <a href={`${import.meta.env.BASE_URL}/place/${slug}`} class="card-link">
+  <a href={mapsUrl} target="_blank" rel="noopener" class="card-link">
     {hero && <img src={`${import.meta.env.BASE_URL}/${hero.replace(/^\//, '')}`} alt={name} class="hero" loading="lazy" width="800" height="600" />}
     <div class="body">
       <p class="eyebrow" style={`color: ${categoryColor};`}>{categoryLabel}</p>
