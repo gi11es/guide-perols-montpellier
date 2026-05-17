@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseTakeoutCsv, escapeYaml } from '../scripts/import-takeout.mjs';
+import { parseTakeoutCsv, escapeYaml, toMarkdown } from '../scripts/import-takeout.mjs';
 
 describe('parseTakeoutCsv', () => {
   it('parses a Saved-list CSV row', () => {
@@ -43,6 +43,57 @@ describe('parseTakeoutCsv', () => {
     const csv = 'Title,Note,URL\n"Bar ""Pirate""","",""\n';
     const rows = parseTakeoutCsv(csv);
     expect(rows[0].title).toBe('Bar "Pirate"');
+  });
+});
+
+describe('parseTakeoutCsv – Tags and Comment columns', () => {
+  it('extracts tags and comment when present', () => {
+    const csv = `Title,Note,URL,Tags,Comment\n"Urfa Dürüm","","https://www.google.com/maps/place/Urfa","Kebab,Turkish","Great place"\n`;
+    const rows = parseTakeoutCsv(csv);
+    expect(rows).toHaveLength(1);
+    expect(rows[0].tags).toBe('Kebab,Turkish');
+    expect(rows[0].comment).toBe('Great place');
+  });
+
+  it('returns empty strings for tags and comment when columns are absent', () => {
+    const csv = `Title,Note,URL\n"Le Spot","","https://www.google.com/maps/place/Foo"\n`;
+    const rows = parseTakeoutCsv(csv);
+    expect(rows).toHaveLength(1);
+    expect(rows[0].tags).toBe('');
+    expect(rows[0].comment).toBe('');
+  });
+});
+
+describe('toMarkdown', () => {
+  const baseRow = {
+    title: 'Urfa Dürüm',
+    note: '',
+    url: 'https://www.google.com/maps/place/Urfa',
+    coords: { lat: 43.6, lon: 3.87 },
+    tags: '',
+    comment: '',
+  };
+
+  it('includes tags in frontmatter when present', () => {
+    const row = { ...baseRow, tags: 'Kebab,Turkish' };
+    const { content } = toMarkdown(row);
+    expect(content).toContain('tags: "Kebab,Turkish"');
+  });
+
+  it('omits tags from frontmatter when empty', () => {
+    const { content } = toMarkdown(baseRow);
+    expect(content).not.toContain('tags:');
+  });
+
+  it('includes comment in frontmatter when present', () => {
+    const row = { ...baseRow, comment: 'Great place' };
+    const { content } = toMarkdown(row);
+    expect(content).toContain('comment: "Great place"');
+  });
+
+  it('omits comment from frontmatter when empty', () => {
+    const { content } = toMarkdown(baseRow);
+    expect(content).not.toContain('comment:');
   });
 });
 

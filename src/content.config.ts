@@ -20,6 +20,8 @@ const places = defineCollection({
     hero_credit: z.string().optional(),
     source: z.string().default('manual'),
     google_category: z.string().optional(),
+    tags: z.string().optional(),
+    comment: z.string().optional(),
   }),
 });
 

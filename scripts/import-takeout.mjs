@@ -29,6 +29,8 @@ export function parseTakeoutCsv(text) {
     title: header.indexOf('title'),
     note: header.indexOf('note'),
     url: header.indexOf('url'),
+    tags: header.indexOf('tags'),
+    comment: header.indexOf('comment'),
   };
   if (idx.title === -1 || idx.url === -1) return [];
   const out = [];
@@ -39,6 +41,8 @@ export function parseTakeoutCsv(text) {
       title: cells[idx.title] ?? '',
       note: idx.note >= 0 ? (cells[idx.note] ?? '') : '',
       url: cells[idx.url] ?? '',
+      tags: idx.tags >= 0 ? (cells[idx.tags] ?? '') : '',
+      comment: idx.comment >= 0 ? (cells[idx.comment] ?? '') : '',
     });
   }
   return out;
@@ -70,13 +74,40 @@ function parseCsvStream(text) {
   return rows;
 }
 
+let lastNominatim = 0;
+async function geocodeByName(name) {
+  if (!name?.trim()) return null;
+  // Throttle to 1 req/sec.
+  const since = Date.now() - lastNominatim;
+  if (since < 1100) await new Promise((r) => setTimeout(r, 1100 - since));
+  lastNominatim = Date.now();
+  const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(name)}&format=json&limit=1`;
+  try {
+    const res = await fetch(url, {
+      headers: { 'User-Agent': 'guide-perols/0.1 (gilles@layer.com)' },
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (!Array.isArray(data) || data.length === 0) return null;
+    return { lat: parseFloat(data[0].lat), lon: parseFloat(data[0].lon) };
+  } catch {
+    return null;
+  }
+}
+
 async function resolveRow(row) {
   let url = row.url;
   if (url.includes('maps.app.goo.gl') || /^https:\/\/goo\.gl\/maps/.test(url)) {
     try { url = await resolveShortUrl(url); } catch { /* keep original */ }
   }
-  const coords = extractCoordsFromGmapsUrl(url);
-  return { ...row, url, coords };
+  let coords = extractCoordsFromGmapsUrl(url);
+  let resolvedByNominatim = false;
+  if (!coords) {
+    coords = await geocodeByName(row.title);
+    if (coords) resolvedByNominatim = true;
+  }
+  return { ...row, url, coords, resolvedByNominatim };
 }
 
 export function escapeYaml(s) {
@@ -86,7 +117,7 @@ export function escapeYaml(s) {
     .replace(/[\r\n]+/g, ' ')}"`;
 }
 
-function toMarkdown(row) {
+export function toMarkdown(row) {
   const slug = slugify(row.title);
   const lines = [
     '---',
@@ -99,10 +130,12 @@ function toMarkdown(row) {
     `  google_maps: ${escapeYaml(row.url)}`,
     `source: "google-takeout"`,
     `google_category: ""`,
-    '---',
-    row.note ? `<!-- Note Google: ${row.note} -->` : '',
-    '',
   ];
+  if (row.tags) lines.push(`tags: ${escapeYaml(row.tags)}`);
+  if (row.comment) lines.push(`comment: ${escapeYaml(row.comment)}`);
+  lines.push('---');
+  lines.push(row.note ? `<!-- Note Google: ${row.note} -->` : '');
+  lines.push('');
   return { slug, content: lines.join('\n') };
 }
 
@@ -134,6 +167,12 @@ async function main() {
   const withCoords = resolved.filter((r) => r.coords);
   const inRange = withCoords.filter((r) => haversineKm(HOUSE, r.coords) <= RADIUS_KM);
   const written = [];
+  let resolvedByNominatimCount = 0;
+  const nominatimMisses = [];
+  for (const r of resolved) {
+    if (r.resolvedByNominatim) resolvedByNominatimCount++;
+    if (!r.coords && r.title.trim()) nominatimMisses.push(r.title);
+  }
   for (const r of inRange) {
     if (!r.title.trim()) continue;
     const { slug, content } = toMarkdown(r);
@@ -153,6 +192,8 @@ async function main() {
     written: written.length,
     skipped_no_coords: resolved.length - withCoords.length,
     skipped_out_of_range: withCoords.length - inRange.length,
+    resolved_by_nominatim: resolvedByNominatimCount,
+    nominatim_misses: nominatimMisses,
   };
   writeFileSync(REPORT, JSON.stringify(report, null, 2));
   console.log('\n--- Import report ---');
