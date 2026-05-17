@@ -232,14 +232,19 @@ const houseLngLat = house ? [house.lon, house.lat] : null;
     });
 
     // Category filter
-    window.addEventListener('category:filter', (e: any) => {
-      const cat = e.detail.category;
+    function applyCatFilter(cat: string) {
       if (cat === 'all' || !cat) {
         map.setFilter('places-dots', null);
       } else {
         map.setFilter('places-dots', ['==', ['get', 'category'], cat]);
       }
+    }
+    window.addEventListener('category:filter', (e: any) => {
+      applyCatFilter(e.detail.category);
     });
+    // Apply initial filter from URL once the layer is ready
+    const initCat = new URLSearchParams(window.location.search).get('cat') ?? 'all';
+    applyCatFilter(initCat);
   });
 </script>
 

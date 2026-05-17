@@ -57,21 +57,63 @@ const center = house;
   const list = document.getElementById('view-list')!;
   const btn = document.getElementById('view-toggle')!;
 
-  let isList = false;
-  btn.addEventListener('click', () => {
-    isList = !isList;
+  function urlState() {
+    const p = new URLSearchParams(window.location.search);
+    return { view: p.get('view') ?? 'map', cat: p.get('cat') ?? 'all' };
+  }
+
+  function pushState(view: string, cat: string) {
+    const p = new URLSearchParams();
+    if (view && view !== 'map') p.set('view', view);
+    if (cat && cat !== 'all') p.set('cat', cat);
+    const qs = p.toString();
+    const newUrl = window.location.pathname + (qs ? '?' + qs : '');
+    history.replaceState(null, '', newUrl);
+  }
+
+  function applyView(view: string) {
+    const isList = view === 'list';
     map.hidden = isList;
     list.hidden = !isList;
     btn.textContent = isList ? 'Carte' : 'Liste';
+  }
+
+  function applyCat(cat: string) {
+    // Update list view visibility
+    list.querySelectorAll('article[data-category]').forEach((el) => {
+      const c = (el as HTMLElement).dataset.category;
+      (el as HTMLElement).hidden = !(cat === 'all' || c === cat);
+    });
+    // Update chip active state
+    document.querySelectorAll('.chip').forEach((c) => c.classList.remove('active'));
+    const target = document.querySelector(`.chip[data-category="${cat}"]`);
+    target?.classList.add('active');
+  }
+
+  // Initial state from URL
+  const init = urlState();
+  applyView(init.view);
+  applyCat(init.cat);
+  // Dispatch the initial filter so the map layer + popup respect it
+  window.dispatchEvent(new CustomEvent('category:filter', { detail: { category: init.cat } }));
+
+  // View toggle
+  btn.addEventListener('click', () => {
+    const cur = urlState();
+    const next = cur.view === 'list' ? 'map' : 'list';
+    applyView(next);
+    pushState(next, cur.cat);
   });
 
-  // Sync category filter to list view as well.
+  // Sync category filter changes + URL
   window.addEventListener('category:filter', (e: any) => {
     const cat = e.detail.category;
     list.querySelectorAll('article[data-category]').forEach((el) => {
       const c = (el as HTMLElement).dataset.category;
       (el as HTMLElement).hidden = !(cat === 'all' || c === cat);
     });
+    const cur = urlState();
+    pushState(cur.view, cat);
   });
 </script>
 
