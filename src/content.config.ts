@@ -22,6 +22,7 @@ const places = defineCollection({
     google_category: z.string().optional(),
     tags: z.string().optional(),
     comment: z.string().optional(),
+    description: z.string().optional(),
   }),
 });
 
