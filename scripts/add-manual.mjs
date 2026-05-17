@@ -10,11 +10,7 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Le Tomatologue', category: 'fruits-legumes', query: 'Le Tomatologue, Lattes, France' },
-  { name: 'Chez Estela', category: 'fruits-legumes', query: 'Chez Estela, Saint-Aunès, France' },
-  { name: 'La Cueillette de Fontmarie', category: 'fruits-legumes', query: 'La Cueillette de Fontmarie, Castries, France' },
-  { name: 'Les Vergers de Saint-Jean', category: 'fruits-legumes', query: 'Les Vergers de Saint-Jean, France' },
-  { name: "Chez l'Indien", category: 'fruits-legumes', query: "Chez l'Indien, Montpellier, France" },
+  { name: 'Ōme Chocolat', category: 'boutique', query: 'Ōme Chocolat, Montpellier, France' },
 ];
 
 function escapeYaml(s) {
