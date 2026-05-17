@@ -295,18 +295,19 @@ const houseLngLat = house ? [house.lon, house.lat] : null;
     padding: 0;
     box-shadow: 0 4px 16px rgba(0,0,0,0.18);
     overflow: hidden;
-    min-width: 140px;
-    max-width: 160px;
+    width: max-content;
+    max-width: 220px;
   }
   :global(.hover-popup-inner) {
     display: flex;
     flex-direction: column;
   }
   :global(.hover-popup-img) {
-    width: 120px;
-    height: 90px;
-    object-fit: cover;
     display: block;
+    max-width: 220px;
+    max-height: 220px;
+    width: auto;
+    height: auto;
     filter: saturate(0.92) contrast(1.06);
   }
   :global(.hover-popup-eyebrow) {
