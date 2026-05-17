@@ -7,6 +7,7 @@ const { categories } = Astro.props;
 const sorted = [...categories].sort((a, b) => a.order - b.order);
 ---
 <nav class="chips" aria-label="Filtrer par catégorie">
+  <button class="chip chip-favorites" data-category="favorites">★ Favoris</button>
   <button class="chip active" data-category="all">Tout</button>
   {sorted.map((c) => (
     <button class="chip" data-category={c.slug} style={`--chip-color: ${c.color};`}>
@@ -65,6 +66,16 @@ const sorted = [...categories].sort((a, b) => a.order - b.order);
   }
   .chip.active {
     background: var(--chip-color, var(--color-ink));
+    color: var(--color-bg);
+    border-color: transparent;
+  }
+  .chip-favorites {
+    --chip-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+  .chip-favorites.active {
+    background: var(--color-accent);
     color: var(--color-bg);
     border-color: transparent;
   }

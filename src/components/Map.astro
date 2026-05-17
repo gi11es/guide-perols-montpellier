@@ -239,16 +239,35 @@ const houseLngLat = house ? [house.lon, house.lat] : null;
       }
     });
 
+    // Bookmark helpers
+    function getBookmarks(): string[] {
+      try { return JSON.parse(localStorage.getItem('guide:bookmarks') ?? '[]'); } catch { return []; }
+    }
+
     // Category filter
+    let currentCat = 'all';
     function applyCatFilter(cat: string) {
+      currentCat = cat;
       if (cat === 'all' || !cat) {
         map.setFilter('places-dots', null);
+      } else if (cat === 'favorites') {
+        const slugs = getBookmarks();
+        if (slugs.length === 0) {
+          // Show nothing when no bookmarks
+          map.setFilter('places-dots', ['literal', false] as any);
+        } else {
+          map.setFilter('places-dots', ['in', ['get', 'slug'], ['literal', slugs]] as any);
+        }
       } else {
         map.setFilter('places-dots', ['==', ['get', 'category'], cat]);
       }
     }
     window.addEventListener('category:filter', (e: any) => {
       applyCatFilter(e.detail.category);
+    });
+    // Re-apply favorites filter when bookmarks change
+    window.addEventListener('bookmark:changed', () => {
+      if (currentCat === 'favorites') applyCatFilter('favorites');
     });
     // Apply initial filter from URL once the layer is ready
     const initCat = new URLSearchParams(window.location.search).get('cat') ?? 'all';

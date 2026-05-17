@@ -39,6 +39,10 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
   const { detail, catBySlug, baseUrl } = (window as any).__GUIDE_SHEET__;
   const byslug = Object.fromEntries(detail.map((d: any) => [d.slug, d]));
 
+  function getBookmarks(): string[] {
+    try { return JSON.parse(localStorage.getItem('guide:bookmarks') ?? '[]'); } catch { return []; }
+  }
+
   function render(slug: string) {
     const p = byslug[slug];
     if (!p) return;
@@ -52,11 +56,15 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
       p.links.website ? `<li><a href="${p.links.website}" target="_blank" rel="noopener">Site</a></li>` : '',
       insta ? `<li><a href="${insta}" target="_blank" rel="noopener">Instagram</a></li>` : '',
     ].filter(Boolean).join('');
+    const bookmarked = getBookmarks().includes(slug);
     body.innerHTML = `
       ${p.hero ? `<img src="${baseUrl}${p.hero.replace(/^\//, '')}" alt="${p.name}" class="sheet-hero" />` : ''}
       <div class="sheet-text">
         <p class="eyebrow" style="color:${cat?.color ?? 'inherit'}">${cat?.label ?? p.category}</p>
-        <h2>${p.name}</h2>
+        <div class="sheet-title-row">
+          <h2>${p.name}</h2>
+          <button class="sheet-star${bookmarked ? ' active' : ''}" data-slug="${slug}" aria-label="Favori">${bookmarked ? '★' : '☆'}</button>
+        </div>
         ${p.description ? `<p class="place-description">${p.description}</p>` : ''}
         <a href="${mapsUrl}" target="_blank" rel="noopener" class="maps-cta">Ouvrir dans Google Maps</a>
         ${secondaryLinks ? `<ul class="links">${secondaryLinks}</ul>` : ''}
@@ -117,6 +125,33 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
   });
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') close();
+  });
+
+  // Star button inside sheet
+  body.addEventListener('click', (e) => {
+    const btn = (e.target as Element).closest<HTMLButtonElement>('.sheet-star');
+    if (!btn) return;
+    const slug = btn.dataset.slug!;
+    // Toggle
+    const bookmarks: string[] = getBookmarks();
+    const idx = bookmarks.indexOf(slug);
+    const next = idx === -1 ? [...bookmarks, slug] : bookmarks.filter((s) => s !== slug);
+    localStorage.setItem('guide:bookmarks', JSON.stringify(next));
+    window.dispatchEvent(new CustomEvent('bookmark:changed', { detail: { bookmarks: next } }));
+    // Update button immediately
+    const isNowBookmarked = next.includes(slug);
+    btn.textContent = isNowBookmarked ? '★' : '☆';
+    btn.classList.toggle('active', isNowBookmarked);
+  });
+
+  // Re-sync star if bookmarks change from outside (e.g. card star click)
+  window.addEventListener('bookmark:changed', (e: any) => {
+    const btn = body.querySelector<HTMLButtonElement>('.sheet-star');
+    if (!btn) return;
+    const slug = btn.dataset.slug!;
+    const isBookmarked = (e.detail.bookmarks as string[]).includes(slug);
+    btn.textContent = isBookmarked ? '★' : '☆';
+    btn.classList.toggle('active', isBookmarked);
   });
 </script>
 
@@ -211,10 +246,43 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
   :global(.sheet-text) {
     padding: var(--space-5) var(--space-5) var(--space-6);
   }
+  :global(.sheet-title-row) {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    margin: var(--space-2) 0;
+  }
+  :global(.sheet-title-row h2) {
+    flex: 1 1 auto;
+    margin: 0;
+  }
   :global(.sheet-text h2) {
     font-family: var(--font-serif);
     font-size: var(--fs-2xl);
     margin: var(--space-2) 0;
+  }
+  :global(.sheet-star) {
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 1px solid var(--color-rule);
+    background: transparent;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--color-ink-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.15s;
+    margin-top: 4px;
+  }
+  :global(.sheet-star:active) { transform: scale(0.88); }
+  :global(.sheet-star.active) {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
   }
   :global(.sheet-text .place-description) {
     font-family: var(--font-serif);

@@ -32,7 +32,7 @@ const center = house;
       {places.map((place) => {
         const cat = catBySlug.get(place.data.category);
         return (
-          <article data-category={place.data.category}>
+          <article data-category={place.data.category} data-slug={place.data.slug}>
             <PlaceCard
               place={place}
               categoryLabel={cat?.label ?? place.data.category}
@@ -78,12 +78,28 @@ const center = house;
     btn.textContent = isList ? 'Carte' : 'Liste';
   }
 
+  function getBookmarks(): string[] {
+    try { return JSON.parse(localStorage.getItem('guide:bookmarks') ?? '[]'); } catch { return []; }
+  }
+
+  function applyListFilter(cat: string) {
+    if (cat === 'favorites') {
+      const bookmarks = new Set(getBookmarks());
+      list.querySelectorAll('article[data-slug]').forEach((el) => {
+        const slug = (el as HTMLElement).dataset.slug;
+        (el as HTMLElement).hidden = !bookmarks.has(slug!);
+      });
+    } else {
+      list.querySelectorAll('article[data-category]').forEach((el) => {
+        const c = (el as HTMLElement).dataset.category;
+        (el as HTMLElement).hidden = !(cat === 'all' || c === cat);
+      });
+    }
+  }
+
   function applyCat(cat: string) {
     // Update list view visibility
-    list.querySelectorAll('article[data-category]').forEach((el) => {
-      const c = (el as HTMLElement).dataset.category;
-      (el as HTMLElement).hidden = !(cat === 'all' || c === cat);
-    });
+    applyListFilter(cat);
     // Update chip active state
     document.querySelectorAll('.chip').forEach((c) => c.classList.remove('active'));
     const target = document.querySelector(`.chip[data-category="${cat}"]`);
@@ -108,12 +124,15 @@ const center = house;
   // Sync category filter changes + URL
   window.addEventListener('category:filter', (e: any) => {
     const cat = e.detail.category;
-    list.querySelectorAll('article[data-category]').forEach((el) => {
-      const c = (el as HTMLElement).dataset.category;
-      (el as HTMLElement).hidden = !(cat === 'all' || c === cat);
-    });
+    applyListFilter(cat);
     const cur = urlState();
     pushState(cur.view, cat);
+  });
+
+  // Re-apply favorites list filter when bookmarks change
+  window.addEventListener('bookmark:changed', () => {
+    const cur = urlState();
+    if (cur.cat === 'favorites') applyListFilter('favorites');
   });
 </script>
 
