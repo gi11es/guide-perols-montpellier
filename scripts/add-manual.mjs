@@ -10,7 +10,7 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Le Petit Jardin', category: 'restaurant', query: 'Le Petit Jardin, Montpellier, France' },
+  { name: 'Bravo Babette', category: 'restaurant', query: 'Bravo Babette, Montpellier, France' },
 ];
 
 function escapeYaml(s) {
