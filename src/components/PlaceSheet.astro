@@ -1,0 +1,145 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Category { slug: string; label: string; color: string; }
+interface Props {
+  places: CollectionEntry<'places'>[];
+  categories: Category[];
+}
+const { places, categories } = Astro.props;
+
+const detail = places.map((p) => ({
+  slug: p.data.slug,
+  name: p.data.name,
+  category: p.data.category,
+  address: p.data.address ?? '',
+  hero: p.data.hero ?? '',
+  links: p.data.links ?? {},
+}));
+const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
+---
+<div id="sheet" class="sheet" aria-hidden="true">
+  <button class="sheet-handle" aria-label="Toggle"></button>
+  <div class="sheet-body"></div>
+</div>
+
+<script is:inline define:vars={{ detail, catBySlug }}>
+  window.__GUIDE_SHEET__ = { detail, catBySlug };
+</script>
+
+<script>
+  const sheet = document.getElementById('sheet')!;
+  const body = sheet.querySelector('.sheet-body') as HTMLElement;
+  const handle = sheet.querySelector('.sheet-handle') as HTMLElement;
+  const { detail, catBySlug } = (window as any).__GUIDE_SHEET__;
+  const byslug = Object.fromEntries(detail.map((d: any) => [d.slug, d]));
+
+  function render(slug: string) {
+    const p = byslug[slug];
+    if (!p) return;
+    const cat = catBySlug[p.category];
+    const insta = p.links.instagram
+      ? `https://instagram.com/${p.links.instagram.replace(/^@/, '')}`
+      : '';
+    body.innerHTML = `
+      ${p.hero ? `<img src="${p.hero}" alt="${p.name}" class="sheet-hero" />` : ''}
+      <p class="eyebrow" style="color:${cat?.color ?? 'inherit'}">${cat?.label ?? p.category}</p>
+      <h2>${p.name}</h2>
+      ${p.address ? `<p class="muted">${p.address}</p>` : ''}
+      <ul class="links">
+        ${p.links.google_maps ? `<li><a href="${p.links.google_maps}" target="_blank" rel="noopener">Google Maps</a></li>` : ''}
+        ${p.links.website ? `<li><a href="${p.links.website}" target="_blank" rel="noopener">Site</a></li>` : ''}
+        ${insta ? `<li><a href="${insta}" target="_blank" rel="noopener">Instagram</a></li>` : ''}
+      </ul>
+      <p class="more"><a href="/place/${p.slug}">Voir la page</a></p>
+    `;
+    sheet.classList.add('open', 'peek');
+    sheet.classList.remove('expanded');
+    sheet.setAttribute('aria-hidden', 'false');
+  }
+
+  function expand() {
+    sheet.classList.add('expanded');
+    sheet.classList.remove('peek');
+  }
+  function collapse() {
+    sheet.classList.remove('expanded');
+    sheet.classList.add('peek');
+  }
+  function close() {
+    sheet.classList.remove('open', 'peek', 'expanded');
+    sheet.setAttribute('aria-hidden', 'true');
+  }
+
+  handle.addEventListener('click', () => {
+    if (sheet.classList.contains('expanded')) collapse();
+    else expand();
+  });
+
+  window.addEventListener('place:select', (e: any) => {
+    render(e.detail.slug);
+  });
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+</script>
+
+<style>
+  .sheet {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-bg);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    box-shadow: 0 -8px 32px rgba(0,0,0,0.15);
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 20;
+    max-height: 85dvh;
+    overflow: hidden;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .sheet.open.peek { transform: translateY(calc(100% - 160px)); }
+  .sheet.open.expanded { transform: translateY(0); }
+  .sheet-handle {
+    display: block;
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--color-rule);
+    border: none;
+    margin: var(--space-3) auto;
+    cursor: pointer;
+  }
+  .sheet-body {
+    padding: 0 var(--space-5) var(--space-6);
+    max-height: calc(85dvh - 32px);
+    overflow-y: auto;
+  }
+  :global(.sheet-hero) {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    filter: saturate(0.95) contrast(1.05);
+    margin-bottom: var(--space-4);
+  }
+  :global(.sheet-body h2) {
+    font-family: var(--font-serif);
+    font-size: var(--fs-2xl);
+    margin: var(--space-2) 0;
+  }
+  :global(.sheet-body .links) {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-3) 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-5);
+    font-size: var(--fs-sm);
+  }
+  :global(.sheet-body .more) {
+    margin-top: var(--space-4);
+    font-size: var(--fs-sm);
+  }
+</style>
