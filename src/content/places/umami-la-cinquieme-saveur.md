@@ -1,7 +1,7 @@
 ---
 name: "Umami - La cinquième saveur"
 slug: umami-la-cinquieme-saveur
-category: uncategorized
+category: restaurant
 lat: 43.6119661
 lon: 3.8735697
 links:

@@ -1,7 +1,7 @@
 ---
 name: "Tiger Noodles Antigone"
 slug: tiger-noodles-antigone
-category: uncategorized
+category: restaurant
 lat: 43.6083173
 lon: 3.8890639
 links:

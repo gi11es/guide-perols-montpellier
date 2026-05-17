@@ -10,8 +10,7 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Scholler', category: 'boulangerie', query: 'Scholler boulangerie, Lattes, France' },
-  { name: 'Des Pains et des Rêves', category: 'boulangerie', query: 'Des Pains et des Rêves, Montpellier, France' },
+  { name: 'Halles et Manger', category: 'restaurant', query: 'Halles et Manger, Sète, France' },
 ];
 
 function escapeYaml(s) {

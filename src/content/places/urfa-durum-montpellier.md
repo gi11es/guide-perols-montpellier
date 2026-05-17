@@ -1,7 +1,7 @@
 ---
 name: "Urfa Dürüm - Montpellier"
 slug: urfa-durum-montpellier
-category: uncategorized
+category: restaurant
 lat: 43.602895
 lon: 3.8714132999999995
 address: "33 Av. Georges Clemenceau, 34000 Montpellier, France"
