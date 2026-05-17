@@ -1,7 +1,7 @@
 ---
 name: "Salins de Villeneuve-lès-Maguelone"
 slug: salins-villeneuve
-category: enfants
+category: nature
 lat: 43.5178157
 lon: 3.8488774
 address: "34750 Villeneuve-lès-Maguelone, France"
