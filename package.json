@@ -15,13 +15,13 @@
     "build-tiles": "tsx scripts/build-tiles.mjs"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.9",
-    "astro": "^6.3.3",
-    "typescript": "^6.0.3"
+    "astro": "^6.3.3"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.9",
     "@types/node": "^25.8.0",
     "tsx": "^4.22.1",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.6"
   }
 }
