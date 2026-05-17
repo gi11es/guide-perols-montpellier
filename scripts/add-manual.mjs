@@ -10,9 +10,8 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Trampoline Park Lattes', category: 'enfants', query: 'Trampoline Park Montpellier Lattes, France' },
-  { name: 'Laser Game Evolution Odysseum', category: 'enfants', query: 'Laser Game Evolution Odysseum Montpellier, France' },
-  { name: "Bowlingstar Près d'Arènes", category: 'enfants', query: 'Bowlingstar Montpellier Marché Gare, France' },
+  { name: 'Cimetière marin Saint-Charles', category: 'culture', query: 'Cimetière marin Saint-Charles, Sète, France' },
+  { name: 'Halles centrales de Sète', category: 'boutique', query: 'Halles Sète, France' },
 ];
 
 function escapeYaml(s) {
