@@ -63,7 +63,7 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
   });
 
   map.on('load', () => {
-    const markers: { category: string; marker: maplibregl.Marker }[] = [];
+    const markers: { slug: string; category: string; marker: maplibregl.Marker; element: HTMLElement }[] = [];
     let activePopup: maplibregl.Popup | null = null;
 
     // Only show hover popups on non-touch devices
@@ -106,7 +106,7 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
       }
 
       const marker = new maplibregl.Marker({ element: dot }).setLngLat([p.lon, p.lat]).addTo(map);
-      markers.push({ category: p.category, marker });
+      markers.push({ slug: p.slug, category: p.category, marker, element: dot });
     }
 
     window.addEventListener('category:filter', (e: any) => {
@@ -114,6 +114,19 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
       for (const m of markers) {
         const visible = cat === 'all' || m.category === cat;
         m.marker.getElement().style.display = visible ? '' : 'none';
+      }
+    });
+
+    window.addEventListener('place:select', (e: any) => {
+      const slug = e.detail.slug;
+      for (const m of markers) {
+        m.element.classList.toggle('selected', m.slug === slug);
+      }
+    });
+
+    window.addEventListener('place:deselect', () => {
+      for (const m of markers) {
+        m.element.classList.remove('selected');
       }
     });
   });
@@ -137,6 +150,12 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
     transition: transform 0.15s ease;
   }
   :global(.place-dot:active) { transform: scale(1.2); }
+  :global(.place-dot.selected) {
+    outline: 3px solid var(--color-ink, #1A1814);
+    outline-offset: 3px;
+    transform: scale(1.25);
+    z-index: 2;
+  }
   :global(.place-dot:focus-visible) {
     outline: 2px solid var(--color-accent, #C25B3F);
     outline-offset: 3px;

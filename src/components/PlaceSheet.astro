@@ -20,7 +20,6 @@ const detail = places.map((p) => ({
 }));
 const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
 ---
-<div id="sheet-backdrop" class="sheet-backdrop"></div>
 <div id="sheet" class="sheet" aria-hidden="true">
   <button class="sheet-handle" aria-label="Fermer"></button>
   <button class="sheet-close" aria-label="Fermer">×</button>
@@ -33,7 +32,6 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
 
 <script>
   const sheet = document.getElementById('sheet')!;
-  const backdrop = document.getElementById('sheet-backdrop')!;
   const body = sheet.querySelector('.sheet-body') as HTMLElement;
   const handle = sheet.querySelector('.sheet-handle') as HTMLElement;
   const closeBtn = sheet.querySelector('.sheet-close') as HTMLElement;
@@ -58,7 +56,6 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
       <div class="sheet-text">
         <p class="eyebrow" style="color:${cat?.color ?? 'inherit'}">${cat?.label ?? p.category}</p>
         <h2>${p.name}</h2>
-        ${p.address ? `<p class="muted">${p.address}</p>` : ''}
         ${p.description ? `<p class="place-description">${p.description}</p>` : ''}
         <a href="${mapsUrl}" target="_blank" rel="noopener" class="maps-cta">Ouvrir dans Google Maps</a>
         ${secondaryLinks ? `<ul class="links">${secondaryLinks}</ul>` : ''}
@@ -66,19 +63,17 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
     `;
     body.scrollTop = 0;
     sheet.classList.add('open');
-    backdrop.classList.add('open');
     sheet.setAttribute('aria-hidden', 'false');
   }
 
   function close() {
     sheet.classList.remove('open');
-    backdrop.classList.remove('open');
     sheet.setAttribute('aria-hidden', 'true');
+    window.dispatchEvent(new CustomEvent('place:deselect'));
   }
 
   handle.addEventListener('click', close);
   closeBtn.addEventListener('click', close);
-  backdrop.addEventListener('click', close);
 
   window.addEventListener('place:select', (e: any) => {
     render(e.detail.slug);
@@ -89,19 +84,6 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
 </script>
 
 <style>
-  .sheet-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0);
-    pointer-events: none;
-    transition: background 0.25s ease;
-    z-index: 19;
-  }
-  .sheet-backdrop.open {
-    background: rgba(0, 0, 0, 0.18);
-    pointer-events: auto;
-  }
-
   .sheet {
     position: fixed;
     left: 0;
