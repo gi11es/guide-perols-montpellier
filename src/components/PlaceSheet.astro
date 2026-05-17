@@ -23,6 +23,7 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
 <div id="sheet-backdrop" class="sheet-backdrop"></div>
 <div id="sheet" class="sheet" aria-hidden="true">
   <button class="sheet-handle" aria-label="Fermer"></button>
+  <button class="sheet-close" aria-label="Fermer">×</button>
   <div class="sheet-body"></div>
 </div>
 
@@ -35,6 +36,7 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
   const backdrop = document.getElementById('sheet-backdrop')!;
   const body = sheet.querySelector('.sheet-body') as HTMLElement;
   const handle = sheet.querySelector('.sheet-handle') as HTMLElement;
+  const closeBtn = sheet.querySelector('.sheet-close') as HTMLElement;
   const { detail, catBySlug } = (window as any).__GUIDE_SHEET__;
   const byslug = Object.fromEntries(detail.map((d: any) => [d.slug, d]));
 
@@ -60,7 +62,6 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
         ${p.description ? `<p class="place-description">${p.description}</p>` : ''}
         <a href="${mapsUrl}" target="_blank" rel="noopener" class="maps-cta">Ouvrir dans Google Maps</a>
         ${secondaryLinks ? `<ul class="links">${secondaryLinks}</ul>` : ''}
-        <p class="more"><a href="/place/${p.slug}">Voir la page</a></p>
       </div>
     `;
     body.scrollTop = 0;
@@ -76,6 +77,7 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
   }
 
   handle.addEventListener('click', close);
+  closeBtn.addEventListener('click', close);
   backdrop.addEventListener('click', close);
 
   window.addEventListener('place:select', (e: any) => {
@@ -116,21 +118,23 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
     flex-direction: column;
     padding-bottom: env(safe-area-inset-bottom);
   }
-  /* On wider screens, constrain to a column anchored bottom-center */
+  .sheet.open { transform: translateY(0); }
+
+  /* On wider screens: right-side drawer */
   @media (min-width: 720px) {
     .sheet {
-      max-width: 520px;
-      left: 50%;
-      right: auto;
-      transform: translate(-50%, 100%);
-      border-radius: var(--radius-lg);
-      bottom: 24px;
-      height: auto;
-      max-height: 80dvh;
+      left: auto;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 420px;
+      height: 100dvh;
+      max-height: none;
+      border-radius: 0;
+      transform: translateX(100%);
     }
-    .sheet.open { transform: translate(-50%, 0); }
+    .sheet.open { transform: translateX(0); }
   }
-  .sheet.open { transform: translateY(0); }
 
   .sheet-handle {
     flex: 0 0 auto;
@@ -142,6 +146,24 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
     margin: var(--space-3) auto var(--space-2);
     cursor: pointer;
     padding: 0;
+  }
+  .sheet-close {
+    display: none;
+    position: absolute;
+    top: var(--space-3);
+    right: var(--space-3);
+    background: none;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--color-ink-soft);
+    padding: 0;
+    z-index: 1;
+  }
+  @media (min-width: 720px) {
+    .sheet-handle { display: none; }
+    .sheet-close { display: block; }
   }
   .sheet-body {
     flex: 1 1 auto;
@@ -199,10 +221,6 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-3) var(--space-5);
-    font-size: var(--fs-sm);
-  }
-  :global(.sheet-text .more) {
-    margin-top: var(--space-3);
     font-size: var(--fs-sm);
   }
 </style>
