@@ -11,8 +11,8 @@ const { name, address, hero, links } = place.data;
 const slug = place.data.slug;
 ---
 <article class="card">
-  <a href={`/place/${slug}`} class="card-link">
-    {hero && <img src={hero} alt={name} class="hero" loading="lazy" width="800" height="600" />}
+  <a href={`${import.meta.env.BASE_URL}/place/${slug}`} class="card-link">
+    {hero && <img src={`${import.meta.env.BASE_URL}/${hero.replace(/^\//, '')}`} alt={name} class="hero" loading="lazy" width="800" height="600" />}
     <div class="body">
       <p class="eyebrow" style={`color: ${categoryColor};`}>{categoryLabel}</p>
       <h2>{name}</h2>

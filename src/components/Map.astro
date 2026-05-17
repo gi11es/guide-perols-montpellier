@@ -9,6 +9,7 @@ interface Props {
 }
 const { places, categories, center } = Astro.props;
 
+const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const placeData = places.map((p) => ({
   slug: p.data.slug,
   name: p.data.name,
@@ -22,8 +23,8 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
 ---
 <div id="map" data-center={`${center.lon},${center.lat}`}></div>
 
-<script is:inline define:vars={{ placeData, catColors, catLabels }}>
-  window.__GUIDE__ = { placeData, catColors, catLabels };
+<script is:inline define:vars={{ placeData, catColors, catLabels, baseUrl }}>
+  window.__GUIDE__ = { placeData, catColors, catLabels, baseUrl };
 </script>
 
 <script>
@@ -38,7 +39,7 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
 
   const el = document.getElementById('map')!;
   const [lon, lat] = el.dataset.center!.split(',').map(Number);
-  const { placeData, catColors, catLabels } = (window as any).__GUIDE__;
+  const { placeData, catColors, catLabels, baseUrl } = (window as any).__GUIDE__;
 
   // Remote pmtiles basemap (Protomaps public demo bucket).
   // Replace with self-hosted /tiles/perols-100km.pmtiles after running `npm run build-tiles`.
@@ -85,7 +86,7 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
           if (activePopup) { activePopup.remove(); activePopup = null; }
           const html = `
             <div class="hover-popup-inner">
-              ${p.hero ? `<img class="hover-popup-img" src="${p.hero}" alt="${p.name}" />` : ''}
+              ${p.hero ? `<img class="hover-popup-img" src="${baseUrl}${p.hero.replace(/^\//, '')}" alt="${p.name}" />` : ''}
               <p class="hover-popup-eyebrow" style="color:${color}">${label}</p>
               <h3 class="hover-popup-name">${p.name}</h3>
             </div>

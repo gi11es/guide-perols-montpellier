@@ -27,7 +27,7 @@ const mapsUrl = links.google_maps
   <article>
     {hero && (
       <figure class="hero-figure">
-        <img src={hero} alt={name} width="1600" height="1200" />
+        <img src={`${import.meta.env.BASE_URL}/${hero.replace(/^\//, '')}`} alt={name} width="1600" height="1200" />
         {hero_credit && <figcaption>{hero_credit}</figcaption>}
       </figure>
     )}
@@ -47,7 +47,7 @@ const mapsUrl = links.google_maps
       <Links links={links} />
     </section>
     <nav class="container back">
-      <a href="/">← Retour à la carte</a>
+      <a href={import.meta.env.BASE_URL}>← Retour à la carte</a>
     </nav>
   </article>
 </Base>

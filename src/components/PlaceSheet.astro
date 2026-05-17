@@ -6,6 +6,7 @@ interface Props {
   categories: Category[];
 }
 const { places, categories } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 
 const detail = places.map((p) => ({
   slug: p.data.slug,
@@ -26,8 +27,8 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
   <div class="sheet-body"></div>
 </div>
 
-<script is:inline define:vars={{ detail, catBySlug }}>
-  window.__GUIDE_SHEET__ = { detail, catBySlug };
+<script is:inline define:vars={{ detail, catBySlug, baseUrl }}>
+  window.__GUIDE_SHEET__ = { detail, catBySlug, baseUrl };
 </script>
 
 <script>
@@ -35,7 +36,7 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
   const body = sheet.querySelector('.sheet-body') as HTMLElement;
   const handle = sheet.querySelector('.sheet-handle') as HTMLElement;
   const closeBtn = sheet.querySelector('.sheet-close') as HTMLElement;
-  const { detail, catBySlug } = (window as any).__GUIDE_SHEET__;
+  const { detail, catBySlug, baseUrl } = (window as any).__GUIDE_SHEET__;
   const byslug = Object.fromEntries(detail.map((d: any) => [d.slug, d]));
 
   function render(slug: string) {
@@ -52,7 +53,7 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
       insta ? `<li><a href="${insta}" target="_blank" rel="noopener">Instagram</a></li>` : '',
     ].filter(Boolean).join('');
     body.innerHTML = `
-      ${p.hero ? `<img src="${p.hero}" alt="${p.name}" class="sheet-hero" />` : ''}
+      ${p.hero ? `<img src="${baseUrl}${p.hero.replace(/^\//, '')}" alt="${p.name}" class="sheet-hero" />` : ''}
       <div class="sheet-text">
         <p class="eyebrow" style="color:${cat?.color ?? 'inherit'}">${cat?.label ?? p.category}</p>
         <h2>${p.name}</h2>
