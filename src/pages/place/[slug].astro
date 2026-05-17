@@ -17,9 +17,11 @@ export async function getStaticPaths() {
 
 interface Props { place: CollectionEntry<'places'>; }
 const { place } = Astro.props;
-const { name, address, hero, hero_credit, links, category } = place.data;
+const { name, address, hero, hero_credit, links, category, lat, lon, description } = place.data;
 const cat = categories.find((c) => c.slug === category);
 const { Content } = await render(place);
+const mapsUrl = links.google_maps
+  || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}+${lat},${lon}`;
 ---
 <Base title={`${name} — Guide de Pérols`}>
   <article>
@@ -35,8 +37,10 @@ const { Content } = await render(place);
       </p>
       <h1>{name}</h1>
       {address && <p class="muted">{address}</p>}
+      <a href={mapsUrl} target="_blank" rel="noopener" class="maps-cta">Ouvrir dans Google Maps</a>
     </header>
     <section class="container prose">
+      {description && <p class="place-description">{description}</p>}
       <Content />
     </section>
     <section class="container">
@@ -67,6 +71,32 @@ const { Content } = await render(place);
   .header {
     padding-top: var(--space-7);
     padding-bottom: var(--space-4);
+  }
+  .maps-cta {
+    display: inline-block;
+    background: var(--color-ink);
+    color: var(--color-bg);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    margin-top: var(--space-4);
+  }
+  @media (max-width: 719px) {
+    .maps-cta {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  }
+  .place-description {
+    font-family: var(--font-serif);
+    font-size: var(--fs-lg);
+    line-height: var(--lh-loose);
+    color: var(--color-ink-soft);
+    margin-bottom: var(--space-5);
   }
   .prose {
     font-family: var(--font-serif);
