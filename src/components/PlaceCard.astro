@@ -7,7 +7,7 @@ interface Props {
   categoryColor: string;
 }
 const { place, categoryLabel, categoryColor } = Astro.props;
-const { name, address, hero, links, lat, lon } = place.data;
+const { name, hero, links, lat, lon, description } = place.data;
 const mapsUrl = links?.google_maps
   ?? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}+${lat},${lon}`;
 ---
@@ -17,7 +17,7 @@ const mapsUrl = links?.google_maps
     <div class="body">
       <p class="eyebrow" style={`color: ${categoryColor};`}>{categoryLabel}</p>
       <h2>{name}</h2>
-      {address && <p class="muted address">{address}</p>}
+      {description && <p class="description">{description}</p>}
     </div>
   </a>
   <Links links={links} />
@@ -42,8 +42,11 @@ const mapsUrl = links?.google_maps
     font-size: var(--fs-xl);
     margin: var(--space-2) 0;
   }
-  .address {
-    font-size: var(--fs-sm);
-    margin-top: var(--space-1);
+  .description {
+    font-family: var(--font-serif);
+    font-size: var(--fs-lg);
+    line-height: var(--lh-loose);
+    color: var(--color-ink-soft);
+    margin-top: var(--space-2);
   }
 </style>
