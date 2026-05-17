@@ -224,8 +224,9 @@ A single Markdown file with H2 sections: Urgences, Médecin, Pharmacie, Taxi / V
 ### Phase 4 — Tiles
 
 `npm run build-tiles` (one-time):
-1. Extract a `.pmtiles` file from the OpenStreetMap planet (or a regional excerpt) clipped to ~100km around Pérols.
-2. Output to `public/tiles/perols-100km.pmtiles`.
+1. Download the Languedoc-Roussillon regional OSM extract from Geofabrik (a few hundred MB, not the full planet).
+2. Use the `pmtiles` CLI / Protomaps tooling to convert + clip to a ~100km bounding box around Pérols.
+3. Output to `public/tiles/perols-100km.pmtiles` (target: under 100 MB).
 
 ### Phase 5 — Build & deploy
 
