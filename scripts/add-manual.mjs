@@ -18,7 +18,7 @@ function escapeYaml(s) {
 }
 
 let lastNominatim = 0;
-async function geocode(query) {
+async function geocodeNominatim(query) {
   const since = Date.now() - lastNominatim;
   if (since < 1100) await new Promise((r) => setTimeout(r, 1100 - since));
   lastNominatim = Date.now();
@@ -31,6 +31,36 @@ async function geocode(query) {
   const data = await res.json();
   if (!Array.isArray(data) || data.length === 0) return null;
   return { lat: parseFloat(data[0].lat), lon: parseFloat(data[0].lon), display: data[0].display_name };
+}
+
+async function geocodeGoogle(query) {
+  const key = process.env.GOOGLE_PLACES_API_KEY;
+  if (!key) return null;
+  const res = await fetch('https://places.googleapis.com/v1/places:searchText', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Goog-Api-Key': key,
+      'X-Goog-FieldMask': 'places.displayName,places.location,places.formattedAddress',
+    },
+    body: JSON.stringify({
+      textQuery: query,
+      locationBias: {
+        circle: { center: { latitude: 43.5546662, longitude: 3.9642029 }, radius: 50_000 },
+      },
+      maxResultCount: 1,
+    }),
+    signal: AbortSignal.timeout(10_000),
+  });
+  if (!res.ok) return null;
+  const data = await res.json();
+  const p = data?.places?.[0];
+  if (!p) return null;
+  return { lat: p.location.latitude, lon: p.location.longitude, display: p.formattedAddress ?? '' };
+}
+
+async function geocode(query) {
+  return (await geocodeNominatim(query)) ?? (await geocodeGoogle(query));
 }
 
 async function main() {
