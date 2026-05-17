@@ -20,10 +20,18 @@ const sorted = [...categories].sort((a, b) => a.order - b.order);
   nav.addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
     if (!target.classList.contains('chip')) return;
-    nav.querySelectorAll('.chip').forEach((c) => c.classList.remove('active'));
-    target.classList.add('active');
     const cat = target.dataset.category!;
-    window.dispatchEvent(new CustomEvent('category:filter', { detail: { category: cat } }));
+    // If user clicks the already-active non-"all" chip, deselect (go back to all).
+    const isToggleOff = target.classList.contains('active') && cat !== 'all';
+    nav.querySelectorAll('.chip').forEach((c) => c.classList.remove('active'));
+    if (isToggleOff) {
+      const allChip = nav.querySelector('.chip[data-category="all"]');
+      allChip?.classList.add('active');
+      window.dispatchEvent(new CustomEvent('category:filter', { detail: { category: 'all' } }));
+    } else {
+      target.classList.add('active');
+      window.dispatchEvent(new CustomEvent('category:filter', { detail: { category: cat } }));
+    }
   });
 </script>
 

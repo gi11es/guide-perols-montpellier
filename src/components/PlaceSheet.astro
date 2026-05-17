@@ -134,16 +134,21 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
     display: none;
     position: absolute;
     top: var(--space-3);
-    right: var(--space-3);
-    background: none;
+    left: var(--space-3);
+    background: rgba(26, 24, 20, 0.92);
+    color: var(--color-bg);
     border: none;
-    font-size: 28px;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    font-size: 20px;
     line-height: 1;
     cursor: pointer;
-    color: var(--color-ink-soft);
     padding: 0;
-    z-index: 1;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
   }
+  .sheet-close:hover { background: var(--color-ink); }
   @media (min-width: 720px) {
     .sheet-handle { display: none; }
     .sheet-close { display: block; }
