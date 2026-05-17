@@ -1,0 +1,27 @@
+{
+  "name": "guide-perols-montpellier",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "import": "tsx scripts/import-takeout.mjs",
+    "photos": "tsx scripts/fetch-photos.mjs",
+    "build-tiles": "tsx scripts/build-tiles.mjs"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.9",
+    "astro": "^6.3.3",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.8.0",
+    "tsx": "^4.22.1",
+    "vitest": "^4.1.6"
+  }
+}
