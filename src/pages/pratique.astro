@@ -1,0 +1,26 @@
+---
+import Base from '~/layouts/Base.astro';
+import { Content } from '~/data/pratique.md';
+---
+<Base title="Pratique — Guide de Pérols">
+  <main class="container">
+    <p class="eyebrow"><a href="/">← Retour</a></p>
+    <article class="prose">
+      <Content />
+    </article>
+  </main>
+</Base>
+
+<style>
+  .container { padding-top: var(--space-7); padding-bottom: var(--space-9); }
+  .prose :global(h1) { font-size: var(--fs-2xl); }
+  .prose :global(h2) {
+    font-size: var(--fs-xl);
+    margin-top: var(--space-7);
+    margin-bottom: var(--space-2);
+  }
+  .prose :global(ul) {
+    padding-left: var(--space-5);
+    line-height: var(--lh-loose);
+  }
+</style>
