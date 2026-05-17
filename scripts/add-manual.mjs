@@ -10,15 +10,9 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Maison Carrée', category: 'culture', query: 'Maison Carrée, Nîmes, France' },
-  { name: 'Carrières des Lumières', category: 'culture', query: 'Carrières des Lumières, Les Baux-de-Provence, France' },
-  { name: 'Halle Tropisme', category: 'culture', query: 'Halle Tropisme, Montpellier, France' },
-  { name: 'Aquarium Mare Nostrum', category: 'culture', query: 'Aquarium Mare Nostrum, Montpellier, France' },
-  { name: 'Fondation Vincent Van Gogh', category: 'culture', query: 'Fondation Vincent Van Gogh, Arles, France' },
-  { name: 'Carré Sainte-Anne', category: 'culture', query: 'Carré Sainte-Anne, Montpellier, France' },
-  { name: 'Jardins de la Fontaine', category: 'culture', query: 'Jardins de la Fontaine, Nîmes, France' },
-  { name: 'Centre Équestre Saint-Pierre', category: 'enfants', query: 'Centre Équestre Saint-Pierre, Lattes, France' },
-  { name: 'Écurie des Dunes', category: 'enfants', query: 'Ecurie des Dunes, Le Grau-du-Roi, France' },
+  { name: 'La Fabrique à Choux', category: 'boulangerie', query: 'La Fabrique à Choux, Pérols, France' },
+  { name: 'Boulangerie Pâtisserie Cenatiempo', category: 'boulangerie', query: 'Boulangerie Pâtisserie Cenatiempo, Castelnau-le-Lez, France' },
+  { name: 'Clara Jung Pâtisserie', category: 'boulangerie', query: 'Clara Jung Pâtisserie, Montpellier, France' },
 ];
 
 function escapeYaml(s) {

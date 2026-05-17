@@ -1,6 +1,6 @@
 [
   { "slug": "restaurant", "label": "Restaurants", "color": "#7A8B3A", "order": 1 },
-  { "slug": "boulangerie", "label": "Boulangeries", "color": "#C9A857", "order": 2 },
+  { "slug": "boulangerie", "label": "Boulangeries & Pâtisseries", "color": "#C9A857", "order": 2 },
   { "slug": "fruits-legumes", "label": "Fruits & Légumes", "color": "#5C8C4C", "order": 3 },
   { "slug": "nature", "label": "Nature, Parcs & Plages", "color": "#4A7C8F", "order": 4 },
   { "slug": "enfants", "label": "Activités enfants", "color": "#7A5C8B", "order": 5 },
