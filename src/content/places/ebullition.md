@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/ebullition/hero.jpg"
 hero_credit: "Ébullition / Google Places"
-description: "Bar à bières artisanales et restaurant dans la vieille ville de Montpellier, avec une carte tournante de brasseries locales et régionales. Une adresse de choix pour les amateurs de craft beer qui veulent explorer la scène brassicole occitane."
+description: "Restaurant gastronomique étoilé Michelin dans la rue du Pila St Gély, cuisine française moderne avec sommellerie soignée. Plats inventifs et accueil chaleureux de la patronne Coralie pour un excellent rapport qualité-prix."
 ---
