@@ -33,7 +33,7 @@ const catColors = Object.fromEntries(categories.map((c) => [c.slug, c.color]));
   const { placeData, catColors } = (window as any).__GUIDE__;
 
   const map = new maplibregl.Map({
-    container: 'map',
+    container: el,
     center: [lon, lat],
     zoom: 10,
     style: {
@@ -43,7 +43,7 @@ const catColors = Object.fromEntries(categories.map((c) => [c.slug, c.color]));
           type: 'raster',
           tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
           tileSize: 256,
-          attribution: '© OpenStreetMap',
+          attribution: '© OpenStreetMap contributors',
         },
       },
       layers: [{ id: 'osm', type: 'raster', source: 'osm' }],
@@ -83,4 +83,8 @@ const catColors = Object.fromEntries(categories.map((c) => [c.slug, c.color]));
     transition: transform 0.15s ease;
   }
   :global(.place-dot:active) { transform: scale(1.2); }
+  :global(.place-dot:focus-visible) {
+    outline: 2px solid var(--color-accent, #C25B3F);
+    outline-offset: 3px;
+  }
 </style>
