@@ -1,7 +1,7 @@
 ---
 name: "La Carioca - boulangerie singulière"
 slug: la-carioca-boulangerie-singuliere
-category: uncategorized
+category: boulangerie
 lat: 43.405856899999996
 lon: 3.6962013000000002
 address: "20 Quai Maréchal de Lattre de Tassigny, 34200 Sète, France"

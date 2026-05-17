@@ -1,7 +1,7 @@
 ---
 name: "Peña Pil Pil"
 slug: pena-pil-pil
-category: uncategorized
+category: restaurant
 lat: 43.5632253
 lon: 3.9527696000000003
 address: "2 Rue Baudin, 34470 Pérols, France"

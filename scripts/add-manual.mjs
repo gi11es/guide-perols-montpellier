@@ -10,8 +10,8 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Musée de la Romanité', category: 'culture', query: 'Musée de la Romanité, Nîmes, France' },
-  { name: 'LUMA Arles', category: 'culture', query: 'LUMA Arles, France' },
+  { name: 'Scholler', category: 'boulangerie', query: 'Scholler boulangerie, Lattes, France' },
+  { name: 'Des Pains et des Rêves', category: 'boulangerie', query: 'Des Pains et des Rêves, Montpellier, France' },
 ];
 
 function escapeYaml(s) {

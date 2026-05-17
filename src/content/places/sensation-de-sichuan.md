@@ -1,7 +1,7 @@
 ---
 name: "Sensation de Sichuan"
 slug: sensation-de-sichuan
-category: uncategorized
+category: restaurant
 lat: 43.6040909
 lon: 3.8957229
 links:

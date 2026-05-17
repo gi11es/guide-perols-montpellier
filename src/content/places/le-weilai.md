@@ -1,7 +1,7 @@
 ---
 name: "Le Weilai"
 slug: le-weilai
-category: uncategorized
+category: restaurant
 lat: 43.6080724
 lon: 3.8754503
 links:

@@ -1,7 +1,7 @@
 ---
 name: "Restaurant Leclère, Cuisine d’arrivage."
 slug: restaurant-leclere-cuisine-d-arrivage
-category: uncategorized
+category: restaurant
 lat: 43.6067829
 lon: 3.8739266999999993
 address: "8 Rue André Michel, 34000 Montpellier, France"

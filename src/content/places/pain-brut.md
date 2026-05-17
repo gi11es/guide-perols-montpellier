@@ -1,7 +1,7 @@
 ---
 name: "Pain Brut"
 slug: pain-brut
-category: uncategorized
+category: boulangerie
 lat: 43.6071938
 lon: 3.8783766
 links:

@@ -1,7 +1,7 @@
 ---
 name: "La Banquise - Ice cream parlor"
 slug: la-banquise-ice-cream-parlor
-category: uncategorized
+category: restaurant
 lat: 43.608553300000004
 lon: 3.8749578999999996
 address: "1 Rue des Multipliants, 34000 Montpellier, France"
