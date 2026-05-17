@@ -1,7 +1,7 @@
 ---
 name: "chez Lanchois"
 slug: chez-lanchois
-category: uncategorized
+category: restaurant
 lat: 43.4213294
 lon: 3.7031055999999998
 address: "Parc Aqua-technique, 9 Rue d'Amsterdam, 34200 Sète, France"

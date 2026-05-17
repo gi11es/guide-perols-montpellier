@@ -10,7 +10,8 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Plage de Maguelone', category: 'nature', query: 'Plage de Maguelone, Villeneuve-lès-Maguelone, France' },
+  { name: 'Musée de la Romanité', category: 'culture', query: 'Musée de la Romanité, Nîmes, France' },
+  { name: 'LUMA Arles', category: 'culture', query: 'LUMA Arles, France' },
 ];
 
 function escapeYaml(s) {

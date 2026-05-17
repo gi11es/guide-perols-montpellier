@@ -1,7 +1,7 @@
 ---
 name: "Bistrot Umami Montpellier"
 slug: bistrot-umami-montpellier
-category: uncategorized
+category: restaurant
 lat: 43.6116351
 lon: 3.8741455
 links:

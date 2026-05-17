@@ -1,7 +1,7 @@
 ---
 name: "Domaine de Verchant"
 slug: domaine-de-verchant
-category: uncategorized
+category: restaurant
 lat: 43.6207458
 lon: 3.9231074
 links:

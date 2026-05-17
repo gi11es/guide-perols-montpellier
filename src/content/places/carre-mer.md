@@ -1,7 +1,7 @@
 ---
 name: "Carré Mer"
 slug: carre-mer
-category: uncategorized
+category: restaurant
 lat: 43.516679
 lon: 3.905185
 links:
