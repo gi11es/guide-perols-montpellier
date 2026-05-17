@@ -38,9 +38,9 @@ const catColors = Object.fromEntries(categories.map((c) => [c.slug, c.color]));
   const [lon, lat] = el.dataset.center!.split(',').map(Number);
   const { placeData, catColors } = (window as any).__GUIDE__;
 
-  // Remote pmtiles basemap (Protomaps sample). Replace with self-hosted
-  // /tiles/perols-100km.pmtiles after running `npm run build-tiles`.
-  const PMTILES_URL = 'https://r2-public.protomaps.com/protomaps-sample-datasets/protomaps-basemap-opensource-20230408.pmtiles';
+  // Remote pmtiles basemap (Protomaps public demo bucket).
+  // Replace with self-hosted /tiles/perols-100km.pmtiles after running `npm run build-tiles`.
+  const PMTILES_URL = 'https://demo-bucket.protomaps.com/v4.pmtiles';
 
   const map = new maplibregl.Map({
     container: el,
