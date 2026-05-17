@@ -11,6 +11,6 @@ source: "manual"
 google_category: "ice_skating_rink"
 hero: "/photos/patinoire-vegapolis/hero.jpg"
 hero_credit: "Patinoire Vegapolis / Google Places"
-description: "Patinoire intérieure avec toboggan en glace, tunnel, spectacles son et lumière, location de patins et cours."
+description: "Patinoire indoor du complexe Odysseum de Montpellier, avec piste olympique, toboggan sur glace, spectacles sons et lumières et cours pour tous niveaux. Une sortie idéale pour les familles, avec location de patins sur place, accessible toute l'année quelle que soit la météo."
 ---
 

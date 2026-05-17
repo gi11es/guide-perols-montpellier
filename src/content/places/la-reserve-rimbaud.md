@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/la-reserve-rimbaud/hero.jpg"
 hero_credit: "La Réserve Rimbaud / Google Places"
-description: "Menus fixes, dégustations et grande carte des vins dans un restaurant raffiné avec terrasse en bord de fleuve."
+description: "Restaurant gastronomique étoilé Michelin sur les rives du Lez, avenue de Saint-Maur à Montpellier, avec terrasse sur l'eau et menus dégustation axés sur les produits méditerranéens. La grande carte des vins et la cuisine précise du chef Charles Fontes en font l'une des meilleures tables de la région."
 ---

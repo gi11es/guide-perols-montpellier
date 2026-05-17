@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/la-poissonnerie-du-bateau-enzo-emma/hero.jpg"
 hero_credit: "La poissonnerie du bateau Enzo Emma / Google Places"
+description: "Poissonnerie directement approvisionnée par le bateau de pêche Enzo Emma, à Carnon, proposant poissons de la Méditerranée et fruits de mer selon les arrivages du jour. L'adresse préférée des riverains pour acheter le poisson le plus frais possible à prix de pêcheur."
 ---

@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/aquarium-mare-nostrum/hero.jpg"
 hero_credit: "Planet Ocean Montpellier / Google Places"
-description: "Vaste aquarium contemporain avec expositions high-tech interactives, notamment un simulateur d'océan en 3D."
+description: "Vaste aquarium contemporain du complexe Odysseum à Montpellier, avec expositions interactives high-tech dont un simulateur d'océan en 3D. Les bassins de requins, raies et méduses fascinent autant les enfants que les adultes dans ce parcours immersif de plusieurs heures."
 ---

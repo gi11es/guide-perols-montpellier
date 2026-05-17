@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/gorges-d-heric/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
-description: "Bassins de baignade populaires au bord d'une rivière, avec des gros rochers, des petites cascades et des eaux fraîches et claires."
+description: "Gorges encaissées dans le massif du Caroux, accessibles à pied depuis Mons-la-Trivalle, avec des bassins naturels de baignade aux eaux cristallines entre cascades et rochers granitiques. L'un des sites de randonnée aquatique les plus fréquentés de l'Hérault en été, à une heure de Montpellier."
 ---

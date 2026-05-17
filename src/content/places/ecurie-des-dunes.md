@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/ecurie-des-dunes/hero.jpg"
 hero_credit: "Ecurie des Dunes - promenade à cheval / Google Places"
+description: "Centre équestre situé dans les dunes de l'Espiguette, proposant des promenades à cheval sur les plages sauvages du Grau-du-Roi. Une expérience rare, entre sable, mer et Camargue, accessible aux débutants comme aux cavaliers confirmés."
 ---

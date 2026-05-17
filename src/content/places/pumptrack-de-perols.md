@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/pumptrack-de-perols/hero.jpg"
 hero_credit: "Jérôme / Google Places"
+description: "Pumptrack en béton situé rue des Vendanges à Pérols, accessible librement et adapté aux vélos, trottinettes et skateboards pour tous niveaux. Un équipement sportif municipal apprécié des enfants et adolescents du quartier, ouvert toute l'année."
 ---

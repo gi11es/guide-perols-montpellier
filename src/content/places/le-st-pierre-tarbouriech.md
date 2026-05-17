@@ -11,5 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/le-st-pierre-tarbouriech/hero.jpg"
 hero_credit: "Le St Pierre Tarbouriech / Google Places"
+description: "Restaurant de la famille Tarbouriech, ostréiculteurs renommés de l'étang de Thau à Loupian, proposant leurs huîtres solaires en dégustation directe sur la zone conchylicole. Une expérience rare, les pieds dans l'eau face aux tables ostréicoles, pour comprendre d'où viennent les meilleures huîtres de Méditerranée."
 ---
 

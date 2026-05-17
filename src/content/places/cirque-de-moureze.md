@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/cirque-de-moureze/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
-description: "Sentiers de randonnée sauvages au milieu de roches calcaires aux formes uniques érodées par le vent et l'eau au fil des millénaires."
+description: "Site naturel classé de l'Hérault, avec un labyrinthe de roches calcaires aux formes sculptées par l'érosion, traversé par des sentiers de randonnée balisés. Le village de Mourèze, niché dans les rochers, complète ce paysage minéral unique à deux pas du lac du Salagou."
 ---

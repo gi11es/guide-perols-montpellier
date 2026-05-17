@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/scholler/hero.jpg"
 hero_credit: "Frédéric G / Google Places"
+description: "Boulangerie-pâtisserie de quartier à Boirargues, Lattes, connue pour ses viennoiseries du matin et sa gamme de pâtisseries maison travaillées avec soin. Une adresse fidèle aux familles du secteur, avec une clientèle d'habitués qui vient chercher sa baguette tradition chaque jour."
 ---

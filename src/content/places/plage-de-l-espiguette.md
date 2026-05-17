@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/plage-de-l-espiguette/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY 4.0"
-description: "Plage sobre avec vaste étendue de sable et 2 restaurants proposant chaises longues et paddles à louer."
+description: "Immense plage de sable fin à l'extrémité de la presqu'île de l'Espiguette, avec des kilomètres de dunes préservées et un caractère naturel exceptionnel classé site Natura 2000. L'éloignement des routes et l'absence d'urbanisation en font une des plages les plus sauvages accessible en voiture depuis Montpellier."
 ---

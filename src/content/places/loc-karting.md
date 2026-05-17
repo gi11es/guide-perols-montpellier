@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/loc-karting/hero.jpg"
 hero_credit: "LOC'KARTING / Google Places"
+description: "Circuit de karting outdoor situé à Pailletrice, aux portes de Pérols, avec des karts pour tous les âges dès 7 ans sur une piste technique de plein air. Une adresse appréciée des familles et des groupes pour une compétition amicale sans permis nécessaire."
 ---

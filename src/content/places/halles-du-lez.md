@@ -10,5 +10,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/halles-du-lez/hero.jpg"
 hero_credit: "Olivier TRAN / Google Places"
+description: "Marché gourmand et festif installé dans une ancienne halle industrielle du quartier du Lez, à Montpellier, avec des dizaines de stands de street food du monde entier. L'ambiance y est chaleureuse le soir, avec terrasses, concerts et buvettes sous les néons."
 ---
 

@@ -10,6 +10,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/umami-la-cinquieme-saveur/hero.jpg"
 hero_credit: "Umami - La cinquième saveur / Google Places"
-description: "Saveurs raffinées de Corée du Sud et du Japon aux produits français dans une salle claire et décontractée."
+description: "Restaurant de cuisine coréo-japonaise dans une salle lumineuse du centre de Montpellier, alliant produits français de qualité et techniques asiatiques pour une expérience umami à part entière. Les bibimbaps, tartares et plats mijotés y sont travaillés avec une précision qui justifie la réputation de la maison."
 ---
 

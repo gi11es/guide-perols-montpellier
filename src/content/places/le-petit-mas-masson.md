@@ -11,5 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/le-petit-mas-masson/hero.jpg"
 hero_credit: "Jordan Dubost / Google Places"
+description: "Restaurant de cuisine du terroir héraultais tenu par les sœurs Masson, dans un mas isolé à Loupian, au bord de l'étang de Thau. Une table confidentielle et chaleureuse où les produits locaux — huîtres, poissons, légumes du jardin — sont mis en valeur avec simplicité."
 ---
 

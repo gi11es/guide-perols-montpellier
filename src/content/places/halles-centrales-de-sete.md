@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/halles-centrales-de-sete/hero.jpg"
 hero_credit: "Joseph Louis / Google Places"
+description: "Marché couvert traditionnel de Sète, au cœur de la ville, réunissant poissonniers, fromagers, maraîchers et charcutiers. L'endroit incontournable pour acheter les produits de l'étang de Thau et sentir le pouls vivant de la cité singulière."
 ---

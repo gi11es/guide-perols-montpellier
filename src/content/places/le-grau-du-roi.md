@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/le-grau-du-roi/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY 4.0"
+description: "Station balnéaire du Gard aux portes de la Camargue, avec son port de pêche animé, ses plages de sable fin et sa promenade face à la Grande-Motte. L'été, bateaux de pêche et voiliers se croisent dans le chenal historique qui donne son nom à la ville."
 ---

@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/grotte-de-clamouse/hero.jpg"
 hero_credit: "Esculapio / Wikimedia / CC BY 3.0"
-description: "Vaste réseau de grottes avec visites en plusieurs langues, parcours de tyrolienne, snack-bar et boutique."
+description: "Grotte souterraine spectaculaire au pied des gorges de l'Hérault, à Saint-Jean-de-Fos, avec un réseau de salles ornées de concrétions aragonitiques d'une finesse exceptionnelle. Les visites guidées en font une halte incontournable lors d'une excursion dans la vallée de l'Hérault."
 ---

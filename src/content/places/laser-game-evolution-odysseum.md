@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/laser-game-evolution-odysseum/hero.jpg"
 hero_credit: "Laser Game Evolution Odysseum Montpellier / Google Places"
+description: "Espace de laser game et d'escape room situé dans le pôle ludique Odysseum, au sein du grand complexe de loisirs montpelliérain. Une sortie idéale pour groupes d'amis ou enfants dès 6 ans, dans un dédale de couloirs et d'effets lumineux."
 ---

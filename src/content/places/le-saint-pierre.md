@@ -11,5 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/le-saint-pierre/hero.jpg"
 hero_credit: "Le saint Pierre / Google Places"
+description: "Restaurant de poissons et de fruits de mer sur le quai de Sète, face aux bateaux de pêche du port de la Criée. Une table classique sétoise pour goûter la tielle, la rouille de seiche ou les huîtres de l'étang à quelques mètres de l'eau."
 ---
 

@@ -12,5 +12,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/pena-pil-pil/hero.jpg"
 hero_credit: "Peña Pil Pil-Restaurant à Pintxos-Bar, Épicerie Basque, Pérols Village / Google Places"
+description: "Bar à pintxos et épicerie fine basque dans le village de Pérols, proposant charcuteries, fromages, txakoli et ambiance du Pays basque. Un dépaysement total à deux pas de Montpellier, avec l'énergie d'une peña et des produits soigneusement importés du Sud-Ouest."
 ---
 

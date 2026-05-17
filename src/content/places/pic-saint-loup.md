@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/pic-saint-loup/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 4.0"
-description: "Imposante montagne de 658 m comprenant un ermitage, une vieille chapelle, une croix et une tour d'observation."
+description: "Pic calcaire emblématique de l'Hérault culminant à 658 m, dominant les garrigues au nord de Montpellier, avec une randonnée aller-retour de 2h depuis le village de Saint-Mathieu-de-Tréviers. Le sommet, marqué d'une croix, offre un panorama à 360° sur la plaine du Languedoc et les Cévennes."
 ---

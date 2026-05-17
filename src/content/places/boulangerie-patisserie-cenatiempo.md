@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/boulangerie-patisserie-cenatiempo/hero.jpg"
 hero_credit: "Boulangerie Pâtisserie Cenatiempo / Google Places"
+description: "Boulangerie-pâtisserie artisanale de Castelnau-le-Lez, réputée pour la qualité de ses viennoiseries et de ses gâteaux travaillés avec soin. Une valeur sûre du quartier, ouverte tôt le matin pour les familles pressées."
 ---

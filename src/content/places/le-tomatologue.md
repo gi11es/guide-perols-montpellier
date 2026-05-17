@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/le-tomatologue/hero.jpg"
 hero_credit: "Tomatologue / Google Places"
+description: "Maraîcher spécialisé dans les variétés anciennes de tomates, installé avenue de Maguelone à Lattes, avec une gamme impressionnante de couleurs, formes et saveurs méconnues. Sa réputation dépasse largement le quartier, attirant cuisiniers amateurs et restaurateurs en quête d'authenticité."
 ---

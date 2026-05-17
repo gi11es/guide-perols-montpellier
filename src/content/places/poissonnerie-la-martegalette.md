@@ -11,5 +11,6 @@ source: "manual"
 google_category: "fish_market"
 hero: "/photos/poissonnerie-la-martegalette/hero.jpg"
 hero_credit: "Philo De Pérols' (Pérols'Lien2Cœur) / Google Places"
+description: "Poissonnerie artisanale de la Grand Rue de Pérols, proposant poissons de Méditerranée et fruits de mer frais selon les arrivages de la criée. Un commerce de proximité incontournable pour les habitants du village, fidèle à la tradition maritime de la région."
 ---
 

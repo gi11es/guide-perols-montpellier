@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/les-baux-de-provence/hero.jpg"
 hero_credit: "Benh LIEU SONG / Wikimedia / CC BY-SA 3.0"
+description: "Village médiéval perché sur les roches des Alpilles, classé parmi les Plus Beaux Villages de France, avec son château en ruines dominant la plaine de Provence. Les Carrières de Lumières, toutes proches, y projettent des spectacles monumentaux dans d'anciennes carrières de calcaire."
 ---

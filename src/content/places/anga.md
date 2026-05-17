@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/anga/hero.jpg"
 hero_credit: "Le Shelter / Google Places"
+description: "Restaurant gastronomique niché dans l'hôtel Beaulieu, au cœur de la vieille ville de Montpellier. La cuisine créative du chef joue sur les produits méditerranéens dans un cadre intimiste aux murs de pierre."
 ---

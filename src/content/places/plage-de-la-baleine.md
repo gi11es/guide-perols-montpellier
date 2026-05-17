@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/plage-de-la-baleine/hero.jpg"
 hero_credit: "Raimond Spekking / Wikimedia / CC BY-SA 4.0"
+description: "Plage sauvage et peu fréquentée au sud de Sète, sur la langue de sable qui sépare l'étang de Thau de la Méditerranée, accessible à pied ou à vélo depuis la ville. Son caractère naturel et préservé en fait un refuge apprécié des locaux qui cherchent à fuir la foule estivale."
 ---

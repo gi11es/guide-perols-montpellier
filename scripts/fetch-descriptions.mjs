@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-// Fetch a one-sentence French description for each place via Google Places API (New).
-// Uses editorialSummary first, falls back to generativeSummary.overview.
-// Skips places that already have a description field.
+// Fetch a 2-sentence French description for each place via Google Places API (New).
+// Prefers generativeSummary.overview (richer, usually 2-3 sentences in French),
+// falls back to editorialSummary.text.
+// ALWAYS overwrites existing descriptions (upgrading all to 2-sentence versions).
 
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
@@ -50,24 +51,37 @@ function writeFrontmatter(originalText, updates) {
 /** Extract city name from full address string. */
 function extractCity(address) {
   if (!address) return '';
-  // Address format: "Street, Postcode City, Country" or "City, Dept, Region…"
-  // Try to extract a short city name: look for a word before a department/region pattern
   const parts = address.split(',').map((s) => s.trim());
-  // Find a part that looks like "12345 City" → take the word after digits
   for (const part of parts) {
     const m = part.match(/^\d{4,6}\s+(.+)$/);
     if (m) return m[1];
   }
-  // Fall back to second or first part
   return parts[1] ?? parts[0] ?? '';
 }
 
-/** Cut text to a single sentence (first sentence only). */
-function toOneSentence(text) {
-  // Split on '. ' (period followed by space) keeping only first part
-  const idx = text.search(/\.\s+[A-ZÁÀÂÄÉÈÊËÎÏÔÖÙÛÜÇ]/);
-  if (idx !== -1) return text.slice(0, idx + 1).trim();
-  return text.trim();
+/** Trim text to exactly 2 sentences. Returns null if fewer than 2 sentences found. */
+function toTwoSentences(text) {
+  if (!text) return null;
+  const t = text.trim();
+
+  // Find all sentence-end positions: '. ' followed by uppercase (including accented)
+  const sentenceEndRe = /\.\s+(?=[A-ZÁÀÂÄÉÈÊËÎÏÔÖÙÛÜÇŒÆ])/g;
+  const breaks = [];
+  let match;
+  while ((match = sentenceEndRe.exec(t)) !== null) {
+    breaks.push(match.index + 1); // position just after the period
+  }
+
+  if (breaks.length === 0) {
+    // Only one sentence found — return it as-is (caller will decide)
+    return t.endsWith('.') ? t : t + '.';
+  }
+
+  // Take up to the end of the second sentence
+  const end2 = breaks.length >= 2 ? breaks[1] : t.length;
+  let result = t.slice(0, end2).trim();
+  if (!result.endsWith('.')) result += '.';
+  return result;
 }
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -101,18 +115,18 @@ async function fetchDescription(name, city, lat, lon) {
   const place = data?.places?.[0];
   if (!place) return null;
 
-  // Prefer editorialSummary, fall back to generativeSummary.overview
-  const editorial = place.editorialSummary?.text;
+  // Prefer generativeSummary (richer, usually 2-3 sentences), fall back to editorialSummary
   const generative = place.generativeSummary?.overview?.text;
-  const raw = editorial ?? generative ?? null;
+  const editorial = place.editorialSummary?.text;
+  const raw = generative ?? editorial ?? null;
   if (!raw) return null;
 
-  return toOneSentence(raw);
+  return toTwoSentences(raw);
 }
 
 async function main() {
   const mdFiles = readdirSync(PLACES_DIR).filter((f) => f.endsWith('.md')).sort();
-  let fetched = 0, skipped = 0, failed = 0;
+  let fetched = 0, oneSentence = 0, failed = 0;
 
   for (const f of mdFiles) {
     const path = join(PLACES_DIR, f);
@@ -121,11 +135,7 @@ async function main() {
     if (!parsed) { console.log(`  ? ${f}: could not parse`); failed++; continue; }
     const { fm } = parsed;
 
-    if (fm.description) {
-      skipped++;
-      continue;
-    }
-
+    // ALWAYS overwrite — we're upgrading all to 2-sentence versions
     const name = fm.name ?? f.replace(/\.md$/, '');
     const lat = parseFloat(fm.lat);
     const lon = parseFloat(fm.lon);
@@ -137,10 +147,17 @@ async function main() {
         console.log(`  ✗ ${name} (no summary returned)`);
         failed++;
       } else {
+        // Check if we got 2 sentences
+        const sentenceCount = (desc.match(/\.\s+[A-ZÁÀÂÄÉÈÊËÎÏÔÖÙÛÜÇŒÆ]/g) || []).length + 1;
         const updated = writeFrontmatter(text, { description: desc });
         writeFileSync(path, updated);
-        console.log(`  ✓ ${name}: ${desc.slice(0, 80)}${desc.length > 80 ? '…' : ''}`);
-        fetched++;
+        if (sentenceCount < 2) {
+          console.log(`  ~ ${name} (1 sentence): ${desc.slice(0, 80)}${desc.length > 80 ? '…' : ''}`);
+          oneSentence++;
+        } else {
+          console.log(`  ✓ ${name}: ${desc.slice(0, 80)}${desc.length > 80 ? '…' : ''}`);
+          fetched++;
+        }
       }
     } catch (e) {
       console.log(`  ✗ ${name}: ${e.message}`);
@@ -151,7 +168,8 @@ async function main() {
     await sleep(340);
   }
 
-  console.log(`\nfetched=${fetched}  skipped=${skipped}  failed=${failed}`);
+  console.log(`\nfetched(2-sent)=${fetched}  fetched(1-sent)=${oneSentence}  failed=${failed}`);
+  console.log(`Total with description: ${fetched + oneSentence} / ${mdFiles.length}`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });

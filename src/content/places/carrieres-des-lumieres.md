@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/carrieres-des-lumieres/hero.jpg"
 hero_credit: "Pierre Goiffon / Wikimedia / CC BY-SA 4.0"
-description: "Ancienne carrière avec spectacles multimédia artistiques et projection de célèbres tableaux mis en musique."
+description: "Anciennes carrières de bauxite aux Baux-de-Provence transformées en salle de spectacle numérique géante, projetant les œuvres de grands maîtres de la peinture sur les parois de pierre. Un spectacle immersif et saisissant qui change de thème chaque saison, à voir avec ou sans enfants."
 ---

@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/chez-estela/hero.jpg"
 hero_credit: "Chez Estela / Google Places"
+description: "Primeur et épicerie de producteurs installé à Saint-Aunès, sur les hauteurs de Montpellier, avec une sélection de fruits et légumes locaux et de saison. La clientèle fidèle apprécie l'ambiance conviviale et les conseils du marché en circuit court."
 ---

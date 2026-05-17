@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/la-fabrique-a-choux/hero.jpg"
 hero_credit: "Emmanuelle BOHN / Google Places"
+description: "Pâtisserie artisanale spécialisée dans les choux garnies, installée dans la zone de Pailletrice à Pérols. La boutique décline les choux en dizaines de saveurs créatives, aussi bien en version sucrée que salée pour un repas sur le pouce."
 ---

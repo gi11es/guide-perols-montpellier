@@ -11,5 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/il-etait-une-fougasse/hero.jpg"
 hero_credit: "Boulangerie Il était une Fougasse – Route de Nîmes / Google Places"
+description: "Boutique spécialisée dans la fougasse provençale, la grand rue d'Aigues-Mortes, avec des dizaines de variétés garnies sucrées et salées. Un arrêt incontournable lors d'une visite de la cité médiévale, avant ou après le tour des remparts."
 ---
 

@@ -12,5 +12,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/chez-lanchois/hero.jpg"
 hero_credit: "paulin sylvie / Google Places"
+description: "Restaurant de cuisine traditionnelle sétoise installé près du port de Sète, connu pour ses recettes de poissons et de bourride maison. Une table sans chichi où l'on retrouve l'authenticité des saveurs de l'étang de Thau."
 ---
 

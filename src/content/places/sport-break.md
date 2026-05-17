@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/sport-break/hero.jpg"
 hero_credit: "Sport Break / Google Places"
+description: "Centre de loisirs sportifs indoor à Baillargues, avec trampoline, mur d'escalade, tyrolienne et structures de jeux pour enfants et adolescents. Un espace couvert complet pour les sorties en famille par tous temps, à proximité des communes de l'est montpelliérain."
 ---

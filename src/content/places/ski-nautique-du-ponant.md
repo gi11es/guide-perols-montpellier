@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/ski-nautique-du-ponant/hero.jpg"
 hero_credit: "Wakeboard Ski Nautique Club Ponant (SLNP) / Google Places"
+description: "Club de ski nautique et wakeboard à La Grande-Motte, sur l'étang du Ponant, ouvert aux débutants et aux sportifs confirmés avec initiations encadrées. Un spot idéal pour glisser sur l'eau calme de l'étang, à l'abri du vent et des vagues de la mer."
 ---

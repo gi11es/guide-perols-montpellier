@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/caves-notre-dame/hero.jpg"
 hero_credit: "Richard Massonet / Google Places"
-description: "Ce caviste est spécialisé dans les vignobles du sud et propose vins, eaux-de-vie, spiritueux et champagne."
+description: "Caviste de quartier spécialisé dans les vignobles du Sud de la France, situé sur la véloligne 4 de Port Marianne, proposant vins, spiritueux, champagnes et eaux-de-vie. Une sélection pointue et des conseils personnalisés pour les amateurs qui cherchent les belles bouteilles languedociennes."
 ---

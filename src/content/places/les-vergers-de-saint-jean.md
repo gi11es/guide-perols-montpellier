@@ -11,5 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/les-vergers-de-saint-jean/hero.jpg"
 hero_credit: "Andrea Bordone / Google Places"
+description: "Vergers en vente directe à Saint-Jean-de-Védas, proposant fruits de saison — pêches, abricots, pommes, raisins — cueillis à maturité dans les exploitations familiales du secteur. Un arrêt populaire pour faire le plein de fruits locaux à prix producteur."
 ---
 

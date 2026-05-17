@@ -11,5 +11,6 @@ source: "manual"
 google_category: "wine_shop"
 hero: "/photos/pompette/hero.jpg"
 hero_credit: "Pierre Tailleur de vins / Google Places"
+description: "Cave à vins artisanale dans les ruelles de Pérols, spécialisée dans les vins naturels et les petits domaines du Languedoc et d'ailleurs. Une boutique attachante tenue avec passion, pour les curieux qui cherchent une bouteille hors des sentiers battus."
 ---
 

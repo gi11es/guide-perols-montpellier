@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/bowlingstar-pres-d-arenes/hero.jpg"
 hero_credit: "sandy betty / Google Places"
+description: "Grand bowling de loisirs situé près du quartier des Arènes, à Montpellier, avec de nombreuses pistes, salle d'arcade et restaurant. Une sortie polyvalente appréciée en famille ou entre amis, même par mauvais temps."
 ---

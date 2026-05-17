@@ -11,5 +11,6 @@ source: "manual"
 google_category: "barbecue_restaurant"
 hero: "/photos/le-brasero/hero.jpg"
 hero_credit: "Le Braséro / Google Places"
+description: "Restaurant de grillades au feu de bois à Lattes, proposant viandes et poissons cuits au brasero dans une ambiance conviviale et décontractée. La terrasse ombragée en été en fait une adresse populaire pour les familles du quartier."
 ---
 

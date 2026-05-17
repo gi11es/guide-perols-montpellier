@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/des-pains-et-des-reves/hero.jpg"
 hero_credit: "Peter Mann / Google Places"
-description: "Boulangerie haut de gamme proposant des pains artisanaux cuits dans un four à bois d'époque, des pâtisseries et des mets salés."
+description: "Boulangerie artisanale haut de gamme de la vieille ville de Montpellier, avec pains cuits au four à bois, pâtisseries fines et plats salés préparés chaque matin. L'une des meilleures adresses de pain de Montpellier, récompensée et fidèle à un savoir-faire boulanger exigeant."
 ---

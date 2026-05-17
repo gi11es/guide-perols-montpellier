@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/trampoline-park-lattes/hero.jpg"
 hero_credit: "Simon Wizman / Google Places"
+description: "Parc de trampolines indoor à Lattes avec de nombreuses pistes, zones foam, basketball aérien et cours adaptés aux enfants comme aux adultes. Une sortie incontournable pour dépenser de l'énergie par tous temps, à quelques minutes de Montpellier."
 ---

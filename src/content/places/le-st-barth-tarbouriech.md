@@ -11,6 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/le-st-barth-tarbouriech/hero.jpg"
 hero_credit: "Le St Barth Tarbouriech / Google Places"
-description: "Installés au bord de l'étang de Thau, ces ostréiculteurs proposent des huîtres et des spécialités régionales."
+description: "Restaurant de la famille Tarbouriech à Marseillan, face à l'étang de Thau, proposant leurs huîtres solaires élevées en plein air avec dégustation sur terrasse. L'ambiance balnéaire, les vins de la région et la vue sur l'étang en font une escale inoubliable sur la route des tables de l'Hérault."
 ---
 

@@ -11,5 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/el-duende/hero.jpg"
 hero_credit: "Philo De Pérols' (Pérols'Lien2Cœur) / Google Places"
+description: "Bar et restaurant de tapas dans le village de Pérols, avec une ambiance conviviale et une programmation musicale flamenco et ibérique. L'adresse phare du bourg pour les soirées animées autour de planches espagnoles et de verres de vin."
 ---
 

@@ -11,5 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/corniche-de-sete/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
+description: "Route littorale de Sète longeant la Méditerranée entre la plage de la Corniche et le Mont Saint-Clair, ponctuée de criques rocheuses et de villas Belle Époque. La promenade à pied ou à vélo offre des vues imprenables sur la mer et les toits de la ville."
 ---
 

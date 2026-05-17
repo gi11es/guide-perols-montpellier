@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/les-rochers-de-maguelone/hero.jpg"
 hero_credit: "Les Rochers de Maguelone / Google Places"
+description: "Accrobranche et parcours d'escalade naturelle sur les rochers de la presqu'île de Maguelone, avec vue sur les étangs et la mer. Un site sportif et paysager idéal pour les familles, à deux pas de la cathédrale médiévale de Maguelone."
 ---

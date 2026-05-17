@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/les-petits-fermiers-de-lansargues/hero.jpg"
 hero_credit: "LES PETITS FERMIERS - Parc animalier et de loisirs - Lansargues / Google Places"
-description: "Destination d'agritourisme avec jardins, animaux de la ferme, mini-ferme, promenades en poney, parc aquatique."
+description: "Ferme pédagogique et parc de loisirs familiaux à Lansargues avec animaux de la ferme, promenades en poney, jardin potager et parc aquatique en été. Une sortie complète à la campagne pour les familles avec enfants en bas âge, à une demi-heure de Montpellier."
 ---

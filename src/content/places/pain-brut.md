@@ -10,5 +10,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/pain-brut/hero.jpg"
 hero_credit: "Pain Brut / Google Places"
+description: "Boulangerie artisanale dans le centre de Montpellier, spécialisée dans les pains au levain naturel à la mie alvéolée et à la croûte épaisse. Une adresse confidentielle et fidèle à ses principes, fréquentée par ceux qui ne transigent pas sur la qualité du pain."
 ---
 

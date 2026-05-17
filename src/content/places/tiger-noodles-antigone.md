@@ -10,5 +10,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/tiger-noodles-antigone/hero.jpg"
 hero_credit: "Tiger Noodles Antigone / Google Places"
+description: "Restaurant de nouilles asiatiques dans le quartier Antigone de Montpellier, proposant soupes, ramens et plats de nouilles sautées d'inspiration japonaise et thaï. Un spot rapide et généreux dans le quartier classique de Ricardo Bofill, apprécié aux déjeuners."
 ---
 

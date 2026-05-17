@@ -11,6 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/le-lamparo/hero.jpg"
 hero_credit: "Le Lamparino / Google Places"
-description: "Ce restaurant chaleureux doté de terrasses sur le port propose des plats simples de poissons et coquillages."
+description: "Restaurant de poissons et coquillages au bord du port de Carnon à Mauguio, avec une terrasse face aux bateaux et une cuisine simple et franche de produits de la mer. Une valeur sûre pour une moules-frites ou un plateau de fruits de mer après la plage, dans une ambiance de port méditerranéen."
 ---
 

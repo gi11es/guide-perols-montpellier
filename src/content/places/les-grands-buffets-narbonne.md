@@ -11,6 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/les-grands-buffets-narbonne/hero.jpg"
 hero_credit: "Les Grands Buffets / Google Places"
-description: "Établissement élégant en lambris, proposant des buffets à volonté composés de viandes, de fromages et de desserts."
+description: "Restaurant légendaire de Narbonne proposant des buffets à volonté de haute cuisine française — foie gras, homard, fromages d'exception, desserts maison — dans un décor de brasserie élégante. Une expérience gastronomique démesurée et populaire qui attire des convives de toute la région pour les grandes occasions."
 ---
 

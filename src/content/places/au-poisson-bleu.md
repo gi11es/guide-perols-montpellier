@@ -11,6 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/au-poisson-bleu/hero.jpg"
 hero_credit: "fares bouhlila (REDCAPTURE360) / Google Places"
-description: "Poissons, crustacés et fruits de mer dans un restaurant boisé avec terrasse, poissonnerie et soirées à thème."
+description: "Restaurant de poissons et fruits de mer à Palavas-les-Flots, avec poissonnerie attenante, terrasse et soirées à thème en saison. La double casquette restaurant-poissonnerie en fait un arrêt pratique pour manger sur place ou repartir avec du frais du jour."
 ---
 

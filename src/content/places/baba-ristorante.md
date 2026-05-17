@@ -11,6 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/baba-ristorante/hero.jpg"
 hero_credit: "Jossuha Théophile / Google Places"
-description: "Menu créatif, tapas du monde et cocktails dans une salle voûtée au décor soigné inspiré de la Beat Generation."
+description: "Restaurant-bar en cave voûtée rue Vallat, dans le centre historique de Montpellier, avec menu créatif, tapas fusion et cocktails élaborés dans un décor Beat Generation. L'ambiance intimiste et l'inventivité de la carte en font une adresse de choix pour une soirée originale en centre-ville."
 ---
 

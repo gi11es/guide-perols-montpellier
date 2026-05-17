@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/grotte-des-demoiselles/hero.jpg"
 hero_credit: "W. Bulach / Wikimedia / CC BY-SA 4.0"
+description: "Grotte préhistorique monumentale du Hérault, accessible par funiculaire depuis Saint-Bauzille-de-Putois, abritant une cathédrale naturelle de stalagmites et stalactites géantes. Classée parmi les plus belles grottes de France, elle fascine depuis sa découverte au XVIIe siècle."
 ---

@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/moco/hero.jpg"
 hero_credit: "Tmittelstaedt / Wikimedia / CC BY-SA 4.0"
+description: "Centre d'art contemporain adossé à l'École supérieure des Beaux-Arts de Montpellier, proposant des expositions temporaires d'artistes internationaux dans un bâtiment haussmannien rénové. L'un des lieux de référence pour la scène artistique contemporaine dans le sud de la France."
 ---

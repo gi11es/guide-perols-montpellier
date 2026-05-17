@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/site-naturel-de-la-conque/hero.jpg"
 hero_credit: "Roland45 / Wikimedia / CC BY-SA 4.0"
+description: "Site naturel protégé en bordure de l'étang de Thau, à Mèze, avec une anse abritée, des roselières et des sentiers de promenade au calme. Un espace sauvage apprécié pour l'observation des oiseaux et la détente loin de l'agitation des plages aménagées."
 ---

@@ -10,6 +10,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/domaine-de-verchant/hero.jpg"
 hero_credit: "Domaine de Verchant / Google Places"
-description: "Manoir du XVIe siècle au cœur des vignes avec des chambres et des suites élégantes, un spa et une piscine."
+description: "Hôtel de luxe installé dans un manoir Renaissance du XVIe siècle entouré de vignes, à Castelnau-le-Lez, avec chambres élégantes, restaurant gastronomique, spa et piscine. Un refuge hors du temps à quelques minutes de Montpellier, où l'on peut aussi dîner et se faire soigner en journée."
 ---
 

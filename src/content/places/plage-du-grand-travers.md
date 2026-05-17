@@ -11,6 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/plage-du-grand-travers/hero.jpg"
 hero_credit: "Laurent Wattieaux-Ma… / Wikimedia / CC BY 3.0"
-description: "Plage étroite bordée de pins et de cafés de style décontracté, animée en été et prisée des promeneurs de chiens en hiver."
+description: "Plage du Grand Travers à La Grande-Motte, étroite et bordée de pins, avec des bars et restaurants décontractés le long du sable, animée en été et calme hors saison. Son atmosphère de station balnéaire seventies et sa proximité des étangs en font une destination agréable à vélo depuis Carnon ou La Grande-Motte."
 ---
 

@@ -11,5 +11,6 @@ source: "manual"
 google_category: "movie_theater"
 hero: "/photos/pathe-odysseum/hero.jpg"
 hero_credit: "Pathé / Google Places"
+description: "Multiplexe Pathé dans le pôle commercial Odysseum, à l'est de Montpellier, avec de nombreuses salles dont des salles IMAX et Dolby Atmos. Le complexe de loisirs environnant, avec piscine, patinoire et commerces, en fait une destination de sortie complète pour les familles."
 ---
 

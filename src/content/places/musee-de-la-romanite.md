@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/musee-de-la-romanite/hero.jpg"
 hero_credit: "Celeda / Wikimedia / CC BY-SA 4.0"
-description: "Doté d'une façade en verre ondulée ressemblant à une toge, ce remarquable musée abrite une collection de reliques romaines."
+description: "Musée archéologique de Nîmes inauguré en 2018, avec une façade en verre ondulé signée Elizabeth de Portzamparc imitant les plis d'une toge, face aux Arènes romaines. Il abrite l'une des plus grandes collections d'antiquités gallo-romaines de France dans un écrin architectural spectaculaire."
 ---

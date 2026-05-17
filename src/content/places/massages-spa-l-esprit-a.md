@@ -11,5 +11,6 @@ source: "manual"
 google_category: "spa"
 hero: "/photos/massages-spa-l-esprit-a/hero.jpg"
 hero_credit: "Massages & Spa L'ESPRIT A Montpellier / Google Places"
+description: "Institut de massages et spa place Georges Frêche, dans le quartier Port Marianne de Montpellier, proposant soins du corps, massages thérapeutiques et rituels relaxants. Un havre de calme à quelques minutes du centre-ville pour une pause bien-être en solo ou en duo."
 ---
 

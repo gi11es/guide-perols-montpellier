@@ -11,5 +11,6 @@ source: "manual"
 google_category: "pizza_restaurant"
 hero: "/photos/pizza-les-daltons/hero.jpg"
 hero_credit: "FF mm / Google Places"
+description: "Pizzeria artisanale de Pérols, rue des Vendanges, proposant des pizzas au feu de bois dans une ambiance décontractée de quartier. L'adresse populaire du village pour une pizza généreuse à emporter ou sur place en famille."
 ---
 

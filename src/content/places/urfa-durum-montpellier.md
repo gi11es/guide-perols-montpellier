@@ -11,5 +11,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/urfa-durum-montpellier/hero.jpg"
 hero_credit: "Urfa Dürüm - Montpellier / Google Places"
+description: "Sandwicherie turque avenue Clemenceau à Montpellier, spécialisée dans les dürüm — galettes de blé roulées garnie de viande grillée, légumes et sauces maison. Une adresse de street food économique et généreuse, très fréquentée à l'heure du déjeuner par les travailleurs du secteur."
 ---
 

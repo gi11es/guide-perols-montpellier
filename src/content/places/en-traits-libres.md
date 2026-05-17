@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/en-traits-libres/hero.jpg"
 hero_credit: "En traits libres / Google Places"
+description: "Librairie indépendante de bande dessinée et illustration, rue Voltaire, dans le quartier de la Comédie à Montpellier. Elle propose aussi des expositions d'originaux et des rencontres avec des auteurs, pour les amateurs de neuvième art."
 ---

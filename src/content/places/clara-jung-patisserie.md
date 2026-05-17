@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/clara-jung-patisserie/hero.jpg"
 hero_credit: "Clara Jung / Google Places"
+description: "Pâtisserie fine installée rue du Palais des Guilhem, dans le cœur médiéval de Montpellier, proposant des créations délicates aux influences franco-asiatiques. Les tartes, entremets et choux de Clara Jung sont à la fois beaux à regarder et précis en bouche."
 ---

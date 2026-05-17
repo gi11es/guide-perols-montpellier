@@ -11,5 +11,6 @@ source: "manual"
 google_category: "spa"
 hero: "/photos/les-corallines-thalasso/hero.jpg"
 hero_credit: "Les Corallines Thalasso & Resort - La Grande Motte / Google Places"
+description: "Hôtel thalasso 4 étoiles de La Grande-Motte, avec piscines intérieure et extérieure, soins marins, restaurant gastronomique et chambres avec vue sur mer dans les emblématiques pyramides d'architecte. L'endroit idéal pour conjuguer séjour balnéaire et cure de thalassothérapie à deux pas de Montpellier."
 ---
 

@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/skatepark-de-grammont/hero.jpg"
 hero_credit: "Al / Google Places"
+description: "Grand skatepark municipal du quartier Grammont-Port Marianne à Montpellier, avec piste BMX, bowl et modules street accessibles gratuitement. Un équipement de référence pour les riders du secteur, dans un cadre urbain verdoyant en bordure du Lez."
 ---

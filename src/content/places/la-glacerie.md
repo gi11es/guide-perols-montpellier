@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/la-glacerie/hero.jpg"
 hero_credit: "La Glacerie Glaces et crêpes artisanales / Google Places"
+description: "Glacier artisanal de La Grande-Motte, réputé pour ses glaces aux parfums généreux et ses crêpes faites à la commande. Idéalement situé pour une pause sucrée après la plage dans la station balnéaire aux pyramides d'architecte."
 ---

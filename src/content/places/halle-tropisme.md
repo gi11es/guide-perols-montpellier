@@ -12,4 +12,5 @@ google_category: ""
 hero: "/photos/halle-tropisme/hero.jpg"
 hero_credit: "
 Fédération des sociétés françaises de sciences naturelles / Wikimedia / Public domain"
+description: "Ancienne halle industrielle reconvertie en espace culturel et créatif dans la Cité créative de Montpellier, accueillant expositions, marchés, concerts et événements. Un lieu emblématique du renouveau artistique et économique du sud de la ville."
 ---

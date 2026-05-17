@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/plage-de-maguelone/hero.jpg"
 hero_credit: "A. Garcia / Wikimedia / CC BY-SA 4.0"
+description: "Longue plage de sable fin sur la presqu'île de Maguelone, entre étangs et mer, accessible par une route piétonne depuis Villeneuve-lès-Maguelone. La proximité de la cathédrale romane du XIe siècle et les dunes non aménagées lui donnent un charme naturel rare pour un site aussi proche de Montpellier."
 ---

@@ -11,5 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/gorges-de-l-herault/hero.jpg"
 hero_credit: "Xavier Malafosse - Simio (talk · contribs) / Wikimedia / CC BY-SA 1.0"
+description: "Gorges calcaires creusées par l'Hérault entre Aniane et Saint-Guilhem-le-Désert, offrant baignade, randonnée et kayak dans un cadre sauvage classé Grand Site de France. Le Pont du Diable, ouvrage médiéval du XIe siècle, en est le symbole le plus photographié."
 ---
 

@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/chez-l-indien/hero.jpg"
 hero_credit: "Maria Fernanda Goiburu / Google Places"
+description: "Stand de fruits et légumes exotiques installé à Lattes, proposant des variétés peu communes introuvables en grande surface. Une halte incontournable pour cuisiniers curieux et amateurs de saveurs venues d'ailleurs."
 ---

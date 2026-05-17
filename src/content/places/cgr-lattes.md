@@ -11,6 +11,6 @@ source: "manual"
 google_category: "movie_theater"
 hero: "/photos/cgr-lattes/hero.jpg"
 hero_credit: "CINÉMA CGR Montpellier Lattes / Google Places"
-description: "Avant-premières, événements et espaces privatisables dans une chaîne de cinémas multiplexes grand public."
+description: "Multiplexe CGR de Lattes, dans la ZAC des Commandeurs, proposant des films en VO et VF, des avant-premières et des événements spéciaux dans plusieurs salles confortables. La salle IMAX et l'accès facile en voiture en font le cinéma de référence pour les familles du sud de Montpellier."
 ---
 

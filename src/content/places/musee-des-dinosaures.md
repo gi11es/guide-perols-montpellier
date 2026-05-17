@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/musee-des-dinosaures/hero.jpg"
 hero_credit: "Michael Barruel / Google Places"
-description: "Musée-parc sur les dinosaures et l'évolution de l'humanité, reconstitutions, fossiles et aires de pique-nique."
+description: "Musée des dinosaures de Mèze avec un parc en plein air accueillant des reconstitutions grandeur nature de dinosaures et de nombreux fossiles authentiques mis au jour dans la région. Un site familial passionnant, à la fois musée scientifique et parc de découverte, au bord de l'étang de Thau."
 ---

@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/meze/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY 4.0"
+description: "Petite ville de bord d'étang de Thau, connue pour ses restaurants ostréicoles et son musée des Dinosaures avec son parc de reproductions en plein air. Le port de plaisance et les quais animés en font une destination agréable pour une journée dans l'Hérault."
 ---

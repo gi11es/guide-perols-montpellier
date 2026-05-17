@@ -12,6 +12,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/restaurant-leclere-cuisine-d-arrivage/hero.jpg"
 hero_credit: "Restaurant Leclère, Cuisine d’arrivage. / Google Places"
-description: "Restaurant élégant servant des plats de viande et de fruits de mer élégamment présentés, dans un cadre intimiste."
+description: "Restaurant gastronomique montpelliérain proposant une cuisine d'arrivage au quotidien, avec une carte entièrement renouvelée selon les produits disponibles chez les producteurs du matin. La démarche rigoureuse et l'exécution précise en font une table de référence pour les amateurs de cuisine de marché."
 ---
 

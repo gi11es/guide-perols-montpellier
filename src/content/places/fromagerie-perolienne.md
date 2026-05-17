@@ -11,5 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/fromagerie-perolienne/hero.jpg"
 hero_credit: "la Fromagerie Pérolienne , Pérols Village / Google Places"
+description: "Fromagerie artisanale de la Grand Rue de Pérols, proposant une sélection de fromages affinés et de spécialités laitières régionales. Un commerce de village qui perpétue la tradition fromagère au cœur du bourg, face à la boucherie."
 ---
 

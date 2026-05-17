@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/fondation-vincent-van-gogh/hero.jpg"
 hero_credit: "Vincent van Gogh / Wikimedia / Public domain"
-description: "Ce musée d'Art élégant propose des visites guidées et des expositions temporaires, avec des œuvres de Vincent Van Gogh."
+description: "Fondation dédiée à l'oeuvre de Van Gogh à Arles, ville où le peintre vécut en 1888 et 1889, proposant expositions temporaires et oeuvres permanentes dans un hôtel particulier du XVIIIe siècle. Un musée incontournable lors d'une visite à Arles, pour voir la ville à travers les yeux de celui qui l'a tant peinte."
 ---

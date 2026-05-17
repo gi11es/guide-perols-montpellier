@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/le-jardin-des-sens/hero.jpg"
 hero_credit: "F A / Google Places"
+description: "Restaurant gastronomique place de la Canourgue, au cœur du Montpellier médiéval, anciennement étoilé Michelin et porté par les frères Pourcel. La cuisine du terroir méditerranéen, précise et généreuse, s'apprécie dans un cadre de place historique avec terrasse."
 ---

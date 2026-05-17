@@ -11,6 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/pomme-de-reinette-et-pomme-d-api/hero.jpg"
 hero_credit: "corinne bouillet / Google Places"
-description: "Magasin proposant jouets classiques et modernes, marionnettes, peluches et décorations pour chambre d'enfant."
+description: "Boutique de jouets indépendante dans le centre de Montpellier, proposant une sélection soignée de jouets classiques, marionnettes, peluches et jeux éducatifs en dehors des circuits des grandes surfaces. Un refuge pour parents exigeants à la recherche de cadeaux de qualité et de jouets durables pour enfants."
 ---
 

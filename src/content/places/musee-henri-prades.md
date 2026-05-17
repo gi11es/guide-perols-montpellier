@@ -11,6 +11,6 @@ source: "manual"
 google_category: "museum"
 hero: "/photos/musee-henri-prades/hero.jpg"
 hero_credit: " Daniel VILLAFRUELA. / Wikimedia / CC BY-SA 3.0"
-description: "Musée présentant des objets locaux issus de l'ancienne ville étrusque de Lattara et de l'art contemporain."
+description: "Musée archéologique de Lattes consacré aux fouilles du site antique de Lattara, port étrusque et gaulois fondé au Ve siècle av. J.-C. à l'emplacement de l'actuelle ville. Des milliers d'objets découverts sur le site racontent la vie quotidienne des habitants de ce carrefour commercial méditerranéen."
 ---
 

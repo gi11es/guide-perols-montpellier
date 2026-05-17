@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/la-cueillette-de-fontmarie/hero.jpg"
 hero_credit: "Mathilde Bres / Google Places"
+description: "Ferme maraîchère de Castries où il est possible de cueillir soi-même fleurs et légumes cultivés en plein champ selon les saisons. Une expérience familiale et ludique, à une vingtaine de minutes de Montpellier, pour renouer avec l'agriculture à petite échelle."
 ---

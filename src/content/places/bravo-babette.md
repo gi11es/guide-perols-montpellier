@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/bravo-babette/hero.jpg"
 hero_credit: "Bravo Babette / Google Places"
+description: "Cave à vins et épicerie fine dans une rue piétonne du centre historique de Montpellier, spécialisée dans les vins nature et les producteurs engagés. L'adresse idéale pour repartir avec une belle bouteille dénichée avec les conseils de la maison."
 ---

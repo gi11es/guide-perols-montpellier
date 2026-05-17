@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/le-petit-jardin/hero.jpg"
 hero_credit: "Restaurant du Petit Jardin / Google Places"
-description: "Cuisine internationale proposée dans un restaurant raffiné doté d'une vaste terrasse verdoyante et d'un salon privé."
+description: "Restaurant raffiné rue Jean-Jacques Rousseau, dans la vieille ville de Montpellier, avec une terrasse-jardin verdoyante cachée au fond d'une impasse médiévale. La cuisine française aux influences méditerranéennes et l'oasis de verdure en plein centre historique en font une adresse idéale pour les repas en amoureux ou les repas d'affaires."
 ---

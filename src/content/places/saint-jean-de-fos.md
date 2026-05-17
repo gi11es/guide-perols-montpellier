@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/saint-jean-de-fos/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
+description: "Village potier de l'Hérault, aux portes des gorges de l'Hérault, connu depuis des siècles pour ses ateliers de céramique traditionnelle vernissée. La Grand Rue regroupe ateliers d'artisans et boutiques de poteries, à deux pas du Pont du Diable et de Saint-Guilhem."
 ---

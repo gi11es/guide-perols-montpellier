@@ -11,4 +11,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/halles-et-manger/hero.jpg"
 hero_credit: "Halles et Manger / Google Places"
+description: "Restaurant gastronomique installé au sein des Halles centrales de Sète, proposant une cuisine de la mer travaillée avec les produits du marché du jour. La formule déjeuner autour des étals est particulièrement appréciée des habitués."
 ---

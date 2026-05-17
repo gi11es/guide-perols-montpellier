@@ -12,5 +12,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/la-banquise-ice-cream-parlor/hero.jpg"
 hero_credit: "La Banquise - Glacier Créateur / Google Places"
+description: "Glacier créateur installé dans le centre historique de Montpellier, proposant des parfums originaux élaborés avec des produits locaux et de saison. Les files d'attente en été témoignent de la réputation de ses glaces artisanales dans toute la ville."
 ---
 

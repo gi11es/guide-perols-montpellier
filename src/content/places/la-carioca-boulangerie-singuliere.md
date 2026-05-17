@@ -12,5 +12,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/la-carioca-boulangerie-singuliere/hero.jpg"
 hero_credit: "La Carioca Sète - Boulangerie Bio au levain / Google Places"
+description: "Boulangerie bio au levain naturel installée sur le quai de Sète, face au canal, proposant pains aux farines anciennes, viennoiseries et plats du jour végétariens. Une adresse de quartier attachante, portée par un engagement sincère pour une alimentation durable."
 ---
 

@@ -11,5 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/boucherie-vitou/hero.jpg"
 hero_credit: "William Haun / Google Places"
+description: "Boucherie artisanale de la Grand Rue de Pérols, figure du commerce de proximité dans ce bourg villageois. On y trouve viandes de qualité, volailles et charcuteries sélectionnées auprès d'éleveurs régionaux."
 ---
 

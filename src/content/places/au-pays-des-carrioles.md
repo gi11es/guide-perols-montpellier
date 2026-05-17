@@ -11,5 +11,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/au-pays-des-carrioles/hero.jpg"
 hero_credit: "Au Pays des Carrioles / Google Places"
+description: "Ferme pédagogique et parc de loisirs dans l'arrière-pays héraultais, avec balades en carrioles tirées par des chevaux. Un lieu paisible pour initier les enfants aux animaux de la ferme et aux paysages de garrigues."
 ---
 
