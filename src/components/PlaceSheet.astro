@@ -50,8 +50,17 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
     const insta = p.links.instagram
       ? `https://instagram.com/${p.links.instagram.replace(/^@/, '')}`
       : '';
-    const mapsUrl = p.links.google_maps
-      || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name)}+${p.lat},${p.lon}`;
+    // Use Google's documented Maps URL API format so deep-linking works reliably on iOS/Android.
+    function toMapsUrl(stored: string | undefined): string {
+      const idMatch = stored?.match(/place_id:([A-Za-z0-9_-]+)/);
+      const placeId = idMatch?.[1];
+      if (placeId) {
+        return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name)}&query_place_id=${placeId}`;
+      }
+      return stored
+        ?? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name)}+${p.lat},${p.lon}`;
+    }
+    const mapsUrl = toMapsUrl(p.links.google_maps);
     const secondaryLinks = [
       p.links.website ? `<li><a href="${p.links.website}" target="_blank" rel="noopener">Site</a></li>` : '',
       insta ? `<li><a href="${insta}" target="_blank" rel="noopener">Instagram</a></li>` : '',

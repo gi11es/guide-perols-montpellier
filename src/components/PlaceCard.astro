@@ -9,8 +9,10 @@ interface Props {
 const { place, categoryLabel, categoryColor } = Astro.props;
 const { name, hero, links, lat, lon, description } = place.data;
 const slug = place.data.slug;
-const mapsUrl = links?.google_maps
-  ?? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}+${lat},${lon}`;
+const placeIdMatch = links?.google_maps?.match(/place_id:([A-Za-z0-9_-]+)/);
+const mapsUrl = placeIdMatch
+  ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}&query_place_id=${placeIdMatch[1]}`
+  : (links?.google_maps ?? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}+${lat},${lon}`);
 ---
 <article class="card" data-slug={slug}>
   <div class="hero-wrap">
