@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "astro": "^6.3.3",
-    "maplibre-gl": "^5.24.0"
+    "maplibre-gl": "^5.24.0",
+    "pmtiles": "^4.4.1",
+    "protomaps-themes-base": "^4.5.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
