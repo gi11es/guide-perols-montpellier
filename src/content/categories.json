@@ -7,5 +7,6 @@
   { "slug": "enfants", "label": "Activités enfants", "color": "#7A5C8B", "order": 6 },
   { "slug": "culture", "label": "Culture & Art", "color": "#B5667A", "order": 7 },
   { "slug": "villes-villages", "label": "Belles villes et villages", "color": "#8B7355", "order": 8 },
-  { "slug": "spa", "label": "Spas & bien-être", "color": "#B58AAB", "order": 9 }
+  { "slug": "spa", "label": "Spas & bien-être", "color": "#B58AAB", "order": 9 },
+  { "slug": "sante", "label": "Santé", "color": "#6B9090", "order": 10 }
 ]
