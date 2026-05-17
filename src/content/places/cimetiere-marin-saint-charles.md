@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/cimetiere-marin-saint-charles/hero.jpg"
-hero_credit: "Jean-Pierre Dalbéra from Paris, France / Wikimedia / CC BY 2.0"
+hero_credit: "Jérôme Lacoste / Google Places"
 description: "Cimetière marin de Sète immortalisé par le poème de Paul Valéry, dominant la mer depuis les hauteurs du Mont Saint-Clair. La tombe du poète s'y trouve, et la vue sur la Méditerranée justifie à elle seule la montée."
 ---

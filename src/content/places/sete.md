@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/sete/hero.jpg"
-hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
+hero_credit: "Lan T. / Google Places"
 description: "Ville portuaire héraultaise surnommée la Venise du Languedoc, posée entre mer et étang de Thau sur un îlot de sable traversé de canaux. Patrie de Georges Brassens et Paul Valéry, elle se distingue aussi par ses joutes nautiques, sa tielle emblématique et sa scène musicale vivante."
 ---

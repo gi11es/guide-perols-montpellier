@@ -10,7 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/saintes-maries-de-la-mer/hero.jpg"
-hero_credit: "
-Didier Descouens / Wikimedia / CC BY-SA 3.0"
+hero_credit: "Andrea Pieroni (capitanonemo75) / Google Places"
 description: "Village camarguais au bord de la Méditerranée, célèbre pour le pèlerinage des gitans de mai et son église fortifiée du XIIe siècle. Les flamants roses, les chevaux blancs et les arènes en font la capitale sauvage de la Camargue, à une heure de Montpellier."
 ---

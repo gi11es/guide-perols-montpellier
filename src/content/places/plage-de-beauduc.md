@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/plage-de-beauduc/hero.jpg"
-hero_credit: "Ddeveze / Wikimedia / CC BY-SA 3.0"
+hero_credit: "salin estelle / Google Places"
 description: "Plage sauvage et isolée de la Camargue, accessible par une piste en bord de mer, avec de vastes espaces de sable fin et de dunes propices au camping libre et au kitesurf. Sa difficulté d'accès en fait l'un des derniers littoraux vierges du golfe du Lion, loin des plages aménagées."
 ---

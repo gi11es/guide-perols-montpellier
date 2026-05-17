@@ -9,7 +9,7 @@ links:
 source: "google-takeout"
 google_category: ""
 hero: "/photos/bistrot-umami-montpellier/hero.jpg"
-hero_credit: "Alexey Subach / Google Places"
+hero_credit: "Christophe Millet / Google Places"
 description: "Bistrot de cuisine fusion franco-asiatique installé dans le centre historique de Montpellier. Une adresse décontractée pour explorer les saveurs umami autour de petits plats généreux servis au comptoir."
 ---
 

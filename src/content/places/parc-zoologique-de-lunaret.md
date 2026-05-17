@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/parc-zoologique-de-lunaret/hero.jpg"
-hero_credit: "Niel Pama / Google Places"
+hero_credit: "sabrina c / Google Places"
 description: "Zoo municipal de Montpellier dans le parc de Lunaret, accueillant plus de 1 100 animaux représentant 128 espèces dont lions, zèbres et gorilles, avec une spectaculaire serre amazonienne. Entré gratuit pour ce zoo intégré à un vaste parc botanique naturel au nord de la ville."
 ---

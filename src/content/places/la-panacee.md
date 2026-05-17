@@ -9,7 +9,7 @@ links:
 source: "google-takeout"
 google_category: ""
 hero: "/photos/la-panacee/hero.jpg"
-hero_credit: "J. Gazola (18th century) / Wikimedia / Public domain"
+hero_credit: "Patrick Pasquier / Google Places"
 description: "Centre d'art contemporain et restaurant installé dans l'ancienne faculté de médecine de Montpellier, avec expositions, performances et une terrasse verdoyante très courue pour le brunch du week-end. Un lieu hybride qui mêle culture et gastronomie au cœur de la ville historique."
 ---
 

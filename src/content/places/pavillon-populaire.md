@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/pavillon-populaire/hero.jpg"
-hero_credit: "Dinkley = Jean-Marie DAVID / Wikimedia / CC BY-SA 3.0"
+hero_credit: "Josiane J / Google Places"
 description: "Espace municipal de photographie gratuit sur le Parvis de la Légion d'Honneur, à deux pas de la place de la Comédie, proposant de grandes expositions temporaires d'artistes photographes contemporains. Un lieu accessible à tous pour découvrir la création photographique internationale sans billet d'entrée."
 ---

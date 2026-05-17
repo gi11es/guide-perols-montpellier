@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/luma-arles/hero.jpg"
-hero_credit: "MYR67 / Wikimedia / CC BY-SA 4.0"
+hero_credit: "LUMA Arles, Parc des Ateliers / Google Places"
 description: "Vaste campus culturel et artistique ouvert en 2021 dans l'ancienne gare de triage d'Arles, avec en son centre la tour de Frank Gehry recouverte d'acier inoxydable argenté. Expositions d'art contemporain, résidences d'artistes et espaces de création en font l'un des projets culturels les plus ambitieux d'Europe."
 ---

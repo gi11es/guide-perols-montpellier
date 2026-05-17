@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/mad-monkey-montpellier/hero.jpg"
-hero_credit: "Becky Warner / Google Places"
+hero_credit: "Mad Monkey Montpellier / Google Places"
 description: "Salle d'escalade et d'activités indoor pour enfants et adultes, dans le sud de Montpellier, avec murs d'escalade, structures de jeux et ateliers encadrés. Un espace couvert pratique pour les jours de pluie ou les sorties en famille avec des enfants en bas âge."
 ---

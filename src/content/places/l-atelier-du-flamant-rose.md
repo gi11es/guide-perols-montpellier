@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/l-atelier-du-flamant-rose/hero.jpg"
-hero_credit: "L'Atelier du Flamant Rose / Google Places"
+hero_credit: "Le Maître des Loutres / Google Places"
 description: "Atelier de création et boutique de cadeaux originaux à Sète, rue Paul Valéry, proposant céramiques, bijoux et objets artisanaux faits main. Un lieu convivial où il est possible d'assister à des ateliers créatifs et de repartir avec une pièce unique."
 ---

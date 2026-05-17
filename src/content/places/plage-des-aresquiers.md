@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/plage-des-aresquiers/hero.jpg"
-hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
+hero_credit: "Christine Hernandez / Google Places"
 description: "Plage naturiste sur la bande littorale des Aresquiers à Frontignan, avec un mélange de galets et de sable dans un paysage de lido entre mer et étang. Son caractère naturel préservé et son accès pédestre depuis les parkings en font une alternative calme aux plages bondées de l'été."
 ---

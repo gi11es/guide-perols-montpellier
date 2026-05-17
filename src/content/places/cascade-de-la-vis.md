@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/cascade-de-la-vis/hero.jpg"
-hero_credit: "Krzysztof Golik / Wikimedia / CC BY-SA 4.0"
+hero_credit: "La Cascade de la Vis / Google Places"
 description: "Cascade naturelle de la rivière Vis dans les Cévennes gardoises, avec un bassin cristallin entouré de roches plates idéales pour pique-niquer ou se sécher au soleil. L'eau fraîche et le cadre sauvage en font l'une des baignades naturelles les plus appréciées de la région en été."
 ---

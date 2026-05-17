@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/les-ateliers-du-reservoir/hero.jpg"
-hero_credit: "Collard, Augustin-Hippolyte (Valençay, 01–02–1812 - Saint-Mandé, 15–01–1893), photographe / Wikimedia / CC0"
+hero_credit: "MJ / Google Places"
 description: "Espace culturel installé dans l'ancien réservoir d'eau de Sète, sur le quai du canal, accueillant spectacles, ateliers artistiques et résidences de création. Un lieu hybride et singulier, au croisement de l'histoire industrielle de la ville et de la vie artistique contemporaine."
 ---

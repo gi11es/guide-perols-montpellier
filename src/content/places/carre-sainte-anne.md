@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/carre-sainte-anne/hero.jpg"
-hero_credit: "Wolfgang Staudt from Saarbruecken, Germany / Wikimedia / CC BY 2.0"
+hero_credit: "Anne Frasson-Cochet / Google Places"
 description: "Salle d'exposition municipale d'art contemporain installée dans l'ancienne église gothique Sainte-Anne, place Sainte-Anne, au cœur de Montpellier. Le contraste saisissant entre les voûtes médiévales et les œuvres contemporaines en fait l'un des lieux de culture les plus originaux de la ville."
 ---

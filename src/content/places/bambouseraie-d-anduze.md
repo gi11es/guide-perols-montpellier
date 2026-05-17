@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/bambouseraie-d-anduze/hero.jpg"
-hero_credit: "RuB (Ruddy Bénézet) / Wikimedia / CC BY-SA 4.0"
+hero_credit: "La Bambouseraie en Cévennes / Google Places"
 description: "Jardin botanique privé de Générargues, dans le Gard, planté en 1856 et entièrement dédié aux bambous et aux plantes exotiques, avec des allées ombragées traversant des forêts de tiges géantes. Un site dépaysant et inattendu à une heure de Montpellier, particulièrement poétique à la belle saison."
 ---

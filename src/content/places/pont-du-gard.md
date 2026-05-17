@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/pont-du-gard/hero.jpg"
-hero_credit: "Benh LIEU SONG (Flickr) / Wikimedia / CC BY-SA 3.0"
+hero_credit: "- “‪Antoine‬” - / Google Places"
 description: "Aqueduc romain monumental à trois niveaux d'arches construit au Ier siècle de notre ère, classé au patrimoine mondial de l'UNESCO, qui enjambait le Gardon pour alimenter Nîmes en eau. Le site archéologique comprend musée, baignade dans la rivière et sentiers de randonnée dans les garrigues environnantes."
 ---

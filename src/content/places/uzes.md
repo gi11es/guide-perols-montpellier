@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/uzes/hero.jpg"
-hero_credit: "Hyppolyte de Saint-Rambert / Wikimedia / CC BY-SA 4.0"
+hero_credit: "Daniel Hulenka / Google Places"
 description: "Ville ducale du Gard, première duché de France, aux ruelles médiévales et aux hôtels particuliers Renaissance dominés par la tour Fenestrelle. Le marché du samedi sous les arcades de la place aux Herbes est l'un des plus beaux et des plus animés de la région."
 ---

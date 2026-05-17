@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/cirque-de-navacelles/hero.jpg"
-hero_credit: "Krzysztof Golik / Wikimedia / CC BY-SA 4.0"
+hero_credit: "Cirque de Navacelles / Google Places"
 description: "Grand Site de France classé à l'UNESCO, le cirque de Navacelles est un méandre abandonné de la Vis creusé dans les causses du Larzac, visible depuis deux belvédères spectaculaires. Le village au fond du cirque et la cascade naturelle composent un panorama d'une beauté saisissante, à moins de deux heures de Montpellier."
 ---

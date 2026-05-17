@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/mont-saint-clair/hero.jpg"
-hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
+hero_credit: "Raph / Google Places"
 description: "Colline de 183 m qui domine Sète, avec vue à 360° sur la mer, l'étang de Thau et les Pyrénées par temps clair, depuis la chapelle Notre-Dame-de-la-Salette. La montée à pied depuis les ruelles du quartier haut est une promenade incontournable pour découvrir la géographie unique de la ville-île."
 ---

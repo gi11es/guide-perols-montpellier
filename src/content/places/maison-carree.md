@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/maison-carree/hero.jpg"
-hero_credit: "Krzysztof Golik / Wikimedia / CC BY-SA 4.0"
+hero_credit: "Gauthier B / Google Places"
 description: "Temple romain du Ier siècle, l'un des mieux conservés au monde, érigé au cœur de Nîmes en hommage aux petits-fils d'Auguste. Face au Carré d'Art de Norman Foster, il forme avec lui un dialogue architecture millénaire/modernité qui résume à lui seul l'identité de la ville."
 ---

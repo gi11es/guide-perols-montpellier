@@ -11,5 +11,5 @@ source: "manual"
 google_category: "art_gallery"
 description: "Centre d'art contemporain installé dans un entrepôt frigorifique réhabilité sur le port de Sète, programmation pointue d'expositions monographiques. Entrée gratuite."
 hero: "/photos/crac-sete/hero.jpg"
-hero_credit: "antomoro / Wikimedia / FAL"
+hero_credit: "Crac Occitanie, le Centre Régional d'Art Contemporain Occitanie / Pyrénées-Méditerranée / Google Places"
 ---

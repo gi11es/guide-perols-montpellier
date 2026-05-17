@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 description: "Centre d'art contemporain (Montpellier Contemporain) installé dans l'ancien Hôtel Montcalm, proposant trois expositions par an au cœur du centre-ville. Avec sa Panacée et l'École des Beaux-Arts, l'institution porte la scène artistique contemporaine montpelliéraine."
 hero: "/photos/moco/hero.jpg"
-hero_credit: "Google Places"
+hero_credit: "Pat8362 / Google Places"
 ---

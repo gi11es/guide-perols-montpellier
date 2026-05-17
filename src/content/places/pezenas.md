@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/pezenas/hero.jpg"
-hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
+hero_credit: "Florence Cappon / Google Places"
 description: "Ville historique de l'Hérault aux hôtels particuliers du XVIIe siècle, ancienne résidence des États de Languedoc et ville de Molière. Les ruelles du centre médiéval abritent galeries d'art, antiquaires et ateliers d'artisans qui lui valent le titre de ville d'art et d'histoire."
 ---

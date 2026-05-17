@@ -11,5 +11,5 @@ source: "manual"
 google_category: "museum"
 description: "Musée fondé par Hervé Di Rosa, dédié aux objets populaires, jouets, mascottes et autres curiosités du quotidien. Ton ludique et joyeux, expositions temporaires souvent surprenantes."
 hero: "/photos/miam-sete/hero.jpg"
-hero_credit: "Sylexer / Wikimedia / CC BY-SA 3.0"
+hero_credit: "Sonia Arrous / Google Places"
 ---

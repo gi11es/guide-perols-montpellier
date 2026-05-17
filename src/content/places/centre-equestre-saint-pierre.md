@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/centre-equestre-saint-pierre/hero.jpg"
-hero_credit: "Bruno Daubié / Google Places"
+hero_credit: "SAINT PIERRE / Google Places"
 description: "Centre équestre familial sur la route de Palavas, à Lattes, proposant cours d'équitation et promenades pour tous niveaux. Les enfants y trouvent une initiation au cheval dans un cadre verdoyant aux portes de Montpellier."
 ---

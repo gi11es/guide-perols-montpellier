@@ -11,5 +11,5 @@ source: "manual"
 google_category: "museum"
 description: "Le \"Musée Bleu\" d'Arles : collections romaines du Rhône, dont la barge antique de 31 mètres et le buste présumé de Jules César. Architecture contemporaine spectaculaire signée Henri Ciriani."
 hero: "/photos/musee-arles-antique/hero.jpg"
-hero_credit: "Romainbehar / Wikimedia / CC0"
+hero_credit: "Musée départemental Arles antique / Google Places"
 ---

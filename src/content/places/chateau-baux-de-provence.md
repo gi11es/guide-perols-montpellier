@@ -11,5 +11,5 @@ source: "manual"
 google_category: "tourist_attraction"
 description: "Forteresse en ruines perchée au-dessus du village des Baux, vues spectaculaires sur les Alpilles et démonstrations d'armes de siège médiévales. Visite immersive avec catapultes en taille réelle et trébuchet en action l'été."
 hero: "/photos/chateau-baux-de-provence/hero.jpg"
-hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 4.0"
+hero_credit: "Château des Baux-de-Provence / Google Places"
 ---

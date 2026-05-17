@@ -11,5 +11,5 @@ source: "manual"
 google_category: ""
 description: "Centre d'éducation à l'environnement installé en bordure des étangs de Maurin, à Lattes, avec expositions naturalistes et sentiers de découverte des zones humides. Un espace pédagogique gratuit et calme pour observer les oiseaux et comprendre l'écosystème lagunaire."
 hero: "/photos/maison-de-la-nature/hero.jpg"
-hero_credit: "Google Places"
+hero_credit: "Gilles Courteval / Google Places"
 ---

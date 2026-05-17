@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/bouzigues/hero.jpg"
-hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 4.0"
+hero_credit: "Christophe Pages / Google Places"
 description: "Petit village de l'étang de Thau, capitale de la mytiliculture et de l'ostréiculture héraultaise. Les restaurants alignés sur le port servent huîtres et moules fraîches les pieds dans l'eau, face aux tables conchylicoles."
 ---

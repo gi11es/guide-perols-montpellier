@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/ome-chocolat/hero.jpg"
-hero_credit: "Mayra de Armas / Google Places"
+hero_credit: "Sergio Dadou / Google Places"
 description: "Chocolaterie artisanale rue Saint-Guilhem, dans la vieille ville de Montpellier, proposant des tablettes et bonbons chocolatés aux saveurs originales et aux origines sélectionnées. Les ganaches aux épices et les tablettes mono-origine en font une destination pour les amateurs sérieux de cacao."
 ---

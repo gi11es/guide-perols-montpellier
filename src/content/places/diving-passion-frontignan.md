@@ -11,5 +11,5 @@ source: "manual"
 google_category: "scuba_diving"
 description: "Centre de plongée à Frontignan, sorties sur les sites de la Gardiole et du Cap d'Agde. Spécialiste des baptêmes et des stages enfants à partir de 8 ans."
 hero: "/photos/diving-passion-frontignan/hero.jpg"
-hero_credit: "Harish / Wikimedia / CC BY-SA 4.0"
+hero_credit: "Plongée Passion Frontignan / Google Places"
 ---

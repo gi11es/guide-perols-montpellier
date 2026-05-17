@@ -11,5 +11,5 @@ source: "manual"
 google_category: "sailing_school"
 description: "Yacht Club de La Grande-Motte, école de voile labellisée FFV avec stages enfants en optimist et catamaran sur l'Étang du Ponant. La référence régionale pour apprendre la voile dès 7 ans."
 hero: "/photos/ycgm-voile/hero.jpg"
-hero_credit: "Yacht Club de La Grande Motte : Ecole Française de Voile - Wing, stage, pédalo, paddle / Google Places"
+hero_credit: "Restaurant Le Yacht Club / Google Places"
 ---

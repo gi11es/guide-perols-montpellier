@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/jardins-de-la-fontaine/hero.jpg"
-hero_credit: "Krzysztof Golik / Wikimedia / CC BY-SA 4.0"
+hero_credit: "Emmanuel BELLOT / Google Places"
 description: "Premier jardin public de France, aménagé au XVIIIe siècle à Nîmes autour de la source antique, avec ruines romaines, allées à la française, étangs et sculptures. La Tour Magne au sommet du parc offre une vue panoramique sur la ville et les garrigues environnantes."
 ---

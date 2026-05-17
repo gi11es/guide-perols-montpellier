@@ -11,6 +11,6 @@ source: "manual"
 google_category: "medical_center"
 description: "Centre de soins immédiats et petites urgences à la Cougourlude. Pratique pour bobos et fièvres en dehors des heures de cabinet."
 hero: "/photos/censomed-lattes/hero.jpg"
-hero_credit: "EJA MA / Google Places"
+hero_credit: "Censomed Lattes / Google Places"
 ---
 

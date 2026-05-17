@@ -10,6 +10,6 @@ links:
 source: "manual"
 google_category: ""
 hero: "/photos/plage-de-l-espiguette/hero.jpg"
-hero_credit: "Christian Ferrer / Wikimedia / CC BY 4.0"
+hero_credit: "Isidor Gleichnam / Google Places"
 description: "Immense plage de sable fin à l'extrémité de la presqu'île de l'Espiguette, avec des kilomètres de dunes préservées et un caractère naturel exceptionnel classé site Natura 2000. L'éloignement des routes et l'absence d'urbanisation en font une des plages les plus sauvages accessible en voiture depuis Montpellier."
 ---
