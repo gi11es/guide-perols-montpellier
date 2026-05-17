@@ -1,0 +1,63 @@
+---
+interface Category { slug: string; label: string; color: string; order: number; }
+interface Props {
+  categories: Category[];
+}
+const { categories } = Astro.props;
+const sorted = [...categories].sort((a, b) => a.order - b.order);
+---
+<nav class="chips" aria-label="Filtrer par catégorie">
+  <button class="chip active" data-category="all">Tout</button>
+  {sorted.map((c) => (
+    <button class="chip" data-category={c.slug} style={`--chip-color: ${c.color};`}>
+      {c.label}
+    </button>
+  ))}
+</nav>
+
+<script>
+  const nav = document.querySelector('.chips')!;
+  nav.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (!target.classList.contains('chip')) return;
+    nav.querySelectorAll('.chip').forEach((c) => c.classList.remove('active'));
+    target.classList.add('active');
+    const cat = target.dataset.category!;
+    window.dispatchEvent(new CustomEvent('category:filter', { detail: { category: cat } }));
+  });
+</script>
+
+<style>
+  .chips {
+    position: fixed;
+    top: calc(env(safe-area-inset-top) + 56px);
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: var(--space-2);
+    padding: 0 var(--space-5);
+    overflow-x: auto;
+    scrollbar-width: none;
+    z-index: 11;
+  }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: 0 0 auto;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--color-rule);
+    background: rgba(244,239,230,0.92);
+    backdrop-filter: blur(8px);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--fs-sm);
+    cursor: pointer;
+    white-space: nowrap;
+    pointer-events: auto;
+  }
+  .chip.active {
+    background: var(--chip-color, var(--color-ink));
+    color: var(--color-bg);
+    border-color: transparent;
+  }
+</style>

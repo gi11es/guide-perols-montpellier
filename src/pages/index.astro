@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '~/layouts/Base.astro';
 import Map from '~/components/Map.astro';
 import PlaceSheet from '~/components/PlaceSheet.astro';
+import CategoryChips from '~/components/CategoryChips.astro';
 import categoriesData from '~/content/categories.json';
 
 interface Category { slug: string; label: string; color: string; order: number; }
@@ -17,6 +18,7 @@ const center = { lat: 43.5650, lon: 3.9450 };
   <header class="topbar">
     <h1>Pérols & autour</h1>
   </header>
+  <CategoryChips categories={categories} />
 </Base>
 
 <style>

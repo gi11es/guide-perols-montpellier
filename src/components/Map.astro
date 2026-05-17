@@ -51,6 +51,7 @@ const catColors = Object.fromEntries(categories.map((c) => [c.slug, c.color]));
   });
 
   map.on('load', () => {
+    const markers: { category: string; marker: maplibregl.Marker }[] = [];
     for (const p of placeData) {
       const color = catColors[p.category] ?? '#1A1814';
       const dot = document.createElement('button');
@@ -60,8 +61,17 @@ const catColors = Object.fromEntries(categories.map((c) => [c.slug, c.color]));
       dot.addEventListener('click', () => {
         window.dispatchEvent(new CustomEvent('place:select', { detail: p }));
       });
-      new maplibregl.Marker({ element: dot }).setLngLat([p.lon, p.lat]).addTo(map);
+      const marker = new maplibregl.Marker({ element: dot }).setLngLat([p.lon, p.lat]).addTo(map);
+      markers.push({ category: p.category, marker });
     }
+
+    window.addEventListener('category:filter', (e: any) => {
+      const cat = e.detail.category;
+      for (const m of markers) {
+        const visible = cat === 'all' || m.category === cat;
+        m.marker.getElement().style.display = visible ? '' : 'none';
+      }
+    });
   });
 </script>
 
