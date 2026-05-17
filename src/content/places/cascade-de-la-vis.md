@@ -1,0 +1,11 @@
+---
+name: "Cascade de la Vis"
+slug: cascade-de-la-vis
+category: nature
+lat: 43.9246727
+lon: 3.6624808
+address: "Cascade de La Vis, Saint-Laurent-le-Minier, Le Vigan, Gard, Occitanie, France métropolitaine, 30440, France"
+links: {}
+source: "manual"
+google_category: ""
+---

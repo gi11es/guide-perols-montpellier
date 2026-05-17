@@ -10,7 +10,17 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: "Salin d'Aigues-Mortes", category: 'nature', query: "Salin d'Aigues-Mortes, France" },
+  { name: 'Cirque de Navacelles', category: 'nature', query: 'Cirque de Navacelles, France' },
+  { name: 'Pont du Gard', category: 'nature', query: 'Pont du Gard, France' },
+  { name: 'Grotte des Demoiselles', category: 'nature', query: 'Grotte des Demoiselles, Saint-Bauzille-de-Putois, France' },
+  { name: "Gorges de l'Hérault", category: 'nature', query: "Gorges de l'Hérault, France" },
+  { name: 'Cirque de Mourèze', category: 'nature', query: 'Cirque de Mourèze, France' },
+  { name: 'Mont Saint-Clair', category: 'nature', query: 'Mont Saint-Clair, Sète, France' },
+  { name: "Bambouseraie d'Anduze", category: 'nature', query: "Bambouseraie d'Anduze, France" },
+  { name: 'Bouzigues', category: 'nature', query: 'Bouzigues, Hérault, France' },
+  { name: 'Plage des Aresquiers', category: 'nature', query: 'Plage des Aresquiers, Vic-la-Gardiole, France' },
+  { name: 'Cascade de la Vis', category: 'nature', query: 'Cascade de la Vis, France' },
+  { name: 'Grotte de Clamouse', category: 'nature', query: 'Grotte de Clamouse, France' },
 ];
 
 function escapeYaml(s) {
