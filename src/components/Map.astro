@@ -198,6 +198,14 @@ const houseLngLat = house ? [house.lon, house.lat] : null;
       if (activePopup) { activePopup.remove(); activePopup = null; }
     });
 
+    // Tap on empty map (no marker under click) → close the open sheet.
+    map.on('click', (e) => {
+      const hit = map.queryRenderedFeatures(e.point, { layers: ['places-dots'] });
+      if (hit.length === 0) {
+        window.dispatchEvent(new CustomEvent('sheet:close'));
+      }
+    });
+
     // Click handler — if we have a hovered feature, that's what the user is aiming at.
     // Otherwise fall back to the closest feature to the click point.
     map.on('click', 'places-dots', (e) => {

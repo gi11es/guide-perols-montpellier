@@ -76,6 +76,42 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
   handle.addEventListener('click', close);
   closeBtn.addEventListener('click', close);
 
+  // Swipe-down-to-close on mobile when the body is already scrolled to top.
+  // Touch starts at the top of the sheet; if user pulls down past 80px, close.
+  let touchStartY: number | null = null;
+  let touchDeltaY = 0;
+  let dragging = false;
+  sheet.addEventListener('touchstart', (e) => {
+    if (window.innerWidth >= 720) return; // desktop side-drawer, skip
+    if (body.scrollTop > 0) return; // user is scrolling inside body
+    touchStartY = e.touches[0].clientY;
+    touchDeltaY = 0;
+    dragging = false;
+  }, { passive: true });
+  sheet.addEventListener('touchmove', (e) => {
+    if (touchStartY === null) return;
+    touchDeltaY = e.touches[0].clientY - touchStartY;
+    if (touchDeltaY > 8) {
+      dragging = true;
+      // Pull the sheet down with the finger
+      sheet.style.transform = `translateY(${touchDeltaY}px)`;
+      sheet.style.transition = 'none';
+    }
+  }, { passive: true });
+  sheet.addEventListener('touchend', () => {
+    if (!dragging) { touchStartY = null; return; }
+    sheet.style.transition = '';
+    sheet.style.transform = '';
+    if (touchDeltaY > 80) close();
+    touchStartY = null;
+    touchDeltaY = 0;
+    dragging = false;
+  });
+
+  window.addEventListener('sheet:close', () => {
+    if (sheet.classList.contains('open')) close();
+  });
+
   window.addEventListener('place:select', (e: any) => {
     render(e.detail.slug);
   });
@@ -161,11 +197,16 @@ const catBySlug = Object.fromEntries(categories.map((c) => [c.slug, c]));
   }
   :global(.sheet-hero) {
     width: 100%;
-    max-height: 50dvh;
+    max-height: 25dvh;
     object-fit: contain;
     background: var(--color-bg);
     display: block;
     filter: saturate(0.95) contrast(1.05);
+  }
+  @media (min-width: 720px) {
+    :global(.sheet-hero) {
+      max-height: 50dvh;
+    }
   }
   :global(.sheet-text) {
     padding: var(--space-5) var(--space-5) var(--space-6);
