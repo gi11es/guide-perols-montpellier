@@ -10,9 +10,8 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'La Fabrique à Choux', category: 'boulangerie', query: 'La Fabrique à Choux, Pérols, France' },
-  { name: 'Boulangerie Pâtisserie Cenatiempo', category: 'boulangerie', query: 'Boulangerie Pâtisserie Cenatiempo, Castelnau-le-Lez, France' },
-  { name: 'Clara Jung Pâtisserie', category: 'boulangerie', query: 'Clara Jung Pâtisserie, Montpellier, France' },
+  { name: "Gorges d'Héric", category: 'nature', query: "Gorges d'Héric, Mons, France" },
+  { name: 'Site naturel de la Conque', category: 'nature', query: 'Site naturel de la Conque, Mèze, France' },
 ];
 
 function escapeYaml(s) {
