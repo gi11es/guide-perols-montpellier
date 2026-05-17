@@ -10,7 +10,7 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Bravo Babette', category: 'restaurant', query: 'Bravo Babette, Montpellier, France' },
+  { name: 'Ski Nautique du Ponant', category: 'enfants', query: 'Wakeboard Ski Nautique Club Ponant, La Grande-Motte, France' },
 ];
 
 function escapeYaml(s) {
