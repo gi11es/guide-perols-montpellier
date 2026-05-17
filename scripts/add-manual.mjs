@@ -10,7 +10,15 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Ski Nautique du Ponant', category: 'enfants', query: 'Wakeboard Ski Nautique Club Ponant, La Grande-Motte, France' },
+  { name: 'Maison Carrée', category: 'culture', query: 'Maison Carrée, Nîmes, France' },
+  { name: 'Carrières des Lumières', category: 'culture', query: 'Carrières des Lumières, Les Baux-de-Provence, France' },
+  { name: 'Halle Tropisme', category: 'culture', query: 'Halle Tropisme, Montpellier, France' },
+  { name: 'Aquarium Mare Nostrum', category: 'culture', query: 'Aquarium Mare Nostrum, Montpellier, France' },
+  { name: 'Fondation Vincent Van Gogh', category: 'culture', query: 'Fondation Vincent Van Gogh, Arles, France' },
+  { name: 'Carré Sainte-Anne', category: 'culture', query: 'Carré Sainte-Anne, Montpellier, France' },
+  { name: 'Jardins de la Fontaine', category: 'culture', query: 'Jardins de la Fontaine, Nîmes, France' },
+  { name: 'Centre Équestre Saint-Pierre', category: 'enfants', query: 'Centre Équestre Saint-Pierre, Lattes, France' },
+  { name: 'Écurie des Dunes', category: 'enfants', query: 'Ecurie des Dunes, Le Grau-du-Roi, France' },
 ];
 
 function escapeYaml(s) {

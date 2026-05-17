@@ -1,0 +1,11 @@
+---
+name: "Fondation Vincent Van Gogh"
+slug: fondation-vincent-van-gogh
+category: culture
+lat: 43.6779268
+lon: 4.625557
+address: "Fondation Vincent Van-Gogh, 33, Rue du Docteur Fanton, Le Méjan, Arles, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur, France métropolitaine, 13200, France"
+links: {}
+source: "manual"
+google_category: ""
+---
