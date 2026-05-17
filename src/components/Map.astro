@@ -1,0 +1,86 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Category { slug: string; label: string; color: string; }
+interface Props {
+  places: CollectionEntry<'places'>[];
+  categories: Category[];
+  center: { lat: number; lon: number };
+}
+const { places, categories, center } = Astro.props;
+
+const placeData = places.map((p) => ({
+  slug: p.data.slug,
+  name: p.data.name,
+  lat: p.data.lat,
+  lon: p.data.lon,
+  category: p.data.category,
+}));
+const catColors = Object.fromEntries(categories.map((c) => [c.slug, c.color]));
+---
+<div id="map" data-center={`${center.lon},${center.lat}`}></div>
+
+<script is:inline define:vars={{ placeData, catColors }}>
+  window.__GUIDE__ = { placeData, catColors };
+</script>
+
+<script>
+  import maplibregl from 'maplibre-gl';
+  import 'maplibre-gl/dist/maplibre-gl.css';
+
+  const el = document.getElementById('map')!;
+  const [lon, lat] = el.dataset.center!.split(',').map(Number);
+  const { placeData, catColors } = (window as any).__GUIDE__;
+
+  const map = new maplibregl.Map({
+    container: 'map',
+    center: [lon, lat],
+    zoom: 10,
+    style: {
+      version: 8,
+      sources: {
+        'osm': {
+          type: 'raster',
+          tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
+          tileSize: 256,
+          attribution: '© OpenStreetMap',
+        },
+      },
+      layers: [{ id: 'osm', type: 'raster', source: 'osm' }],
+    },
+  });
+
+  map.on('load', () => {
+    for (const p of placeData) {
+      const color = catColors[p.category] ?? '#1A1814';
+      const dot = document.createElement('button');
+      dot.className = 'place-dot';
+      dot.style.background = color;
+      dot.setAttribute('aria-label', p.name);
+      dot.addEventListener('click', () => {
+        window.dispatchEvent(new CustomEvent('place:select', { detail: p }));
+      });
+      new maplibregl.Marker({ element: dot }).setLngLat([p.lon, p.lat]).addTo(map);
+    }
+  });
+</script>
+
+<style>
+  #map {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+  }
+  :global(.place-dot) {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--color-bg, #F4EFE6);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.15s ease;
+  }
+  :global(.place-dot:active) { transform: scale(1.2); }
+</style>
