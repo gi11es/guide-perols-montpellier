@@ -1,0 +1,11 @@
+---
+name: "Saint-Guilhem-le-Désert"
+slug: saint-guilhem-le-desert
+category: villes-villages
+lat: 43.734
+lon: 3.54852
+address: "Saint-Guilhem-le-Désert, Lodève, Hérault, Occitanie, France métropolitaine, 34150, France"
+links: {}
+source: "manual"
+google_category: ""
+---
