@@ -10,10 +10,7 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: "Plage de l'Espiguette", category: 'nature', query: "Plage de l'Espiguette, Le Grau-du-Roi, France" },
-  { name: 'Maison de la Nature', category: 'nature', query: 'Maison de la Nature de Lattes, France' },
-  { name: 'Lac du Salagou', category: 'nature', query: 'Lac du Salagou, France' },
-  { name: 'Pic Saint-Loup', category: 'nature', query: 'Pic Saint-Loup, France' },
+  { name: 'Musée Fabre', category: 'culture', query: 'Musée Fabre, Montpellier, France' },
 ];
 
 function escapeYaml(s) {

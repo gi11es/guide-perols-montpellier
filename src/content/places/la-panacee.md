@@ -1,7 +1,7 @@
 ---
 name: "La Panacée"
 slug: la-panacee
-category: uncategorized
+category: culture
 lat: 43.6128269
 lon: 3.8784363
 links:
