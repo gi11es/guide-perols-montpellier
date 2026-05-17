@@ -10,10 +10,7 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Aigues-Mortes', category: 'villes-villages', query: 'Aigues-Mortes, Gard, France' },
-  { name: 'Sète', category: 'villes-villages', query: 'Sète, Hérault, France' },
-  { name: 'Mèze', category: 'villes-villages', query: 'Mèze, Hérault, France' },
-  { name: 'Saint-Guilhem-le-Désert', category: 'villes-villages', query: 'Saint-Guilhem-le-Désert, Hérault, France' },
+  { name: 'Saintes-Maries-de-la-Mer', category: 'villes-villages', query: 'Saintes-Maries-de-la-Mer, Bouches-du-Rhône, France' },
 ];
 
 function escapeYaml(s) {
