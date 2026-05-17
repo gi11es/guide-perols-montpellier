@@ -10,9 +10,7 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Uzès', category: 'villes-villages', query: 'Uzès, Gard, France' },
-  { name: 'Les Baux-de-Provence', category: 'villes-villages', query: 'Les Baux-de-Provence, Bouches-du-Rhône, France' },
-  { name: 'Le Grau-du-Roi', category: 'villes-villages', query: 'Le Grau-du-Roi, Gard, France' },
+  { name: 'Plage de Maguelone', category: 'nature', query: 'Plage de Maguelone, Villeneuve-lès-Maguelone, France' },
 ];
 
 function escapeYaml(s) {
