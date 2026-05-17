@@ -21,9 +21,10 @@ const HOUSE = {
 const RADIUS_KM = 100;
 
 export function parseTakeoutCsv(text) {
-  const lines = text.split(/\r?\n/);
-  if (lines.length < 2) return [];
-  const header = parseCsvLine(lines[0]).map((h) => h.toLowerCase());
+  text = text.replace(/^﻿/, '');
+  const rows = parseCsvStream(text);
+  if (rows.length < 2) return [];
+  const header = rows[0].map((h) => h.trim().toLowerCase());
   const idx = {
     title: header.indexOf('title'),
     note: header.indexOf('note'),
@@ -31,9 +32,9 @@ export function parseTakeoutCsv(text) {
   };
   if (idx.title === -1 || idx.url === -1) return [];
   const out = [];
-  for (let i = 1; i < lines.length; i++) {
-    if (!lines[i].trim()) continue;
-    const cells = parseCsvLine(lines[i]);
+  for (let i = 1; i < rows.length; i++) {
+    const cells = rows[i];
+    if (cells.every((c) => !c || !c.trim())) continue;  // skip blank rows
     out.push({
       title: cells[idx.title] ?? '',
       note: idx.note >= 0 ? (cells[idx.note] ?? '') : '',
@@ -43,24 +44,30 @@ export function parseTakeoutCsv(text) {
   return out;
 }
 
-function parseCsvLine(line) {
-  const out = [];
+function parseCsvStream(text) {
+  const rows = [];
+  let row = [];
   let cur = '';
   let inQuote = false;
-  for (let i = 0; i < line.length; i++) {
-    const ch = line[i];
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
     if (inQuote) {
-      if (ch === '"' && line[i + 1] === '"') { cur += '"'; i++; }
+      if (ch === '"' && text[i + 1] === '"') { cur += '"'; i++; }
       else if (ch === '"') { inQuote = false; }
       else { cur += ch; }
     } else {
-      if (ch === ',') { out.push(cur); cur = ''; }
-      else if (ch === '"') { inQuote = true; }
+      if (ch === '"') { inQuote = true; }
+      else if (ch === ',') { row.push(cur); cur = ''; }
+      else if (ch === '\n') { row.push(cur); rows.push(row); row = []; cur = ''; }
+      else if (ch === '\r') { /* skip; \n handles row break */ }
       else { cur += ch; }
     }
   }
-  out.push(cur);
-  return out;
+  if (cur.length > 0 || row.length > 0) {
+    row.push(cur);
+    rows.push(row);
+  }
+  return rows;
 }
 
 async function resolveRow(row) {
@@ -72,8 +79,11 @@ async function resolveRow(row) {
   return { ...row, url, coords };
 }
 
-function escapeYaml(s) {
-  return `"${s.replace(/"/g, '\\"')}"`;
+export function escapeYaml(s) {
+  return `"${s
+    .replace(/\\/g, '\\\\')
+    .replace(/"/g, '\\"')
+    .replace(/[\r\n]+/g, ' ')}"`;
 }
 
 function toMarkdown(row) {
