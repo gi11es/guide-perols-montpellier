@@ -1,25 +1,78 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '~/layouts/Base.astro';
-import Map from '~/components/Map.astro';
+import MapView from '~/components/Map.astro';
 import PlaceSheet from '~/components/PlaceSheet.astro';
 import CategoryChips from '~/components/CategoryChips.astro';
+import PlaceCard from '~/components/PlaceCard.astro';
 import categoriesData from '~/content/categories.json';
 
 interface Category { slug: string; label: string; color: string; order: number; }
 const categories = categoriesData as Category[];
+const catBySlug = new Map(categories.map((c) => [c.slug, c]));
 
 const places = await getCollection('places');
+places.sort((a, b) => a.data.name.localeCompare(b.data.name, 'fr'));
 const center = { lat: 43.5650, lon: 3.9450 };
 ---
 <Base title="Guide de Pérols">
-  <Map places={places} categories={categories} center={center} />
-  <PlaceSheet places={places} categories={categories} />
+  <div id="view-map">
+    <MapView places={places} categories={categories} center={center} />
+    <PlaceSheet places={places} categories={categories} />
+  </div>
+
+  <div id="view-list" hidden>
+    <header class="container list-header">
+      <p class="eyebrow">Un guide personnel</p>
+      <h1>Pérols & autour</h1>
+      <p class="muted lead">Nos endroits préférés à 100 km autour de la maison.</p>
+    </header>
+    <main class="container">
+      {places.map((place) => {
+        const cat = catBySlug.get(place.data.category);
+        return (
+          <article data-category={place.data.category}>
+            <PlaceCard
+              place={place}
+              categoryLabel={cat?.label ?? place.data.category}
+              categoryColor={cat?.color ?? 'var(--color-ink-soft)'}
+            />
+          </article>
+        );
+      })}
+    </main>
+  </div>
+
   <header class="topbar">
     <h1>Pérols & autour</h1>
   </header>
   <CategoryChips categories={categories} />
+
+  <button id="view-toggle" aria-label="Basculer carte / liste">Liste</button>
 </Base>
+
+<script>
+  const map = document.getElementById('view-map')!;
+  const list = document.getElementById('view-list')!;
+  const btn = document.getElementById('view-toggle')!;
+
+  let isList = false;
+  btn.addEventListener('click', () => {
+    isList = !isList;
+    map.hidden = isList;
+    list.hidden = !isList;
+    btn.textContent = isList ? 'Carte' : 'Liste';
+  });
+
+  // Sync category filter to list view as well.
+  window.addEventListener('category:filter', (e: any) => {
+    const cat = e.detail.category;
+    list.querySelectorAll('article[data-category]').forEach((el) => {
+      const c = (el as HTMLElement).dataset.category;
+      (el as HTMLElement).hidden = !(cat === 'all' || c === cat);
+    });
+  });
+</script>
 
 <style>
   .topbar {
@@ -36,5 +89,23 @@ const center = { lat: 43.5650, lon: 3.9450 };
     font-size: var(--fs-lg);
     margin: 0;
     font-weight: 500;
+  }
+  .list-header { padding-top: 120px; padding-bottom: var(--space-6); }
+  .lead { font-size: var(--fs-lg); }
+  #view-toggle {
+    position: fixed;
+    bottom: calc(env(safe-area-inset-bottom) + 16px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+    border: none;
+    background: var(--color-ink);
+    color: var(--color-bg);
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-family: var(--font-sans);
+    font-size: var(--fs-sm);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    cursor: pointer;
   }
 </style>
