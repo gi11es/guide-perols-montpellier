@@ -136,11 +136,24 @@ const houseLngLat = house ? [house.lon, house.lat] : null;
       },
     });
 
-    // Click handler
+    // Click handler — when dots overlap, prefer the one whose centre is closest
+    // to the click point (rather than relying on rendering order).
     map.on('click', 'places-dots', (e) => {
-      const f = e.features?.[0];
-      if (!f) return;
-      window.dispatchEvent(new CustomEvent('place:select', { detail: f.properties }));
+      const features = e.features ?? [];
+      if (!features.length) return;
+      const clickPx = e.point;
+      let best = features[0];
+      let bestDist = Infinity;
+      for (const f of features) {
+        const coords = (f.geometry as any).coordinates;
+        const px = map.project(coords);
+        const d = Math.hypot(px.x - clickPx.x, px.y - clickPx.y);
+        if (d < bestDist) {
+          bestDist = d;
+          best = f;
+        }
+      }
+      window.dispatchEvent(new CustomEvent('place:select', { detail: best.properties }));
     });
     map.on('mouseenter', 'places-dots', () => { map.getCanvas().style.cursor = 'pointer'; });
     map.on('mouseleave', 'places-dots', () => { map.getCanvas().style.cursor = ''; });
