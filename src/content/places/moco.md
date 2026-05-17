@@ -2,14 +2,14 @@
 name: "MoCo"
 slug: moco
 category: culture
-lat: 43.6176127
-lon: 3.8846223
-address: "École supérieure des Beaux-Arts, Avenue de Saint-Lazare, Les Beaux-Arts, Centre, Montpellier, Hérault, Occitanie, France métropolitaine, 34064, France"
+lat: 43.6062105
+lon: 3.8789745
+address: "13 Rue de la République, 34000 Montpellier, France"
 links:
-  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJWQ4yuDevthIRFD4cAJEKFeY"
+  google_maps: "https://www.google.com/maps/place/?q=place_id:ChIJH--CoR2vthIRuVMQNTVz4JM"
 source: "manual"
 google_category: ""
+description: "Centre d'art contemporain (Montpellier Contemporain) installé dans l'ancien Hôtel Montcalm, proposant trois expositions par an au cœur du centre-ville. Avec sa Panacée et l'École des Beaux-Arts, l'institution porte la scène artistique contemporaine montpelliéraine."
 hero: "/photos/moco/hero.jpg"
-hero_credit: "Tmittelstaedt / Wikimedia / CC BY-SA 4.0"
-description: "Centre d'art contemporain adossé à l'École supérieure des Beaux-Arts de Montpellier, proposant des expositions temporaires d'artistes internationaux dans un bâtiment haussmannien rénové. L'un des lieux de référence pour la scène artistique contemporaine dans le sud de la France."
+hero_credit: "Google Places"
 ---

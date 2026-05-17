@@ -6,8 +6,9 @@ interface Props {
   places: CollectionEntry<'places'>[];
   categories: Category[];
   center: { lat: number; lon: number };
+  house?: { lat: number; lon: number };
 }
-const { places, categories, center } = Astro.props;
+const { places, categories, center, house } = Astro.props;
 
 const baseUrl = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 const placeData = places.map((p) => ({
@@ -20,11 +21,12 @@ const placeData = places.map((p) => ({
 }));
 const catColors = Object.fromEntries(categories.map((c) => [c.slug, c.color]));
 const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
+const houseLngLat = house ? [house.lon, house.lat] : null;
 ---
 <div id="map" data-center={`${center.lon},${center.lat}`}></div>
 
-<script is:inline define:vars={{ placeData, catColors, catLabels, baseUrl }}>
-  window.__GUIDE__ = { placeData, catColors, catLabels, baseUrl };
+<script is:inline define:vars={{ placeData, catColors, catLabels, baseUrl, houseLngLat }}>
+  window.__GUIDE__ = { placeData, catColors, catLabels, baseUrl, houseLngLat };
 </script>
 
 <script>
@@ -33,7 +35,7 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
 
   const el = document.getElementById('map')!;
   const [lon, lat] = el.dataset.center!.split(',').map(Number);
-  const { placeData, catColors, catLabels, baseUrl } = (window as any).__GUIDE__;
+  const { placeData, catColors, catLabels, baseUrl, houseLngLat } = (window as any).__GUIDE__;
 
   const map = new maplibregl.Map({
     container: el,
@@ -59,6 +61,22 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
   });
 
   map.on('load', () => {
+    // --- House marker (single HTMLMarker, no perf concern) ---
+    if (houseLngLat) {
+      const houseEl = document.createElement('div');
+      houseEl.className = 'house-marker';
+      houseEl.title = 'La maison';
+      houseEl.innerHTML = `
+        <svg viewBox="0 0 32 32" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-label="La maison">
+          <circle cx="16" cy="16" r="15" fill="#F4EFE6" stroke="#1A1814" stroke-width="2"/>
+          <path d="M9 16l7-6 7 6v7a1 1 0 0 1-1 1h-4v-5h-4v5h-4a1 1 0 0 1-1-1z" fill="#C25B3F" stroke="#1A1814" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+      `;
+      new maplibregl.Marker({ element: houseEl, anchor: 'center' })
+        .setLngLat(houseLngLat as [number, number])
+        .addTo(map);
+    }
+
     // --- Build GeoJSON from placeData ---
     function hashSlugToInt(s: string): number {
       let h = 0;
@@ -199,6 +217,11 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
     inset: 0;
     width: 100%;
     height: 100dvh;
+  }
+  /* House marker */
+  :global(.house-marker) {
+    cursor: default;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
   }
   /* MapLibre hover popup */
   :global(.maplibregl-popup-tip) { display: none; }

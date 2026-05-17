@@ -13,11 +13,12 @@ const catBySlug = new Map(categories.map((c) => [c.slug, c]));
 
 const places = await getCollection('places');
 places.sort((a, b) => a.data.name.localeCompare(b.data.name, 'fr'));
-const center = { lat: 43.5650, lon: 3.9450 };
+const house = { lat: 43.5546662, lon: 3.9642029 };
+const center = house;
 ---
 <Base title="Guide de Pérols">
   <div id="view-map">
-    <MapView places={places} categories={categories} center={center} />
+    <MapView places={places} categories={categories} center={center} house={house} />
     <PlaceSheet places={places} categories={categories} />
   </div>
 
