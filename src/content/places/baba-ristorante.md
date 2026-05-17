@@ -10,5 +10,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/baba-ristorante/hero.jpg"
 hero_credit: "Jossuha Théophile / Google Places"
+description: "Menu créatif, tapas du monde et cocktails dans une salle voûtée au décor soigné inspiré de la Beat Generation."
 ---
 

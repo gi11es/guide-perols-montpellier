@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/musee-des-dinosaures/hero.jpg"
 hero_credit: "Michael Barruel / Google Places"
+description: "Musée-parc sur les dinosaures et l'évolution de l'humanité, reconstitutions, fossiles et aires de pique-nique."
 ---

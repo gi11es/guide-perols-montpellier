@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/mont-saint-clair/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
+description: "Sommet de 183 m d'altitude avec vue panoramique sur la ville et la mer, chapelle et point de vue."
 ---

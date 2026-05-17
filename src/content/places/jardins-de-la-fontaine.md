@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/jardins-de-la-fontaine/hero.jpg"
 hero_credit: "Krzysztof Golik / Wikimedia / CC BY-SA 4.0"
+description: "Parc de 15 hectares du XVIIe siècle avec ruines romaines, jardins botaniques, étangs et sculptures."
 ---

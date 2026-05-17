@@ -10,5 +10,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/le-st-barth-tarbouriech/hero.jpg"
 hero_credit: "Le St Barth Tarbouriech / Google Places"
+description: "Installés au bord de l'étang de Thau, ces ostréiculteurs proposent des huîtres et des spécialités régionales."
 ---
 

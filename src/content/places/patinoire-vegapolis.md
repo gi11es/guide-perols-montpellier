@@ -10,5 +10,6 @@ source: "manual"
 google_category: "ice_skating_rink"
 hero: "/photos/patinoire-vegapolis/hero.jpg"
 hero_credit: "Patinoire Vegapolis / Google Places"
+description: "Patinoire intérieure avec toboggan en glace, tunnel, spectacles son et lumière, location de patins et cours."
 ---
 

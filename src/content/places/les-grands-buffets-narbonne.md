@@ -10,5 +10,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/les-grands-buffets-narbonne/hero.jpg"
 hero_credit: "Les Grands Buffets / Google Places"
+description: "Établissement élégant en lambris, proposant des buffets à volonté composés de viandes, de fromages et de desserts."
 ---
 

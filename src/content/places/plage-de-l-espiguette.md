@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/plage-de-l-espiguette/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY 4.0"
+description: "Plage sobre avec vaste étendue de sable et 2 restaurants proposant chaises longues et paddles à louer."
 ---

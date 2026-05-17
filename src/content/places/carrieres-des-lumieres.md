@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/carrieres-des-lumieres/hero.jpg"
 hero_credit: "Pierre Goiffon / Wikimedia / CC BY-SA 4.0"
+description: "Ancienne carrière avec spectacles multimédia artistiques et projection de célèbres tableaux mis en musique."
 ---

@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/lac-du-salagou/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY 4.0"
+description: "Lac dans cadre pittoresque, possibilité de baignade, planche à voile, et randonnées et vélo au bord de l'eau."
 ---

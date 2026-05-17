@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/plage-de-beauduc/hero.jpg"
 hero_credit: "Ddeveze / Wikimedia / CC BY-SA 3.0"
+description: "Grande plage isolée de sable fin très appréciée pour le kitesurf et le camping."
 ---

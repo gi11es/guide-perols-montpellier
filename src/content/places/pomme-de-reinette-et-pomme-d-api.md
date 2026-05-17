@@ -10,5 +10,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/pomme-de-reinette-et-pomme-d-api/hero.jpg"
 hero_credit: "corinne bouillet / Google Places"
+description: "Magasin proposant jouets classiques et modernes, marionnettes, peluches et décorations pour chambre d'enfant."
 ---
 

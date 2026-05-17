@@ -11,5 +11,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/carre-mer/hero.jpg"
 hero_credit: "Plage Restaurant Carré Mer / Google Places"
+description: "Viandes et poissons grillés, risottos et salades servis dans une salle chic ouverte sur l'extérieur."
 ---
 

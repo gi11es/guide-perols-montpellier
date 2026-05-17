@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/pavillon-populaire/hero.jpg"
 hero_credit: "Dinkley = Jean-Marie DAVID / Wikimedia / CC BY-SA 3.0"
+description: "Musée de la Photographie moderne avec expositions temporaires d'artistes nationaux et internationaux actuels."
 ---

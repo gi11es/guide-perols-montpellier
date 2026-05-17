@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/le-petit-jardin/hero.jpg"
 hero_credit: "Restaurant du Petit Jardin / Google Places"
+description: "Cuisine internationale proposée dans un restaurant raffiné doté d'une vaste terrasse verdoyante et d'un salon privé."
 ---

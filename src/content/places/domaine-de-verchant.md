@@ -10,5 +10,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/domaine-de-verchant/hero.jpg"
 hero_credit: "Domaine de Verchant / Google Places"
+description: "Manoir du XVIe siècle au cœur des vignes avec des chambres et des suites élégantes, un spa et une piscine."
 ---
 

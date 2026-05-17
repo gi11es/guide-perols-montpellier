@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/les-petits-fermiers-de-lansargues/hero.jpg"
 hero_credit: "LES PETITS FERMIERS - Parc animalier et de loisirs - Lansargues / Google Places"
+description: "Destination d'agritourisme avec jardins, animaux de la ferme, mini-ferme, promenades en poney, parc aquatique."
 ---

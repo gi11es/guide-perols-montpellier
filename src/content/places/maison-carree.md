@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/maison-carree/hero.jpg"
 hero_credit: "Krzysztof Golik / Wikimedia / CC BY-SA 4.0"
+description: "Temple romain restauré dédié aux \"princes de la jeunesse\" avec frises et colonnes richement décorées."
 ---

@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/carre-sainte-anne/hero.jpg"
 hero_credit: "Wolfgang Staudt from Saarbruecken, Germany / Wikimedia / CC BY 2.0"
+description: "Vaste espace avec expositions d'art contemporain dans une église gothique rénovée dans un style moderne."
 ---

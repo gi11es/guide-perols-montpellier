@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/pic-saint-loup/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 4.0"
+description: "Imposante montagne de 658 m comprenant un ermitage, une vieille chapelle, une croix et une tour d'observation."
 ---

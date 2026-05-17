@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/la-reserve-rimbaud/hero.jpg"
 hero_credit: "La Réserve Rimbaud / Google Places"
+description: "Menus fixes, dégustations et grande carte des vins dans un restaurant raffiné avec terrasse en bord de fleuve."
 ---

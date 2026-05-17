@@ -10,5 +10,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/umami-la-cinquieme-saveur/hero.jpg"
 hero_credit: "Umami - La cinquième saveur / Google Places"
+description: "Saveurs raffinées de Corée du Sud et du Japon aux produits français dans une salle claire et décontractée."
 ---
 

@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/fondation-vincent-van-gogh/hero.jpg"
 hero_credit: "Vincent van Gogh / Wikimedia / Public domain"
+description: "Ce musée d'Art élégant propose des visites guidées et des expositions temporaires, avec des œuvres de Vincent Van Gogh."
 ---

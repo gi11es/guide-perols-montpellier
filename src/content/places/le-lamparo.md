@@ -10,5 +10,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/le-lamparo/hero.jpg"
 hero_credit: "Le Lamparino / Google Places"
+description: "Ce restaurant chaleureux doté de terrasses sur le port propose des plats simples de poissons et coquillages."
 ---
 

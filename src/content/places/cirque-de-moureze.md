@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/cirque-de-moureze/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
+description: "Sentiers de randonnée sauvages au milieu de roches calcaires aux formes uniques érodées par le vent et l'eau au fil des millénaires."
 ---

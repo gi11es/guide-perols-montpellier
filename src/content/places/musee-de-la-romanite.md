@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/musee-de-la-romanite/hero.jpg"
 hero_credit: "Celeda / Wikimedia / CC BY-SA 4.0"
+description: "Doté d'une façade en verre ondulée ressemblant à une toge, ce remarquable musée abrite une collection de reliques romaines."
 ---

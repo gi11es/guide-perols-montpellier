@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/caves-notre-dame/hero.jpg"
 hero_credit: "Richard Massonet / Google Places"
+description: "Ce caviste est spécialisé dans les vignobles du sud et propose vins, eaux-de-vie, spiritueux et champagne."
 ---

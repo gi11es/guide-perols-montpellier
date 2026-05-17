@@ -10,5 +10,6 @@ source: "manual"
 google_category: ""
 hero: "/photos/plage-du-grand-travers/hero.jpg"
 hero_credit: "Laurent Wattieaux-Ma… / Wikimedia / CC BY 3.0"
+description: "Plage étroite bordée de pins et de cafés de style décontracté, animée en été et prisée des promeneurs de chiens en hiver."
 ---
 

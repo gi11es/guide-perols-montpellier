@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/musee-fabre/hero.jpg"
 hero_credit: "Björn S. / Wikimedia / CC BY-SA 3.0"
+description: "Musée fondé par un peintre local en 1825 ; vaste collection, dont des œuvres de Delacroix et Raphaël."
 ---

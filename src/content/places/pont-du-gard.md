@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/pont-du-gard/hero.jpg"
 hero_credit: "Benh LIEU SONG (Flickr) / Wikimedia / CC BY-SA 3.0"
+description: "Imposant aqueduc à 3 niveaux avec voûtes bien conservées, bâti au Ier siècle par les Romains."
 ---

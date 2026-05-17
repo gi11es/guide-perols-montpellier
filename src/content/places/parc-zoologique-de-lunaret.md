@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/parc-zoologique-de-lunaret/hero.jpg"
 hero_credit: "Niel Pama / Google Places"
+description: "Zoo proposant plus de 1 100  animaux et 128  espèces, dont des lions, et une luxuriante serre amazonienne."
 ---

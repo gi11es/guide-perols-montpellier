@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/plage-des-aresquiers/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
+description: "Plage naturiste de galets sur une île barrière, propice à la baignade et aux longues promenades."
 ---

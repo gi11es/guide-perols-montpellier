@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/cascade-de-la-vis/hero.jpg"
 hero_credit: "Krzysztof Golik / Wikimedia / CC BY-SA 4.0"
+description: "Large cascade se déversant dans un bassin cristallin doté de roches plates, prisée pour la baignade, le camping et les pique-niques."
 ---

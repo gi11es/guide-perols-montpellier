@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/bambouseraie-d-anduze/hero.jpg"
 hero_credit: "RuB (Ruddy Bénézet) / Wikimedia / CC BY-SA 4.0"
+description: "Jardin botanique spécialisé dans le bambou offrant une aire de jeux pour enfants et un café/restaurant."
 ---

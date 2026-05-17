@@ -12,5 +12,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/restaurant-leclere-cuisine-d-arrivage/hero.jpg"
 hero_credit: "Restaurant Leclère, Cuisine d’arrivage. / Google Places"
+description: "Restaurant élégant servant des plats de viande et de fruits de mer élégamment présentés, dans un cadre intimiste."
 ---
 

@@ -10,5 +10,6 @@ source: "manual"
 google_category: "movie_theater"
 hero: "/photos/cgr-lattes/hero.jpg"
 hero_credit: "CINÉMA CGR Montpellier Lattes / Google Places"
+description: "Avant-premières, événements et espaces privatisables dans une chaîne de cinémas multiplexes grand public."
 ---
 

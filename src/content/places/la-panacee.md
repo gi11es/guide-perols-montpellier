@@ -10,5 +10,6 @@ source: "google-takeout"
 google_category: ""
 hero: "/photos/la-panacee/hero.jpg"
 hero_credit: "J. Gazola (18th century) / Wikimedia / Public domain"
+description: "Ce restaurant tendance doté d'une vaste terrasse verdoyante propose des en-cas classiques et un brunch populaire le week-end."
 ---
 

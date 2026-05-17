@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/luma-arles/hero.jpg"
 hero_credit: "MYR67 / Wikimedia / CC BY-SA 4.0"
+description: "Cette remarquable tour en fer abrite des installations d'art moderne immersives dans une ancienne gare de triage des années 1800."
 ---

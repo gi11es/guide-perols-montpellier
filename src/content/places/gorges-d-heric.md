@@ -10,4 +10,5 @@ source: "manual"
 google_category: ""
 hero: "/photos/gorges-d-heric/hero.jpg"
 hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
+description: "Bassins de baignade populaires au bord d'une rivière, avec des gros rochers, des petites cascades et des eaux fraîches et claires."
 ---
