@@ -1,0 +1,81 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Base from '~/layouts/Base.astro';
+import Links from '~/components/Links.astro';
+import categoriesData from '~/content/categories.json';
+
+interface Category { slug: string; label: string; color: string; }
+const categories = categoriesData as Category[];
+
+export async function getStaticPaths() {
+  const places = await getCollection('places');
+  return places.map((place) => ({
+    params: { slug: place.data.slug },
+    props: { place },
+  }));
+}
+
+interface Props { place: CollectionEntry<'places'>; }
+const { place } = Astro.props;
+const { name, address, hero, hero_credit, links, category } = place.data;
+const cat = categories.find((c) => c.slug === category);
+const { Content } = await render(place);
+---
+<Base title={`${name} — Guide de Pérols`}>
+  <article>
+    {hero && (
+      <figure class="hero-figure">
+        <img src={hero} alt={name} width="1600" height="1200" />
+        {hero_credit && <figcaption>{hero_credit}</figcaption>}
+      </figure>
+    )}
+    <header class="container header">
+      <p class="eyebrow" style={cat ? `color: ${cat.color};` : ''}>
+        {cat?.label ?? category}
+      </p>
+      <h1>{name}</h1>
+      {address && <p class="muted">{address}</p>}
+    </header>
+    <section class="container prose">
+      <Content />
+    </section>
+    <section class="container">
+      <Links links={links} />
+    </section>
+    <nav class="container back">
+      <a href="/">← Retour à la carte</a>
+    </nav>
+  </article>
+</Base>
+
+<style>
+  .hero-figure { margin: 0; }
+  .hero-figure img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    filter: saturate(0.95) contrast(1.05);
+  }
+  .hero-figure figcaption {
+    text-align: center;
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-ink-soft);
+    padding: var(--space-2) var(--space-5);
+  }
+  .header {
+    padding-top: var(--space-7);
+    padding-bottom: var(--space-4);
+  }
+  .prose {
+    font-family: var(--font-serif);
+    font-size: var(--fs-lg);
+    line-height: var(--lh-loose);
+    padding-bottom: var(--space-7);
+  }
+  .back {
+    padding-bottom: var(--space-9);
+    font-size: var(--fs-sm);
+  }
+</style>
