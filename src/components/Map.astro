@@ -30,20 +30,10 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
 <script>
   import maplibregl from 'maplibre-gl';
   import 'maplibre-gl/dist/maplibre-gl.css';
-  import { Protocol } from 'pmtiles';
-  import layersFn from 'protomaps-themes-base';
-
-  // Register the pmtiles:// protocol with MapLibre.
-  const protocol = new Protocol();
-  maplibregl.addProtocol('pmtiles', protocol.tile);
 
   const el = document.getElementById('map')!;
   const [lon, lat] = el.dataset.center!.split(',').map(Number);
   const { placeData, catColors, catLabels, baseUrl } = (window as any).__GUIDE__;
-
-  // Remote pmtiles basemap (Protomaps public demo bucket).
-  // Replace with self-hosted /tiles/perols-100km.pmtiles after running `npm run build-tiles`.
-  const PMTILES_URL = 'https://demo-bucket.protomaps.com/v4.pmtiles';
 
   const map = new maplibregl.Map({
     container: el,
@@ -51,15 +41,20 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
     zoom: 10,
     style: {
       version: 8,
-      glyphs: 'https://protomaps.github.io/basemaps-assets/fonts/{fontstack}/{range}.pbf',
       sources: {
-        protomaps: {
-          type: 'vector',
-          url: `pmtiles://${PMTILES_URL}`,
-          attribution: '© Protomaps © OpenStreetMap contributors',
+        osm: {
+          type: 'raster',
+          tiles: [
+            'https://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            'https://b.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            'https://c.tile.openstreetmap.org/{z}/{x}/{y}.png',
+          ],
+          tileSize: 256,
+          attribution: '© OpenStreetMap contributors',
+          maxzoom: 19,
         },
       },
-      layers: layersFn('protomaps', 'light'),
+      layers: [{ id: 'osm', type: 'raster', source: 'osm' }],
     },
   });
 
