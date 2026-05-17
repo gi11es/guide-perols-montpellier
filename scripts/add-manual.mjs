@@ -10,10 +10,9 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Pavillon Populaire', category: 'culture', query: 'Pavillon Populaire, Montpellier, France' },
-  { name: 'Musée des Dinosaures', category: 'enfants', query: 'Musée des Dinosaures, Mèze, France' },
-  { name: 'Les Ateliers du Réservoir', category: 'culture', query: 'Les Ateliers du Réservoir, Sète, France' },
-  { name: "L'Atelier du Flamant Rose", category: 'boutique', query: "L'Atelier du Flamant Rose, Sète, France" },
+  { name: 'Trampoline Park Lattes', category: 'enfants', query: 'Trampoline Park Montpellier Lattes, France' },
+  { name: 'Laser Game Evolution Odysseum', category: 'enfants', query: 'Laser Game Evolution Odysseum Montpellier, France' },
+  { name: "Bowlingstar Près d'Arènes", category: 'enfants', query: 'Bowlingstar Montpellier Marché Gare, France' },
 ];
 
 function escapeYaml(s) {

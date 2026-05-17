@@ -9,5 +9,7 @@ links:
   website: "https://www.aqualand.fr/cap-d-agde/"
 source: "manual"
 google_category: "water_park"
+hero: "/photos/aqualand-cap-d-agde/hero.jpg"
+hero_credit: "AQUAPARK Cap d'Agde / Google Places"
 ---
 
