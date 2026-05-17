@@ -15,13 +15,15 @@ const placeData = places.map((p) => ({
   lat: p.data.lat,
   lon: p.data.lon,
   category: p.data.category,
+  hero: p.data.hero ?? '',
 }));
 const catColors = Object.fromEntries(categories.map((c) => [c.slug, c.color]));
+const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
 ---
 <div id="map" data-center={`${center.lon},${center.lat}`}></div>
 
-<script is:inline define:vars={{ placeData, catColors }}>
-  window.__GUIDE__ = { placeData, catColors };
+<script is:inline define:vars={{ placeData, catColors, catLabels }}>
+  window.__GUIDE__ = { placeData, catColors, catLabels };
 </script>
 
 <script>
@@ -36,7 +38,7 @@ const catColors = Object.fromEntries(categories.map((c) => [c.slug, c.color]));
 
   const el = document.getElementById('map')!;
   const [lon, lat] = el.dataset.center!.split(',').map(Number);
-  const { placeData, catColors } = (window as any).__GUIDE__;
+  const { placeData, catColors, catLabels } = (window as any).__GUIDE__;
 
   // Remote pmtiles basemap (Protomaps public demo bucket).
   // Replace with self-hosted /tiles/perols-100km.pmtiles after running `npm run build-tiles`.
@@ -62,8 +64,14 @@ const catColors = Object.fromEntries(categories.map((c) => [c.slug, c.color]));
 
   map.on('load', () => {
     const markers: { category: string; marker: maplibregl.Marker }[] = [];
+    let activePopup: maplibregl.Popup | null = null;
+
+    // Only show hover popups on non-touch devices
+    const isTouch = window.matchMedia('(hover: none)').matches;
+
     for (const p of placeData) {
       const color = catColors[p.category] ?? '#1A1814';
+      const label = catLabels[p.category] ?? p.category;
       const dot = document.createElement('button');
       dot.className = 'place-dot';
       dot.style.background = color;
@@ -71,6 +79,32 @@ const catColors = Object.fromEntries(categories.map((c) => [c.slug, c.color]));
       dot.addEventListener('click', () => {
         window.dispatchEvent(new CustomEvent('place:select', { detail: p }));
       });
+
+      if (!isTouch) {
+        dot.addEventListener('mouseenter', () => {
+          if (activePopup) { activePopup.remove(); activePopup = null; }
+          const html = `
+            <div class="hover-popup-inner">
+              ${p.hero ? `<img class="hover-popup-img" src="${p.hero}" alt="${p.name}" />` : ''}
+              <p class="hover-popup-eyebrow" style="color:${color}">${label}</p>
+              <h3 class="hover-popup-name">${p.name}</h3>
+            </div>
+          `;
+          activePopup = new maplibregl.Popup({
+            closeButton: false,
+            closeOnClick: false,
+            anchor: 'bottom',
+            offset: 12,
+          })
+            .setLngLat([p.lon, p.lat])
+            .setHTML(html)
+            .addTo(map);
+        });
+        dot.addEventListener('mouseleave', () => {
+          if (activePopup) { activePopup.remove(); activePopup = null; }
+        });
+      }
+
       const marker = new maplibregl.Marker({ element: dot }).setLngLat([p.lon, p.lat]).addTo(map);
       markers.push({ category: p.category, marker });
     }
@@ -106,5 +140,44 @@ const catColors = Object.fromEntries(categories.map((c) => [c.slug, c.color]));
   :global(.place-dot:focus-visible) {
     outline: 2px solid var(--color-accent, #C25B3F);
     outline-offset: 3px;
+  }
+
+  /* MapLibre hover popup */
+  :global(.maplibregl-popup-tip) { display: none; }
+  :global(.maplibregl-popup-content) {
+    background: var(--color-bg, #F4EFE6);
+    border-radius: 8px;
+    padding: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    overflow: hidden;
+    min-width: 140px;
+    max-width: 160px;
+  }
+  :global(.hover-popup-inner) {
+    display: flex;
+    flex-direction: column;
+  }
+  :global(.hover-popup-img) {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.92) contrast(1.06);
+  }
+  :global(.hover-popup-eyebrow) {
+    font-size: 9px;
+    font-variant: small-caps;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 6px 10px 2px;
+    line-height: 1;
+  }
+  :global(.hover-popup-name) {
+    font-family: var(--font-serif, 'Fraunces', serif);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 10px 8px;
+    color: var(--color-ink, #1A1814);
   }
 </style>
