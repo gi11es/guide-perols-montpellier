@@ -136,61 +136,80 @@ const houseLngLat = house ? [house.lon, house.lat] : null;
       },
     });
 
-    // Click handler — when dots overlap, prefer the one whose centre is closest
-    // to the click point (rather than relying on rendering order).
-    map.on('click', 'places-dots', (e) => {
-      const features = e.features ?? [];
-      if (!features.length) return;
-      const clickPx = e.point;
+    // Helper: pick the feature whose centre is closest to the pointer in pixel space.
+    function closestFeature(features: any[], pointerPx: { x: number; y: number }) {
       let best = features[0];
       let bestDist = Infinity;
       for (const f of features) {
-        const coords = (f.geometry as any).coordinates;
+        const coords = f.geometry.coordinates;
         const px = map.project(coords);
-        const d = Math.hypot(px.x - clickPx.x, px.y - clickPx.y);
+        const d = Math.hypot(px.x - pointerPx.x, px.y - pointerPx.y);
         if (d < bestDist) {
           bestDist = d;
           best = f;
         }
       }
-      window.dispatchEvent(new CustomEvent('place:select', { detail: best.properties }));
-    });
-    map.on('mouseenter', 'places-dots', () => { map.getCanvas().style.cursor = 'pointer'; });
-    map.on('mouseleave', 'places-dots', () => { map.getCanvas().style.cursor = ''; });
+      return best;
+    }
 
-    // Hover popup (non-touch only)
+    // Track the currently-hovered feature so clicks always open whatever
+    // the user sees highlighted/popped-up.
+    let hoveredFeature: any = null;
+
+    map.on('mouseenter', 'places-dots', () => { map.getCanvas().style.cursor = 'pointer'; });
+    map.on('mouseleave', 'places-dots', () => { map.getCanvas().style.cursor = ''; hoveredFeature = null; });
+
+    // Hover popup (non-touch only) + track hoveredFeature on every mousemove
     const isTouch = window.matchMedia('(hover: none)').matches;
     let activePopup: maplibregl.Popup | null = null;
-    if (!isTouch) {
-      map.on('mouseenter', 'places-dots', (e) => {
-        const f = e.features?.[0];
-        if (!f) return;
-        const p = f.properties as any;
-        const color = (catColors as any)[p.category] ?? '#1A1814';
-        const label = (catLabels as any)[p.category] ?? p.category;
-        const heroSrc = p.hero ? `${baseUrl}${p.hero.replace(/^\//, '')}` : '';
-        const html = `
-          <div class="hover-popup-inner">
-            ${heroSrc ? `<img class="hover-popup-img" src="${heroSrc}" alt="${p.name}" />` : ''}
-            <p class="hover-popup-eyebrow" style="color:${color}">${label}</p>
-            <h3 class="hover-popup-name">${p.name}</h3>
-          </div>
-        `;
-        if (activePopup) { activePopup.remove(); }
-        activePopup = new maplibregl.Popup({
-          closeButton: false,
-          closeOnClick: false,
-          anchor: 'bottom',
-          offset: 12,
-        })
-          .setLngLat((f.geometry as any).coordinates)
-          .setHTML(html)
-          .addTo(map);
-      });
-      map.on('mouseleave', 'places-dots', () => {
-        if (activePopup) { activePopup.remove(); activePopup = null; }
-      });
-    }
+
+    map.on('mousemove', 'places-dots', (e) => {
+      const features = e.features ?? [];
+      if (!features.length) return;
+      const f = closestFeature(features, e.point);
+      // If still hovering the same feature, do nothing.
+      if (hoveredFeature && hoveredFeature.properties.slug === f.properties.slug) return;
+      hoveredFeature = f;
+      if (isTouch) return;
+      const p = f.properties as any;
+      const color = (catColors as any)[p.category] ?? '#1A1814';
+      const label = (catLabels as any)[p.category] ?? p.category;
+      const heroSrc = p.hero ? `${baseUrl}${p.hero.replace(/^\//, '')}` : '';
+      const html = `
+        <div class="hover-popup-inner">
+          ${heroSrc ? `<img class="hover-popup-img" src="${heroSrc}" alt="${p.name}" />` : ''}
+          <p class="hover-popup-eyebrow" style="color:${color}">${label}</p>
+          <h3 class="hover-popup-name">${p.name}</h3>
+        </div>
+      `;
+      if (activePopup) { activePopup.remove(); }
+      activePopup = new maplibregl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+        anchor: 'bottom',
+        offset: 12,
+      })
+        .setLngLat((f.geometry as any).coordinates)
+        .setHTML(html)
+        .addTo(map);
+    });
+
+    map.on('mouseleave', 'places-dots', () => {
+      if (activePopup) { activePopup.remove(); activePopup = null; }
+    });
+
+    // Click handler — if we have a hovered feature, that's what the user is aiming at.
+    // Otherwise fall back to the closest feature to the click point.
+    map.on('click', 'places-dots', (e) => {
+      const features = e.features ?? [];
+      if (!features.length) return;
+      let target = hoveredFeature;
+      // Verify the hovered feature is among the clicked ones; if not, fall back.
+      if (!target || !features.some((f: any) => f.properties.slug === target.properties.slug)) {
+        target = closestFeature(features, e.point);
+      }
+      window.dispatchEvent(new CustomEvent('place:select', { detail: target.properties }));
+    });
 
     // Selected state via feature-state
     let selectedFeatureId: number | null = null;
