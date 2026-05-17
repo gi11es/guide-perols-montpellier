@@ -10,7 +10,7 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Saintes-Maries-de-la-Mer', category: 'villes-villages', query: 'Saintes-Maries-de-la-Mer, Bouches-du-Rhône, France' },
+  { name: 'Pézenas', category: 'villes-villages', query: 'Pézenas, Hérault, France' },
 ];
 
 function escapeYaml(s) {
