@@ -8,4 +8,6 @@ address: "Maison Carrée, Place de la Maison Carrée, Écusson, La Placette, Nî
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/maison-carree/hero.jpg"
+hero_credit: "Krzysztof Golik / Wikimedia / CC BY-SA 4.0"
 ---

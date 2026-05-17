@@ -8,4 +8,6 @@ address: "Saint-Guilhem-le-Désert, Lodève, Hérault, Occitanie, France métrop
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/saint-guilhem-le-desert/hero.jpg"
+hero_credit: "The original uploader was Cevenol2 at French Wikipedia. / Wikimedia / CC BY-SA 2.0 fr"
 ---

@@ -8,4 +8,6 @@ address: "Aigues-Mortes, Nîmes, Gard, Occitanie, France métropolitaine, 30220,
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/aigues-mortes/hero.jpg"
+hero_credit: "Benjamin Smith / Wikimedia / CC BY-SA 4.0"
 ---

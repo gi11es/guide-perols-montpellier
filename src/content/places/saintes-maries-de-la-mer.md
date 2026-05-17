@@ -8,4 +8,7 @@ address: "Saintes-Maries-de-la-Mer, Arles, Bouches-du-Rhône, Provence-Alpes-Cô
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/saintes-maries-de-la-mer/hero.jpg"
+hero_credit: "
+Didier Descouens / Wikimedia / CC BY-SA 3.0"
 ---

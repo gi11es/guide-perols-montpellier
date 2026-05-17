@@ -8,4 +8,6 @@ address: "Parc des Ateliers, Les Alyscamps, Pont-de-Crau, Arles, Bouches-du-Rhô
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/luma-arles/hero.jpg"
+hero_credit: "MYR67 / Wikimedia / CC BY-SA 4.0"
 ---

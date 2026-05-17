@@ -8,4 +8,6 @@ address: "Cascade de La Vis, Saint-Laurent-le-Minier, Le Vigan, Gard, Occitanie,
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/cascade-de-la-vis/hero.jpg"
+hero_credit: "Krzysztof Golik / Wikimedia / CC BY-SA 4.0"
 ---

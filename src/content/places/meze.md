@@ -8,4 +8,6 @@ address: "Mèze, Montpellier, Hérault, Occitanie, France métropolitaine, 34140
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/meze/hero.jpg"
+hero_credit: "Christian Ferrer / Wikimedia / CC BY 4.0"
 ---

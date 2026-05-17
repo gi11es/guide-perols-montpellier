@@ -8,4 +8,6 @@ address: "Grotte des Demoiselles, D 108E8, Saint-Bauzille-de-Putois, Lod√®ve, H√
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/grotte-des-demoiselles/hero.jpg"
+hero_credit: "W. Bulach / Wikimedia / CC BY-SA 4.0"
 ---

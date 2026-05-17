@@ -8,5 +8,7 @@ address: "Pont du Diable, Saint-Jean-de-Fos / Aniane, 34150 France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/gorges-de-l-herault/hero.jpg"
+hero_credit: "Xavier Malafosse - Simio (talk · contribs) / Wikimedia / CC BY-SA 1.0"
 ---
 

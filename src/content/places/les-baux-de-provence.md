@@ -8,4 +8,6 @@ address: "Les Baux-de-Provence, Arles, Bouches-du-Rhône, Provence-Alpes-Côte d
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/les-baux-de-provence/hero.jpg"
+hero_credit: "Benh LIEU SONG / Wikimedia / CC BY-SA 3.0"
 ---

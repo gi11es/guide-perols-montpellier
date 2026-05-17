@@ -8,4 +8,6 @@ address: "Carrières des Lumières, Route de Maillane, Les Baux-de-Provence, Arl
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/carrieres-des-lumieres/hero.jpg"
+hero_credit: "Pierre Goiffon / Wikimedia / CC BY-SA 4.0"
 ---

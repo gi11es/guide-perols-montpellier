@@ -8,4 +8,6 @@ address: "Pic Saint-Loup, Cazevieille, Lodève, Hérault, Occitanie, France mét
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/pic-saint-loup/hero.jpg"
+hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 4.0"
 ---

@@ -8,4 +8,6 @@ address: "Grotte de Clamouse, D 4, Saint-Jean-de-Fos, Lodève, Hérault, Occitan
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/grotte-de-clamouse/hero.jpg"
+hero_credit: "Esculapio / Wikimedia / CC BY 3.0"
 ---

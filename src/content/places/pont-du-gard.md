@@ -8,4 +8,6 @@ address: "Pont du Gard, 400, Route du Pont du Gard, La Bégude, Vers-Pont-du-Gar
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/pont-du-gard/hero.jpg"
+hero_credit: "Benh LIEU SONG (Flickr) / Wikimedia / CC BY-SA 3.0"
 ---

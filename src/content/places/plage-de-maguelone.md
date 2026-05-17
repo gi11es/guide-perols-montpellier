@@ -8,4 +8,6 @@ address: "Plage de Maguelone, Villeneuve-lès-Maguelone, Montpellier, Hérault, 
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/plage-de-maguelone/hero.jpg"
+hero_credit: "A. Garcia / Wikimedia / CC BY-SA 4.0"
 ---

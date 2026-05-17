@@ -8,4 +8,6 @@ address: "Lac du Salagou, Clermont-l'Hérault, Lodève, Hérault, Occitanie, Fra
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/lac-du-salagou/hero.jpg"
+hero_credit: "Christian Ferrer / Wikimedia / CC BY 4.0"
 ---

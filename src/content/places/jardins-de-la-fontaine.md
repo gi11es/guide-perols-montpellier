@@ -8,4 +8,6 @@ address: "Les Jardins de la Fontaine, La Placette, Nîmes, Gard, Occitanie, Fran
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/jardins-de-la-fontaine/hero.jpg"
+hero_credit: "Krzysztof Golik / Wikimedia / CC BY-SA 4.0"
 ---

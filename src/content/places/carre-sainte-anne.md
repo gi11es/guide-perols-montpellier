@@ -8,4 +8,6 @@ address: "Carré Sainte-Anne, Place Sainte-Anne, Centre Historique, Centre, Mont
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/carre-sainte-anne/hero.jpg"
+hero_credit: "Wolfgang Staudt from Saarbruecken, Germany / Wikimedia / CC BY 2.0"
 ---

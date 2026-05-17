@@ -8,4 +8,6 @@ address: "Sète, Montpellier, Hérault, Occitanie, France métropolitaine, 34200
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/sete/hero.jpg"
+hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
 ---

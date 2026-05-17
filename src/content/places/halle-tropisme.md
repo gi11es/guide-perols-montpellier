@@ -8,4 +8,7 @@ address: "Halle Tropisme, Allée Noor Inayat Khan, Quartier de la Cité créativ
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/halle-tropisme/hero.jpg"
+hero_credit: "
+Fédération des sociétés françaises de sciences naturelles / Wikimedia / Public domain"
 ---

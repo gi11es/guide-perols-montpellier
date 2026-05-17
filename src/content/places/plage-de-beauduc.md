@@ -8,4 +8,6 @@ address: "Plage de Beauduc, Arles, Bouches-du-Rhône, Provence-Alpes-Côte d'Azu
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/plage-de-beauduc/hero.jpg"
+hero_credit: "Ddeveze / Wikimedia / CC BY-SA 3.0"
 ---

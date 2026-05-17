@@ -8,4 +8,6 @@ address: "Plage des Aresquiers, Villeneuve-lès-Maguelone, Montpellier, Hérault
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/plage-des-aresquiers/hero.jpg"
+hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
 ---

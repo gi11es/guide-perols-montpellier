@@ -8,4 +8,6 @@ address: "Cirque de Mourèze, Mourèze, Lodève, Hérault, Occitanie, France mé
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/cirque-de-moureze/hero.jpg"
+hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
 ---

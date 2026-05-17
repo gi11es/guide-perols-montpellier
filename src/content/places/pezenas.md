@@ -8,4 +8,6 @@ address: "Pézenas, Béziers, Hérault, Occitanie, France métropolitaine, 34120
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/pezenas/hero.jpg"
+hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
 ---

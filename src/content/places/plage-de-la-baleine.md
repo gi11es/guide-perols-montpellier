@@ -8,4 +8,6 @@ address: "Plage de la Baleine, Sète, Montpellier, Hérault, Occitanie, France m
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/plage-de-la-baleine/hero.jpg"
+hero_credit: "Raimond Spekking / Wikimedia / CC BY-SA 4.0"
 ---

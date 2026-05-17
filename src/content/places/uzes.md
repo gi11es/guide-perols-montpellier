@@ -8,4 +8,6 @@ address: "Uzès, Nîmes, Gard, Occitanie, France métropolitaine, 30700, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/uzes/hero.jpg"
+hero_credit: "Hyppolyte de Saint-Rambert / Wikimedia / CC BY-SA 4.0"
 ---

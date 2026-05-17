@@ -8,4 +8,6 @@ address: "École supérieure des Beaux-Arts, Avenue de Saint-Lazare, Les Beaux-A
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/moco/hero.jpg"
+hero_credit: "Tmittelstaedt / Wikimedia / CC BY-SA 4.0"
 ---

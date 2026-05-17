@@ -66,24 +66,52 @@ async function searchWikimedia(name) {
 
 async function searchGooglePlaces(name, lat, lon) {
   if (!GOOGLE_KEY) return null;
-  const findUrl = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${encodeURIComponent(name)}` +
-    `&inputtype=textquery&locationbias=point:${lat},${lon}&fields=place_id,photos&key=${GOOGLE_KEY}`;
-  const r1 = await fetch(findUrl, { signal: AbortSignal.timeout(10_000) });
-  const d1 = await r1.json();
-  const ref = d1?.candidates?.[0]?.photos?.[0]?.photo_reference;
-  if (!ref) return null;
+  // Places API (New): Text Search → photo names → media URL
+  const res = await fetch('https://places.googleapis.com/v1/places:searchText', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Goog-Api-Key': GOOGLE_KEY,
+      'X-Goog-FieldMask': 'places.id,places.displayName,places.photos,places.authorAttributions',
+    },
+    body: JSON.stringify({
+      textQuery: name,
+      locationBias: {
+        circle: { center: { latitude: lat, longitude: lon }, radius: 5000 },
+      },
+      maxResultCount: 1,
+    }),
+    signal: AbortSignal.timeout(10_000),
+  });
+  if (!res.ok) return null;
+  const data = await res.json();
+  const photo = data?.places?.[0]?.photos?.[0];
+  if (!photo?.name) return null;
+  // Photo media URL — appending key in querystring works for direct fetch.
+  const author = photo.authorAttributions?.[0]?.displayName ?? '';
   return {
-    url: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=1600&photo_reference=${ref}&key=${GOOGLE_KEY}`,
-    credit: 'Google Places',
+    url: `https://places.googleapis.com/v1/${photo.name}/media?maxHeightPx=1200&maxWidthPx=1600&key=${GOOGLE_KEY}`,
+    credit: `${author ? author + ' / ' : ''}Google Places`,
   };
 }
 
 async function downloadTo(url, dest) {
-  const res = await fetch(url, { signal: AbortSignal.timeout(30_000) });
+  const res = await fetch(url, {
+    signal: AbortSignal.timeout(30_000),
+    headers: { 'User-Agent': 'guide-perols/0.1 (gilles@layer.com)' },
+    redirect: 'follow',
+  });
   if (!res.ok) throw new Error(`Download failed: ${res.status}`);
   if (!res.body) throw new Error('No response body');
   await pipeline(Readable.fromWeb(res.body), createWriteStream(dest));
 }
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Categories where Wikimedia has legitimate landmark photos.
+// For business categories, Wikimedia almost always returns mismatched photos
+// (matching the name to an unrelated image), so we skip it.
+const WIKIMEDIA_CATEGORIES = new Set(['nature', 'villes-villages', 'culture']);
 
 async function main() {
   if (!existsSync(PLACES_DIR)) {
@@ -106,8 +134,14 @@ async function main() {
     if (!existsSync(placeDir)) mkdirSync(placeDir, { recursive: true });
     const dest = join(placeDir, 'hero.jpg');
 
-    let photo = await searchWikimedia(fm.name);
-    if (!photo) photo = await searchGooglePlaces(fm.name, parseFloat(fm.lat), parseFloat(fm.lon));
+    const useWikimedia = WIKIMEDIA_CATEGORIES.has(fm.category);
+    let photo = null;
+    if (useWikimedia) {
+      photo = await searchWikimedia(fm.name);
+    }
+    if (!photo) {
+      photo = await searchGooglePlaces(fm.name, parseFloat(fm.lat), parseFloat(fm.lon));
+    }
     if (!photo) { console.log(`  ✗ ${fm.name}`); failed++; continue; }
 
     try {
@@ -123,6 +157,8 @@ async function main() {
       console.log(`  ✗ ${fm.name}: ${e.message}`);
       failed++;
     }
+    // Rate-limit ourselves: be a polite Wikimedia/Google client.
+    await sleep(500);
   }
 
   console.log(`\nfetched=${fetched} skipped=${skipped} failed=${failed}`);

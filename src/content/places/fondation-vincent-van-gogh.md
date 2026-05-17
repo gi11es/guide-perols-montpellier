@@ -8,4 +8,6 @@ address: "Fondation Vincent Van-Gogh, 33, Rue du Docteur Fanton, Le Méjan, Arle
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/fondation-vincent-van-gogh/hero.jpg"
+hero_credit: "Vincent van Gogh / Wikimedia / Public domain"
 ---

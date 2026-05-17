@@ -8,5 +8,7 @@ address: "2 Rue du Levant, 34280 La Grande-Motte, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/plage-du-grand-travers/hero.jpg"
+hero_credit: "Laurent Wattieaux-Ma… / Wikimedia / CC BY 3.0"
 ---
 

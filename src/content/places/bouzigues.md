@@ -8,4 +8,6 @@ address: "Bouzigues, Montpellier, Hérault, Occitanie, France métropolitaine, 3
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/bouzigues/hero.jpg"
+hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 4.0"
 ---

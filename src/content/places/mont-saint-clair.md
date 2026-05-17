@@ -8,4 +8,6 @@ address: "Mont Saint-Clair, Sète, Montpellier, Hérault, Occitanie, France mét
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/mont-saint-clair/hero.jpg"
+hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
 ---

@@ -8,4 +8,6 @@ address: "Musée Fabre, 39, Boulevard Bonne Nouvelle, Comédie, Centre, Montpell
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/musee-fabre/hero.jpg"
+hero_credit: "Björn S. / Wikimedia / CC BY-SA 3.0"
 ---

@@ -8,4 +8,6 @@ address: "Cirque de Navacelles, Navacelles, Saint-Maurice-Navacelles, Lodève, H
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/cirque-de-navacelles/hero.jpg"
+hero_credit: "Krzysztof Golik / Wikimedia / CC BY-SA 4.0"
 ---

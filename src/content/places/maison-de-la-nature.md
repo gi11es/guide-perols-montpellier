@@ -8,4 +8,6 @@ address: "Maison de la Nature, Chemin des Étangs, Maurin, Lattes, Montpellier, 
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/maison-de-la-nature/hero.jpg"
+hero_credit: "Cayambe / Wikimedia / CC BY 4.0"
 ---

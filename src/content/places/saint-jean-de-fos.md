@@ -8,4 +8,6 @@ address: "Saint-Jean-de-Fos, Lodève, Hérault, Occitanie, France métropolitain
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/saint-jean-de-fos/hero.jpg"
+hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
 ---

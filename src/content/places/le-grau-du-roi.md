@@ -8,4 +8,6 @@ address: "Le Grau-du-Roi, Nîmes, Gard, Occitanie, France métropolitaine, 30240
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/le-grau-du-roi/hero.jpg"
+hero_credit: "Christian Ferrer / Wikimedia / CC BY 4.0"
 ---

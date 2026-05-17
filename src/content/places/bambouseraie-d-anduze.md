@@ -8,4 +8,6 @@ address: "Bambouseraie d'Anduze, Générargues, Alès, Gard, Occitanie, France m
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/bambouseraie-d-anduze/hero.jpg"
+hero_credit: "RuB (Ruddy Bénézet) / Wikimedia / CC BY-SA 4.0"
 ---

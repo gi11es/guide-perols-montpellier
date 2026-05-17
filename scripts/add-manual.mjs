@@ -10,9 +10,10 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Marché de Lattes', category: 'boutique', query: 'Marché de Lattes, France' },
-  { name: 'Caves Notre Dame', category: 'boutique', query: 'Caves Notre Dame, Montpellier, France' },
-  { name: 'Terminal #1', category: 'restaurant', query: 'Terminal #1, Montpellier, France' },
+  { name: 'Pavillon Populaire', category: 'culture', query: 'Pavillon Populaire, Montpellier, France' },
+  { name: 'Musée des Dinosaures', category: 'enfants', query: 'Musée des Dinosaures, Mèze, France' },
+  { name: 'Les Ateliers du Réservoir', category: 'culture', query: 'Les Ateliers du Réservoir, Sète, France' },
+  { name: "L'Atelier du Flamant Rose", category: 'boutique', query: "L'Atelier du Flamant Rose, Sète, France" },
 ];
 
 function escapeYaml(s) {

@@ -8,4 +8,6 @@ address: "Musée de la Romanité, 16, Boulevard des Arènes, Écusson, Feuchère
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/musee-de-la-romanite/hero.jpg"
+hero_credit: "Celeda / Wikimedia / CC BY-SA 4.0"
 ---

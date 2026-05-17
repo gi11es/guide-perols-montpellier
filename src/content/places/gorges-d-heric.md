@@ -8,4 +8,6 @@ address: "Gorges d'Héric, Mons, Béziers, Hérault, Occitanie, France métropol
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/gorges-d-heric/hero.jpg"
+hero_credit: "Christian Ferrer / Wikimedia / CC BY-SA 3.0"
 ---
