@@ -8,5 +8,7 @@ address: "21 Rue Vallat, 34000 Montpellier, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/baba-ristorante/hero.jpg"
+hero_credit: "Jossuha Théophile / Google Places"
 ---
 

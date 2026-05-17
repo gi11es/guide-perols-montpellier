@@ -8,4 +8,6 @@ address: "Caves Notre-Dame, Véloligne 4, Port Marianne, Montpellier, Hérault, 
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/caves-notre-dame/hero.jpg"
+hero_credit: "Richard Massonet / Google Places"
 ---

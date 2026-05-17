@@ -8,4 +8,6 @@ address: "Marché de Lattes, Place Jacques d'Aragon, Boirargues, Lattes, Montpel
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/marche-de-lattes/hero.jpg"
+hero_credit: "balades & découvertes isa & Abigaëlle / Google Places"
 ---

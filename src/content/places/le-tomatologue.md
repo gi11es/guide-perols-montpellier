@@ -8,4 +8,6 @@ address: "Le Tomatologue, Avenue de Maguelone, Maurin, Lattes, Montpellier, Hér
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/le-tomatologue/hero.jpg"
+hero_credit: "Tomatologue / Google Places"
 ---

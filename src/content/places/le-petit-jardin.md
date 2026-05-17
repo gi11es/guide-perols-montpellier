@@ -8,4 +8,6 @@ address: "Le Petit Jardin, 20, Rue Jean-Jacques Rousseau, Centre Historique, Cen
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/le-petit-jardin/hero.jpg"
+hero_credit: "Restaurant du Petit Jardin / Google Places"
 ---

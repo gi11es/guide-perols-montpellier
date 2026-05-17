@@ -8,4 +8,6 @@ address: "1790 Rte de Fontmarie, 34160 Castries, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/la-cueillette-de-fontmarie/hero.jpg"
+hero_credit: "Mathilde Bres / Google Places"
 ---

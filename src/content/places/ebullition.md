@@ -8,4 +8,6 @@ address: "10 Rue du Pila St Gély, 34000 Montpellier, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/ebullition/hero.jpg"
+hero_credit: "Ébullition / Google Places"
 ---

@@ -8,5 +8,7 @@ links:
   google_maps: "https://www.google.com/maps/place/Tiger+Noodles+Antigone/data=!4m2!3m1!1s0x12b6af93fca5db91:0x6bf7678dce350386"
 source: "google-takeout"
 google_category: ""
+hero: "/photos/tiger-noodles-antigone/hero.jpg"
+hero_credit: "Tiger Noodles Antigone / Google Places"
 ---
 

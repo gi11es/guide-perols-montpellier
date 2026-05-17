@@ -8,4 +8,6 @@ address: "Boulangerie Pâtisserie Scholler, 467, Avenue de Figuières, Boirargue
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/scholler/hero.jpg"
+hero_credit: "Frédéric G / Google Places"
 ---

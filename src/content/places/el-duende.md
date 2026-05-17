@@ -8,5 +8,7 @@ address: "2 Rue du Dr Servel, 34470 Pérols, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/el-duende/hero.jpg"
+hero_credit: "Philo De Pérols' (Pérols'Lien2Cœur) / Google Places"
 ---
 

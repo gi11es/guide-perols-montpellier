@@ -9,5 +9,7 @@ links:
   google_maps: "https://www.google.com/maps/place/Urfa+D%C3%BCr%C3%BCm+-+Montpellier/data=!4m2!3m1!1s0x12b6afdaebe5cc49:0x82d219b4bdff2ebe"
 source: "google-takeout"
 google_category: ""
+hero: "/photos/urfa-durum-montpellier/hero.jpg"
+hero_credit: "Urfa Dürüm - Montpellier / Google Places"
 ---
 

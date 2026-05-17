@@ -8,4 +8,6 @@ address: "Pl. de la Canourgue, 34000 Montpellier, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/le-jardin-des-sens/hero.jpg"
+hero_credit: "F A / Google Places"
 ---

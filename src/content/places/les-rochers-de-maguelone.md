@@ -8,4 +8,6 @@ address: "Les Rochers de Maguelone - Accro’parc, Chemin de Sauvetery, Villeneu
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/les-rochers-de-maguelone/hero.jpg"
+hero_credit: "Les Rochers de Maguelone / Google Places"
 ---

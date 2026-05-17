@@ -8,4 +8,6 @@ address: "Rte de Palavas, 34970 Lattes, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/centre-equestre-saint-pierre/hero.jpg"
+hero_credit: "Bruno Daubié / Google Places"
 ---

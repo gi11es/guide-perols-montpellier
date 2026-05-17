@@ -8,4 +8,6 @@ address: "En Traits Libres, 1, Rue Voltaire, Centre Historique, Comédie, Centre
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/en-traits-libres/hero.jpg"
+hero_credit: "En traits libres / Google Places"
 ---

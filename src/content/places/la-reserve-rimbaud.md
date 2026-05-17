@@ -8,4 +8,6 @@ address: "La Réserve Rimbaud, 820, Avenue de Saint-Maur, Les Aubes, Centre, Mon
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/la-reserve-rimbaud/hero.jpg"
+hero_credit: "La Réserve Rimbaud / Google Places"
 ---

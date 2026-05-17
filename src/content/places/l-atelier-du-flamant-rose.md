@@ -8,4 +8,6 @@ address: "15 Rue Paul Valéry, 34200 Sète, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/l-atelier-du-flamant-rose/hero.jpg"
+hero_credit: "L'Atelier du Flamant Rose / Google Places"
 ---

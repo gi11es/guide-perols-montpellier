@@ -8,5 +8,7 @@ address: "Mas Amadou, 34150 La Boissière, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/au-pays-des-carrioles/hero.jpg"
+hero_credit: "Au Pays des Carrioles / Google Places"
 ---
 

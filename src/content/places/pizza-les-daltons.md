@@ -8,5 +8,7 @@ address: "4b Rue des Vendanges, 34470 Pérols, France"
 links: {}
 source: "manual"
 google_category: "pizza_restaurant"
+hero: "/photos/pizza-les-daltons/hero.jpg"
+hero_credit: "FF mm / Google Places"
 ---
 

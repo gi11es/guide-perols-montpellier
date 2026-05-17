@@ -8,4 +8,6 @@ address: "197 Av. Pierre Racine, 34280 La Grande-Motte, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/la-glacerie/hero.jpg"
+hero_credit: "La Glacerie Glaces et crêpes artisanales / Google Places"
 ---

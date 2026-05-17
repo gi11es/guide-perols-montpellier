@@ -8,5 +8,7 @@ address: "32 Grand Rue, 34470 Pérols, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/boucherie-vitou/hero.jpg"
+hero_credit: "William Haun / Google Places"
 ---
 

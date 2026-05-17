@@ -8,4 +8,6 @@ address: "Parc Zoologique de Montpellier, Allée de Lunaret, Aiguelongue, Hôpit
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/parc-zoologique-de-lunaret/hero.jpg"
+hero_credit: "Niel Pama / Google Places"
 ---

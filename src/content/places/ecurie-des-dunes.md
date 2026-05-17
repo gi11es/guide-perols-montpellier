@@ -8,4 +8,6 @@ address: "L'Écurie des Dunes, 1745, Route de l'Espiguette, Le Grau-du-Roi, Nîm
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/ecurie-des-dunes/hero.jpg"
+hero_credit: "Ecurie des Dunes - promenade à cheval / Google Places"
 ---

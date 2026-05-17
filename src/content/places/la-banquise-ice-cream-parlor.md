@@ -10,5 +10,7 @@ links:
   website: "https://labanquisemontpellier.fr/"
 source: "google-takeout"
 google_category: ""
+hero: "/photos/la-banquise-ice-cream-parlor/hero.jpg"
+hero_credit: "La Banquise - Glacier Créateur / Google Places"
 ---
 

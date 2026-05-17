@@ -10,5 +10,7 @@ links:
   website: "https://www.facebook.com/La-Carioca-Boulangerie-Singuli%C3%A8re-106300157951885/"
 source: "google-takeout"
 google_category: ""
+hero: "/photos/la-carioca-boulangerie-singuliere/hero.jpg"
+hero_credit: "La Carioca Sète - Boulangerie Bio au levain / Google Places"
 ---
 

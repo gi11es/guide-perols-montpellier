@@ -8,5 +8,7 @@ address: "33 Rue de l'Aiguillerie, 34000 Montpellier, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/pomme-de-reinette-et-pomme-d-api/hero.jpg"
+hero_credit: "corinne bouillet / Google Places"
 ---
 

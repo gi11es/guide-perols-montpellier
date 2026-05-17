@@ -8,4 +8,6 @@ address: "34970 Lattes, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/chez-l-indien/hero.jpg"
+hero_credit: "Maria Fernanda Goiburu / Google Places"
 ---

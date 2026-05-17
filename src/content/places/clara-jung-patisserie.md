@@ -8,4 +8,6 @@ address: "21 Rue du Palais des Guilhem, 34000 Montpellier, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/clara-jung-patisserie/hero.jpg"
+hero_credit: "Clara Jung / Google Places"
 ---

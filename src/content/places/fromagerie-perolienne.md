@@ -8,5 +8,7 @@ address: "31 Grand Rue, 34470 Pérols, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/fromagerie-perolienne/hero.jpg"
+hero_credit: "la Fromagerie Pérolienne , Pérols Village / Google Places"
 ---
 

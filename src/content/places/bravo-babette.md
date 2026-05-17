@@ -8,4 +8,6 @@ address: "Bravo Babette, 31, Rue Jean-Jacques Rousseau, Centre Historique, Centr
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/bravo-babette/hero.jpg"
+hero_credit: "Bravo Babette / Google Places"
 ---

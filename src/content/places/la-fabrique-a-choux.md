@@ -8,4 +8,6 @@ address: "Pailletrice, 34470 Pérols, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/la-fabrique-a-choux/hero.jpg"
+hero_credit: "Emmanuelle BOHN / Google Places"
 ---

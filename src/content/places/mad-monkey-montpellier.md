@@ -8,4 +8,6 @@ address: "2929 Av. Etienne Méhul, 34070 Montpellier, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/mad-monkey-montpellier/hero.jpg"
+hero_credit: "Becky Warner / Google Places"
 ---

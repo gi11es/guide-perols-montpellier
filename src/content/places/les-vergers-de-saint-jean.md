@@ -8,5 +8,7 @@ address: "All. du Pioch Redon, 34430 Saint-Jean-de-Védas, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/les-vergers-de-saint-jean/hero.jpg"
+hero_credit: "Andrea Bordone / Google Places"
 ---
 

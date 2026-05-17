@@ -8,4 +8,6 @@ address: "Les Halles de Sète, 6 Rue de Metz BAL 26, 34200 Sète, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/halles-et-manger/hero.jpg"
+hero_credit: "Halles et Manger / Google Places"
 ---

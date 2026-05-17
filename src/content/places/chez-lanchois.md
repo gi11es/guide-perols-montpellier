@@ -10,5 +10,7 @@ links:
   website: "https://www.chezlanchois.fr/"
 source: "google-takeout"
 google_category: ""
+hero: "/photos/chez-lanchois/hero.jpg"
+hero_credit: "paulin sylvie / Google Places"
 ---
 

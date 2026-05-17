@@ -8,4 +8,6 @@ address: "Chem. de la Vieille Poste, 34130 Saint-Aunès, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/chez-estela/hero.jpg"
+hero_credit: "Chez Estela / Google Places"
 ---

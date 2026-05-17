@@ -8,4 +8,6 @@ address: "510 Av. Georges Frêche, 34170 Castelnau-le-Lez, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/boulangerie-patisserie-cenatiempo/hero.jpg"
+hero_credit: "Boulangerie Pâtisserie Cenatiempo / Google Places"
 ---

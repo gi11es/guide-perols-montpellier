@@ -8,4 +8,6 @@ address: "Pumptrack, Rue des Vendanges, La Martegale, Pérols, Montpellier, Hér
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/pumptrack-de-perols/hero.jpg"
+hero_credit: "Jérôme / Google Places"
 ---

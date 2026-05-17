@@ -8,5 +8,7 @@ address: "All. de Basse Terre, 34300 Cap d'Agde, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/aquapark-cap-d-agde/hero.jpg"
+hero_credit: "AQUAPARK Cap d'Agde / Google Places"
 ---
 

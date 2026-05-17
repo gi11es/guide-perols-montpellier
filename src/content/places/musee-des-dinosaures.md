@@ -8,4 +8,6 @@ address: "Musée des Dinosaures, D 613, Mèze, Montpellier, Hérault, Occitanie,
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/musee-des-dinosaures/hero.jpg"
+hero_credit: "Michael Barruel / Google Places"
 ---

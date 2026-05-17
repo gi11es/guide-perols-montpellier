@@ -8,4 +8,6 @@ address: "Pavillon Populaire, Parvis de la Légion d'Honneur, Comédie, Centre, 
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/pavillon-populaire/hero.jpg"
+hero_credit: "Dinkley = Jean-Marie DAVID / Wikimedia / CC BY-SA 3.0"
 ---

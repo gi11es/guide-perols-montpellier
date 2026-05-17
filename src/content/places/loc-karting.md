@@ -8,4 +8,6 @@ address: "Circuit de karting Loc'karting, M 172, Pailletrice, Pérols, Montpelli
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/loc-karting/hero.jpg"
+hero_credit: "LOC'KARTING / Google Places"
 ---

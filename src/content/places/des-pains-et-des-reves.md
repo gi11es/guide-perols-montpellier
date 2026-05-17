@@ -8,4 +8,6 @@ address: "10 Rue Eugène Lisbonne, 34000 Montpellier, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/des-pains-et-des-reves/hero.jpg"
+hero_credit: "Peter Mann / Google Places"
 ---

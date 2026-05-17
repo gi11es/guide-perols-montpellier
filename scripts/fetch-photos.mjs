@@ -72,7 +72,7 @@ async function searchGooglePlaces(name, lat, lon) {
     headers: {
       'Content-Type': 'application/json',
       'X-Goog-Api-Key': GOOGLE_KEY,
-      'X-Goog-FieldMask': 'places.id,places.displayName,places.photos,places.authorAttributions',
+      'X-Goog-FieldMask': 'places.id,places.displayName,places.photos',
     },
     body: JSON.stringify({
       textQuery: name,

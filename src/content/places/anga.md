@@ -8,4 +8,6 @@ address: "Anga - Beaulieu, Rue Saint-Firmin, Centre Historique, Centre, Montpell
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/anga/hero.jpg"
+hero_credit: "Le Shelter / Google Places"
 ---

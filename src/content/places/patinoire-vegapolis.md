@@ -8,5 +8,7 @@ address: "Centre Commercial Odysseum, 1 Place de la Petite France, 34000 Montpel
 links: {}
 source: "manual"
 google_category: "ice_skating_rink"
+hero: "/photos/patinoire-vegapolis/hero.jpg"
+hero_credit: "Patinoire Vegapolis / Google Places"
 ---
 

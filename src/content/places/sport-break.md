@@ -8,4 +8,6 @@ address: "300 Av. de la Biste, 34670 Baillargues, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/sport-break/hero.jpg"
+hero_credit: "Sport Break / Google Places"
 ---

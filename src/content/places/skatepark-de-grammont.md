@@ -8,4 +8,6 @@ address: "BMX - Skatepark Ronan-Pointeau, Avenue Albert Einstein, Grammont, Port
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/skatepark-de-grammont/hero.jpg"
+hero_credit: "Al / Google Places"
 ---

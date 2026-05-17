@@ -8,5 +8,7 @@ address: "27 Rue Samuel Bassaget, 34280 Mauguio, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/le-lamparo/hero.jpg"
+hero_credit: "Le Lamparino / Google Places"
 ---
 

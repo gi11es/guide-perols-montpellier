@@ -8,5 +8,7 @@ address: "22 Gd Rue Jean Jaurès, 30220 Aigues-Mortes, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/il-etait-une-fougasse/hero.jpg"
+hero_credit: "Boulangerie Il était une Fougasse – Route de Nîmes / Google Places"
 ---
 

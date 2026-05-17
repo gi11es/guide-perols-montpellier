@@ -8,4 +8,6 @@ address: "Terminal #1, Véloligne 4, Port Marianne, Montpellier, Hérault, Occit
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/terminal-1/hero.jpg"
+hero_credit: "AlissaN. / Google Places"
 ---

@@ -10,5 +10,7 @@ links:
   website: "https://penapilpil.com/"
 source: "google-takeout"
 google_category: ""
+hero: "/photos/pena-pil-pil/hero.jpg"
+hero_credit: "Peña Pil Pil-Restaurant à Pintxos-Bar, Épicerie Basque, Pérols Village / Google Places"
 ---
 

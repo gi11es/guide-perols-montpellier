@@ -8,5 +8,7 @@ address: "Domaine de Pailletrice, 34470 Pérols, France"
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/cuves-gourmandes/hero.jpg"
+hero_credit: "Cuves Gourmandes-Restaurant-Domaine de Pailletrice, Pérols / Google Places"
 ---
 

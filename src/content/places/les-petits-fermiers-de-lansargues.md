@@ -8,4 +8,6 @@ address: "Les Petits Fermiers au Pays de l'Or, Lansargues, Montpellier, Hérault
 links: {}
 source: "manual"
 google_category: ""
+hero: "/photos/les-petits-fermiers-de-lansargues/hero.jpg"
+hero_credit: "LES PETITS FERMIERS - Parc animalier et de loisirs - Lansargues / Google Places"
 ---

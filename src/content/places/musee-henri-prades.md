@@ -8,5 +8,7 @@ address: "390 Rte de Pérols, 34970 Lattes, France"
 links: {}
 source: "manual"
 google_category: "museum"
+hero: "/photos/musee-henri-prades/hero.jpg"
+hero_credit: " Daniel VILLAFRUELA. / Wikimedia / CC BY-SA 3.0"
 ---
 
