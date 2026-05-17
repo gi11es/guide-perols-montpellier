@@ -10,7 +10,7 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Plage de la Baleine', category: 'nature', query: 'Plage de la Baleine, Sète, France' },
+  { name: 'Plage du Grand Travers', category: 'nature', query: 'Plage du Grand Travers, La Grande-Motte, France' },
 ];
 
 function escapeYaml(s) {
