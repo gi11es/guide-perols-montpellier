@@ -1,10 +1,41 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '~/layouts/Base.astro';
+import PlaceCard from '~/components/PlaceCard.astro';
+import categoriesData from '~/content/categories.json';
+
+interface Category { slug: string; label: string; color: string; order: number; }
+const categories = categoriesData as Category[];
+const catBySlug = new Map(categories.map((c) => [c.slug, c]));
+
+const places = await getCollection('places');
+places.sort((a, b) => a.data.name.localeCompare(b.data.name, 'fr'));
 ---
 <Base title="Guide de Pérols">
-  <main class="container" style="padding-top: var(--space-9); padding-bottom: var(--space-9);">
+  <header class="hero-header container">
     <p class="eyebrow">Un guide personnel</p>
     <h1>Pérols & autour</h1>
-    <p class="muted">Mes endroits préférés à 100 km autour de la maison.</p>
+    <p class="muted lead">Mes endroits préférés à 100 km autour de la maison.</p>
+  </header>
+
+  <main class="container">
+    {places.map((place) => {
+      const cat = catBySlug.get(place.data.category);
+      return (
+        <PlaceCard
+          place={place}
+          categoryLabel={cat?.label ?? place.data.category}
+          categoryColor={cat?.color ?? 'var(--color-ink-soft)'}
+        />
+      );
+    })}
   </main>
 </Base>
+
+<style>
+  .hero-header {
+    padding-top: var(--space-9);
+    padding-bottom: var(--space-7);
+  }
+  .lead { font-size: var(--fs-lg); }
+</style>
