@@ -10,7 +10,7 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'En traits libres', category: 'boutique', query: 'En traits libres, Montpellier, France' },
+  { name: "Salin d'Aigues-Mortes", category: 'nature', query: "Salin d'Aigues-Mortes, France" },
 ];
 
 function escapeYaml(s) {
