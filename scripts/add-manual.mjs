@@ -10,7 +10,7 @@ const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const PLACES_DIR = join(ROOT, 'src', 'content', 'places');
 
 const ENTRIES = [
-  { name: 'Musée Fabre', category: 'culture', query: 'Musée Fabre, Montpellier, France' },
+  { name: 'Plage de la Baleine', category: 'nature', query: 'Plage de la Baleine, Sète, France' },
 ];
 
 function escapeYaml(s) {
