@@ -1,8 +1,9 @@
 [
   { "slug": "restaurant", "label": "Restaurants", "color": "#7A8B3A", "order": 1 },
   { "slug": "boulangerie", "label": "Boulangeries", "color": "#C9A857", "order": 2 },
-  { "slug": "nature", "label": "Nature, Parcs & Plages", "color": "#4A7C8F", "order": 3 },
-  { "slug": "culture", "label": "Culture & Art", "color": "#B5667A", "order": 4 },
-  { "slug": "villes-villages", "label": "Belles villes et villages", "color": "#8B7355", "order": 5 },
-  { "slug": "boutique", "label": "Boutiques & Marchés", "color": "#5F5F5F", "order": 6 }
+  { "slug": "fruits-legumes", "label": "Fruits & Légumes", "color": "#5C8C4C", "order": 3 },
+  { "slug": "nature", "label": "Nature, Parcs & Plages", "color": "#4A7C8F", "order": 4 },
+  { "slug": "culture", "label": "Culture & Art", "color": "#B5667A", "order": 5 },
+  { "slug": "villes-villages", "label": "Belles villes et villages", "color": "#8B7355", "order": 6 },
+  { "slug": "boutique", "label": "Boutiques & Marchés", "color": "#5F5F5F", "order": 7 }
 ]
