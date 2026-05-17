@@ -59,70 +59,135 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
   });
 
   map.on('load', () => {
-    const markers: { slug: string; category: string; marker: maplibregl.Marker; element: HTMLElement }[] = [];
-    let activePopup: maplibregl.Popup | null = null;
-
-    // Only show hover popups on non-touch devices
-    const isTouch = window.matchMedia('(hover: none)').matches;
-
-    for (const p of placeData) {
-      const color = catColors[p.category] ?? '#1A1814';
-      const label = catLabels[p.category] ?? p.category;
-      const dot = document.createElement('button');
-      dot.className = 'place-dot';
-      dot.style.background = color;
-      dot.setAttribute('aria-label', p.name);
-      dot.addEventListener('click', () => {
-        window.dispatchEvent(new CustomEvent('place:select', { detail: p }));
-      });
-
-      if (!isTouch) {
-        dot.addEventListener('mouseenter', () => {
-          if (activePopup) { activePopup.remove(); activePopup = null; }
-          const html = `
-            <div class="hover-popup-inner">
-              ${p.hero ? `<img class="hover-popup-img" src="${baseUrl}${p.hero.replace(/^\//, '')}" alt="${p.name}" />` : ''}
-              <p class="hover-popup-eyebrow" style="color:${color}">${label}</p>
-              <h3 class="hover-popup-name">${p.name}</h3>
-            </div>
-          `;
-          activePopup = new maplibregl.Popup({
-            closeButton: false,
-            closeOnClick: false,
-            anchor: 'bottom',
-            offset: 12,
-          })
-            .setLngLat([p.lon, p.lat])
-            .setHTML(html)
-            .addTo(map);
-        });
-        dot.addEventListener('mouseleave', () => {
-          if (activePopup) { activePopup.remove(); activePopup = null; }
-        });
-      }
-
-      const marker = new maplibregl.Marker({ element: dot }).setLngLat([p.lon, p.lat]).addTo(map);
-      markers.push({ slug: p.slug, category: p.category, marker, element: dot });
+    // --- Build GeoJSON from placeData ---
+    function hashSlugToInt(s: string): number {
+      let h = 0;
+      for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+      return Math.abs(h);
     }
 
-    window.addEventListener('category:filter', (e: any) => {
-      const cat = e.detail.category;
-      for (const m of markers) {
-        const visible = cat === 'all' || m.category === cat;
-        m.marker.getElement().style.display = visible ? '' : 'none';
-      }
+    const features = placeData.map((p: any) => ({
+      type: 'Feature',
+      id: hashSlugToInt(p.slug),
+      geometry: { type: 'Point', coordinates: [p.lon, p.lat] },
+      properties: {
+        slug: p.slug,
+        name: p.name,
+        category: p.category,
+        hero: p.hero,
+      },
+    }));
+    const slugToId: Record<string, number> = Object.fromEntries(
+      features.map((f: any) => [f.properties.slug, f.id])
+    );
+
+    map.addSource('places', {
+      type: 'geojson',
+      data: { type: 'FeatureCollection', features } as GeoJSON.FeatureCollection,
+      promoteId: 'id',
     });
 
+    // Build match expression for per-category colors
+    const matchColor: any[] = ['match', ['get', 'category']];
+    for (const [slug, color] of Object.entries(catColors as Record<string, string>)) {
+      matchColor.push(slug, color);
+    }
+    matchColor.push('#1A1814'); // default fallback
+
+    map.addLayer({
+      id: 'places-dots',
+      type: 'circle',
+      source: 'places',
+      paint: {
+        'circle-color': matchColor as any,
+        'circle-radius': [
+          'case',
+          ['boolean', ['feature-state', 'selected'], false], 11,
+          7,
+        ] as any,
+        'circle-stroke-width': [
+          'case',
+          ['boolean', ['feature-state', 'selected'], false], 3,
+          2,
+        ] as any,
+        'circle-stroke-color': [
+          'case',
+          ['boolean', ['feature-state', 'selected'], false], '#1A1814',
+          '#F4EFE6',
+        ] as any,
+      },
+    });
+
+    // Click handler
+    map.on('click', 'places-dots', (e) => {
+      const f = e.features?.[0];
+      if (!f) return;
+      window.dispatchEvent(new CustomEvent('place:select', { detail: f.properties }));
+    });
+    map.on('mouseenter', 'places-dots', () => { map.getCanvas().style.cursor = 'pointer'; });
+    map.on('mouseleave', 'places-dots', () => { map.getCanvas().style.cursor = ''; });
+
+    // Hover popup (non-touch only)
+    const isTouch = window.matchMedia('(hover: none)').matches;
+    let activePopup: maplibregl.Popup | null = null;
+    if (!isTouch) {
+      map.on('mouseenter', 'places-dots', (e) => {
+        const f = e.features?.[0];
+        if (!f) return;
+        const p = f.properties as any;
+        const color = (catColors as any)[p.category] ?? '#1A1814';
+        const label = (catLabels as any)[p.category] ?? p.category;
+        const heroSrc = p.hero ? `${baseUrl}${p.hero.replace(/^\//, '')}` : '';
+        const html = `
+          <div class="hover-popup-inner">
+            ${heroSrc ? `<img class="hover-popup-img" src="${heroSrc}" alt="${p.name}" />` : ''}
+            <p class="hover-popup-eyebrow" style="color:${color}">${label}</p>
+            <h3 class="hover-popup-name">${p.name}</h3>
+          </div>
+        `;
+        if (activePopup) { activePopup.remove(); }
+        activePopup = new maplibregl.Popup({
+          closeButton: false,
+          closeOnClick: false,
+          anchor: 'bottom',
+          offset: 12,
+        })
+          .setLngLat((f.geometry as any).coordinates)
+          .setHTML(html)
+          .addTo(map);
+      });
+      map.on('mouseleave', 'places-dots', () => {
+        if (activePopup) { activePopup.remove(); activePopup = null; }
+      });
+    }
+
+    // Selected state via feature-state
+    let selectedFeatureId: number | null = null;
     window.addEventListener('place:select', (e: any) => {
       const slug = e.detail.slug;
-      for (const m of markers) {
-        m.element.classList.toggle('selected', m.slug === slug);
+      const fid = slugToId[slug];
+      if (selectedFeatureId !== null) {
+        map.setFeatureState({ source: 'places', id: selectedFeatureId }, { selected: false });
+      }
+      if (fid !== undefined) {
+        map.setFeatureState({ source: 'places', id: fid }, { selected: true });
+        selectedFeatureId = fid;
+      }
+    });
+    window.addEventListener('place:deselect', () => {
+      if (selectedFeatureId !== null) {
+        map.setFeatureState({ source: 'places', id: selectedFeatureId }, { selected: false });
+        selectedFeatureId = null;
       }
     });
 
-    window.addEventListener('place:deselect', () => {
-      for (const m of markers) {
-        m.element.classList.remove('selected');
+    // Category filter
+    window.addEventListener('category:filter', (e: any) => {
+      const cat = e.detail.category;
+      if (cat === 'all' || !cat) {
+        map.setFilter('places-dots', null);
+      } else {
+        map.setFilter('places-dots', ['==', ['get', 'category'], cat]);
       }
     });
   });
@@ -135,28 +200,6 @@ const catLabels = Object.fromEntries(categories.map((c) => [c.slug, c.label]));
     width: 100%;
     height: 100dvh;
   }
-  :global(.place-dot) {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    border: 2px solid var(--color-bg, #F4EFE6);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-    cursor: pointer;
-    padding: 0;
-    transition: transform 0.15s ease;
-  }
-  :global(.place-dot:active) { transform: scale(1.2); }
-  :global(.place-dot.selected) {
-    outline: 3px solid var(--color-ink, #1A1814);
-    outline-offset: 3px;
-    transform: scale(1.25);
-    z-index: 2;
-  }
-  :global(.place-dot:focus-visible) {
-    outline: 2px solid var(--color-accent, #C25B3F);
-    outline-offset: 3px;
-  }
-
   /* MapLibre hover popup */
   :global(.maplibregl-popup-tip) { display: none; }
   :global(.maplibregl-popup-content) {
