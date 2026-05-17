@@ -724,7 +724,7 @@ import Base from '~/layouts/Base.astro';
   <main class="container" style="padding-top: var(--space-9); padding-bottom: var(--space-9);">
     <p class="eyebrow">Un guide personnel</p>
     <h1>Pérols & autour</h1>
-    <p class="muted">Mes endroits préférés à 100 km autour de la maison.</p>
+    <p class="muted">Nos endroits préférés à 100 km autour de la maison.</p>
   </main>
 </Base>
 ```
@@ -873,7 +873,7 @@ places.sort((a, b) => a.data.name.localeCompare(b.data.name, 'fr'));
   <header class="hero-header container">
     <p class="eyebrow">Un guide personnel</p>
     <h1>Pérols & autour</h1>
-    <p class="muted lead">Mes endroits préférés à 100 km autour de la maison.</p>
+    <p class="muted lead">Nos endroits préférés à 100 km autour de la maison.</p>
   </header>
 
   <main class="container">
